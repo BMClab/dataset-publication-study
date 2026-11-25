@@ -125,15 +125,15 @@
       "file": "case-studies/ppds/selection-record.md",
       "source": "framework/docs/data_format_and_reader_selection.md",
       "source_sha256": "9e0638d17c6e3487df390bb482c69b6f61b9ce5542882aed8bf79ce93836059d",
-      "sha256": "38ade52a838ef91cf9795631eb9dd8339d2f266b64056ff29530f1aef76f1d27",
-      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable"
+      "sha256": "edc63605174dea20fa29edbd24c6fa016434f4b4f0de8322dfbc12ada5bffe5e",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable; added notes on a check of the public dataset v1.0.0 without credentials on 25 November 2026"
     },
     {
       "file": "case-studies/ppds/polars-vs-duckdb.md",
       "source": "framework/docs/polars_vs_duckdb.md",
       "source_sha256": "03793d8b80e4145bc965230be9efdc2c23fb72c6b9de575541a9500983ddd146",
-      "sha256": "79be767de3204d8396ed5fe07accaa36e24d58ecb5adfb0005a5ccd254bb00e8",
-      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable"
+      "sha256": "3789c12dd48f487cd24897fb9b99812aaf6990436d93aa870c75dd1449f0ef6b",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable; corrected the Polars direct-read statements with a check of the public dataset v1.0.0 on 25 November 2026"
     },
     {
       "file": "evidence/observations/lab_formats_pandas_dtypes.json",

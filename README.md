@@ -1,9 +1,9 @@
 # Choosing how to publish a research dataset
 
-BMClab used its plantar pressure dataset (PPDS) to investigate how researchers could retrieve one trial, join a cohort to its measurements, or work offline from the same release. The lab selected Parquet for tabular storage, DuckDB for querying, and a Python toolkit for operations such as reconstructing a pressure recording in physical units. This repository documents the evidence and gives the next project a way to make its own choices.
+This repository helps a lab decide how to publish a research dataset: which file format to release, which reader to recommend, and whether to maintain a toolkit for users. It provides a step-by-step guide, a test for deciding on a toolkit, and a worksheet for recording the evidence behind each choice.
 
 - **Choose for your project.** Use the [format and reader guide](guide/choosing-formats-and-readers.md), decide [whether to provide a toolkit](guide/toolkit-decision.md), and record your evidence in the [decision worksheet](guide/worksheet.md).
-- **See how PPDS decided.** Follow the [case study](case-studies/ppds/decision.md) from its initial requirements through the measured alternatives to the published files and Python interface. The [evidence index](evidence/README.md) identifies the inputs, environments and limits of each experiment.
+- **See a worked case.** BMClab used its plantar pressure dataset (PPDS) to investigate how researchers could retrieve one trial, join a cohort to its measurements, or work offline from the same release. The lab selected Parquet for tabular storage, DuckDB for querying, and a Python toolkit. Follow the [case study](case-studies/ppds/decision.md) from its initial requirements through the measured alternatives. The [evidence index](evidence/README.md) identifies the inputs, environments and limits of each experiment.
 
 ## Try the comparison
 
@@ -13,7 +13,7 @@ From the repository root, run the example with uv and Python 3.12–3.14. The re
 uv run --locked python examples/cohort_join.py
 ```
 
-The example creates three tiny Parquet tables in a temporary directory. DuckDB and Polars run the same SQL over them. Both return participant A with two qualifying trials, three force samples and a 220 N peak, and B with one trial, two samples and a 190 N peak. Each answer is checked against those values. The printed times describe this invocation on generated data. [Example source](examples/cohort_join.py)
+The example creates three tiny Parquet tables in a temporary directory. DuckDB and Polars run the same SQL over them. Both return participant A with two qualifying trials, three force samples and a 220 N peak, and B with one trial, two samples and a 190 N peak. Each answer is checked against those values. The printed times describe this invocation on generated data. Agreement on local files does not show that both readers work with a hosted copy. [Check the final public release](guide/choosing-formats-and-readers.md#check-the-final-public-release) separately. [Example source](examples/cohort_join.py)
 
 To regenerate the local timing and loopback transfer tables from the November 2026 PPDS study, run the original report generator with Python's standard library. The archive includes the observations and their reference digests.
 

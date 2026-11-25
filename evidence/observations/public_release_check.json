@@ -1,0 +1,251 @@
+{
+  "purpose": "Direct reads of the public PPDS v1.0.0 Zenodo record without credentials",
+  "record": 24432612,
+  "files": {
+    "trials": "https://zenodo.org/api/records/24432612/files/trials.parquet/content",
+    "pressure": "https://zenodo.org/api/records/24432612/files/pressure.parquet/content"
+  },
+  "started_utc": "2026-11-25T23:54:52.666696+00:00",
+  "python": "3.14.9",
+  "packages": {
+    "duckdb": "2.0.1",
+    "polars": "2.1.0"
+  },
+  "byte_counting": "Declared Content-Length of GET responses from DuckDB's HTTP log; not measured wire bytes",
+  "repetitions": "One observation per reader and task over the public internet",
+  "rate_limit_headers": {
+    "status": 206,
+    "x-ratelimit-limit": "133",
+    "x-ratelimit-remaining": "132",
+    "x-ratelimit-reset": "1795650954",
+    "retry-after": "60"
+  },
+  "cohort_selection": {
+    "sql": "SELECT count(*) AS trials, count(DISTINCT subject) AS participants FROM trials WHERE Age >= 60",
+    "results": [
+      {
+        "reader": "duckdb",
+        "status": "pass",
+        "seconds": 2.369,
+        "rows": [
+          [
+            1174,
+            34
+          ]
+        ],
+        "sha256": "65d96250d5fbe0d7dbe1f666a5830d4ea71d430e8e8bdaa4683d11a30ce62c30",
+        "http": {
+          "requests": 12,
+          "get_requests": 6,
+          "head_requests": 6,
+          "declared_get_body_bytes": 66408,
+          "statuses": [
+            "OK_200",
+            "PartialContent_206"
+          ]
+        },
+        "http_log": [
+          {
+            "method": "HEAD",
+            "range": null,
+            "status": "OK_200",
+            "content_length": 54111
+          },
+          {
+            "method": "GET",
+            "range": "bytes=37727-54110",
+            "status": "PartialContent_206",
+            "content_length": 16384
+          },
+          {
+            "method": "HEAD",
+            "range": null,
+            "status": "OK_200",
+            "content_length": 54111
+          },
+          {
+            "method": "GET",
+            "range": "bytes=37727-54110",
+            "status": "PartialContent_206",
+            "content_length": 16384
+          },
+          {
+            "method": "HEAD",
+            "range": null,
+            "status": "OK_200",
+            "content_length": 54111
+          },
+          {
+            "method": "GET",
+            "range": "bytes=37727-54110",
+            "status": "PartialContent_206",
+            "content_length": 16384
+          },
+          {
+            "method": "HEAD",
+            "range": null,
+            "status": "OK_200",
+            "content_length": 54111
+          },
+          {
+            "method": "GET",
+            "range": "bytes=37727-54110",
+            "status": "PartialContent_206",
+            "content_length": 16384
+          },
+          {
+            "method": "HEAD",
+            "range": null,
+            "status": "OK_200",
+            "content_length": 54111
+          },
+          {
+            "method": "HEAD",
+            "range": null,
+            "status": "OK_200",
+            "content_length": 54111
+          },
+          {
+            "method": "GET",
+            "range": "bytes=37064-37592",
+            "status": "PartialContent_206",
+            "content_length": 529
+          },
+          {
+            "method": "GET",
+            "range": "bytes=12158-12500",
+            "status": "PartialContent_206",
+            "content_length": 343
+          }
+        ]
+      },
+      {
+        "reader": "polars_scan",
+        "status": "fail",
+        "seconds": 1.671,
+        "error_class": "OSError",
+        "error": "object-store error: Generic HTTP error: Requested 0..54111, got 18446744073709343583..54111 (location: api/records/24432612/files/trials.parquet/content) (path: https://zenodo.org)"
+      },
+      {
+        "reader": "polars_sql",
+        "status": "fail",
+        "seconds": 1.535,
+        "error_class": "OSError",
+        "error": "object-store error: Generic HTTP error: Requested 0..54111, got 18446744073709343583..54111 (location: api/records/24432612/files/trials.parquet/content) (path: https://zenodo.org)"
+      }
+    ]
+  },
+  "one_trial": {
+    "reader": "duckdb",
+    "selection": {
+      "subject": "s045",
+      "condition": "wc",
+      "trial": 3,
+      "trial_id": 1566
+    },
+    "expected_from_trials_table": {
+      "n_cells": 32266,
+      "n_frames": 280
+    },
+    "status": "pass",
+    "timer": "pressure query only; trial lookup ran in a separate connection",
+    "seconds": 5.199,
+    "rows": [
+      [
+        32266,
+        278,
+        485
+      ]
+    ],
+    "http": {
+      "requests": 12,
+      "get_requests": 8,
+      "head_requests": 4,
+      "declared_get_body_bytes": 1371553,
+      "statuses": [
+        "OK_200",
+        "PartialContent_206"
+      ]
+    },
+    "http_log": [
+      {
+        "method": "HEAD",
+        "range": null,
+        "status": "OK_200",
+        "content_length": 124803423
+      },
+      {
+        "method": "GET",
+        "range": "bytes=124672351-124803422",
+        "status": "PartialContent_206",
+        "content_length": 131072
+      },
+      {
+        "method": "GET",
+        "range": "bytes=124346717-124803414",
+        "status": "PartialContent_206",
+        "content_length": 456698
+      },
+      {
+        "method": "HEAD",
+        "range": null,
+        "status": "OK_200",
+        "content_length": 124803423
+      },
+      {
+        "method": "GET",
+        "range": "bytes=124672351-124803422",
+        "status": "PartialContent_206",
+        "content_length": 131072
+      },
+      {
+        "method": "GET",
+        "range": "bytes=124346717-124803414",
+        "status": "PartialContent_206",
+        "content_length": 456698
+      },
+      {
+        "method": "HEAD",
+        "range": null,
+        "status": "OK_200",
+        "content_length": 124803423
+      },
+      {
+        "method": "HEAD",
+        "range": null,
+        "status": "OK_200",
+        "content_length": 124803423
+      },
+      {
+        "method": "GET",
+        "range": "bytes=60860896-60948696",
+        "status": "PartialContent_206",
+        "content_length": 87801
+      },
+      {
+        "method": "GET",
+        "range": "bytes=60816601-60821532",
+        "status": "PartialContent_206",
+        "content_length": 4932
+      },
+      {
+        "method": "GET",
+        "range": "bytes=60950935-60955870",
+        "status": "PartialContent_206",
+        "content_length": 4936
+      },
+      {
+        "method": "GET",
+        "range": "bytes=61006368-61104711",
+        "status": "PartialContent_206",
+        "content_length": 98344
+      }
+    ]
+  },
+  "not_checked": [
+    "mesh retrieval",
+    "full pressure read",
+    "authenticated access"
+  ],
+  "finished_utc": "2026-11-25T23:55:09.196266+00:00"
+}

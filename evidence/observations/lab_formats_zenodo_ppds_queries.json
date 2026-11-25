@@ -1,0 +1,594 @@
+{
+  "transport": "authenticated production Zenodo via a counted loopback relay",
+  "rows": [
+    {
+      "engine": "sql_parquet",
+      "task": "trial",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 4.1016,
+          "result": {
+            "rows": 138035,
+            "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+          },
+          "http": {
+            "requests": 9,
+            "range_requests": 7,
+            "http_200": 2,
+            "http_206": 7,
+            "body_bytes": 655995
+          }
+        },
+        {
+          "run": "repeat",
+          "seconds": 0.5649,
+          "result": {
+            "rows": 138035,
+            "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+          },
+          "http": {
+            "requests": 2,
+            "http_200": 2
+          }
+        }
+      ]
+    },
+    {
+      "engine": "sql_compact_vortex",
+      "task": "trial",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 34.4618,
+          "result": {
+            "rows": 138035,
+            "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+          },
+          "http": {
+            "requests": 7,
+            "range_requests": 5,
+            "http_200": 2,
+            "http_206": 5,
+            "body_bytes": 18198311
+          }
+        },
+        {
+          "run": "repeat",
+          "seconds": 33.5354,
+          "result": {
+            "rows": 138035,
+            "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+          },
+          "http": {
+            "requests": 7,
+            "range_requests": 7,
+            "http_206": 7,
+            "body_bytes": 18129588
+          }
+        }
+      ]
+    },
+    {
+      "engine": "polars_parquet",
+      "task": "trial",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 3.7646,
+          "result": {
+            "rows": 138035,
+            "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+          },
+          "http": {
+            "requests": 6,
+            "range_requests": 6,
+            "http_206": 6,
+            "body_bytes": 922339,
+            "bounded_suffixes": 1
+          }
+        },
+        {
+          "run": "repeat",
+          "seconds": 3.4612,
+          "result": {
+            "rows": 138035,
+            "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+          },
+          "http": {
+            "requests": 6,
+            "range_requests": 6,
+            "http_206": 6,
+            "body_bytes": 922339,
+            "bounded_suffixes": 1
+          }
+        }
+      ]
+    },
+    {
+      "engine": "polars_compact_vortex",
+      "task": "trial",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 53.6398,
+          "result": {
+            "rows": 138035,
+            "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+          },
+          "http": {
+            "requests": 6,
+            "range_requests": 4,
+            "http_200": 2,
+            "http_206": 4,
+            "body_bytes": 33376859
+          }
+        },
+        {
+          "run": "repeat",
+          "seconds": 49.5707,
+          "result": {
+            "rows": 138035,
+            "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+          },
+          "http": {
+            "requests": 6,
+            "range_requests": 4,
+            "http_200": 2,
+            "http_206": 4,
+            "body_bytes": 31703691
+          }
+        }
+      ]
+    },
+    {
+      "engine": "sql_parquet",
+      "task": "cohort_force",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 4.3168,
+          "result": {
+            "rows": 34,
+            "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+          },
+          "http": {
+            "requests": 21,
+            "range_requests": 18,
+            "http_200": 3,
+            "http_206": 18,
+            "body_bytes": 1079590
+          }
+        },
+        {
+          "run": "repeat",
+          "seconds": 0.8401,
+          "result": {
+            "rows": 34,
+            "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+          },
+          "http": {
+            "requests": 3,
+            "http_200": 3
+          }
+        }
+      ]
+    },
+    {
+      "engine": "sql_compact_vortex",
+      "task": "cohort_force",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 8.3589,
+          "result": {
+            "rows": 34,
+            "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+          },
+          "http": {
+            "requests": 10,
+            "range_requests": 7,
+            "http_200": 3,
+            "http_206": 7,
+            "body_bytes": 1955047
+          }
+        },
+        {
+          "run": "repeat",
+          "seconds": 5.239,
+          "result": {
+            "rows": 34,
+            "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+          },
+          "http": {
+            "requests": 4,
+            "range_requests": 4,
+            "http_206": 4,
+            "body_bytes": 1833092
+          }
+        }
+      ]
+    },
+    {
+      "engine": "polars_parquet",
+      "task": "cohort_force",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 4.3297,
+          "result": {
+            "rows": 34,
+            "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+          },
+          "http": {
+            "requests": 11,
+            "range_requests": 11,
+            "http_206": 11,
+            "body_bytes": 2755945,
+            "bounded_suffixes": 2
+          }
+        },
+        {
+          "run": "repeat",
+          "seconds": 3.9988,
+          "result": {
+            "rows": 34,
+            "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+          },
+          "http": {
+            "requests": 11,
+            "range_requests": 11,
+            "http_206": 11,
+            "body_bytes": 2755945,
+            "bounded_suffixes": 2
+          }
+        }
+      ]
+    },
+    {
+      "engine": "polars_compact_vortex",
+      "task": "cohort_force",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 6.801,
+          "result": {
+            "rows": 34,
+            "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+          },
+          "http": {
+            "requests": 7,
+            "range_requests": 4,
+            "http_200": 3,
+            "http_206": 4,
+            "body_bytes": 1886171
+          }
+        },
+        {
+          "run": "repeat",
+          "seconds": 6.3377,
+          "result": {
+            "rows": 34,
+            "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+          },
+          "http": {
+            "requests": 7,
+            "range_requests": 4,
+            "http_200": 3,
+            "http_206": 4,
+            "body_bytes": 1886171
+          }
+        }
+      ]
+    },
+    {
+      "engine": "sql_parquet",
+      "task": "mesh",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 3.578,
+          "result": {
+            "rows": 1,
+            "stl_bytes": 1153984,
+            "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+          },
+          "http": {
+            "requests": 4,
+            "range_requests": 3,
+            "http_200": 1,
+            "http_206": 3,
+            "body_bytes": 777880
+          }
+        },
+        {
+          "run": "repeat",
+          "seconds": 0.4085,
+          "result": {
+            "rows": 1,
+            "stl_bytes": 1153984,
+            "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+          },
+          "http": {
+            "requests": 1,
+            "http_200": 1
+          }
+        }
+      ]
+    },
+    {
+      "engine": "polars_parquet",
+      "task": "mesh",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 2.3526,
+          "result": {
+            "rows": 1,
+            "stl_bytes": 1153984,
+            "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+          },
+          "http": {
+            "requests": 2,
+            "range_requests": 2,
+            "http_206": 2,
+            "body_bytes": 771121
+          }
+        },
+        {
+          "run": "repeat",
+          "seconds": 1.88,
+          "result": {
+            "rows": 1,
+            "stl_bytes": 1153984,
+            "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+          },
+          "http": {
+            "requests": 2,
+            "range_requests": 2,
+            "http_206": 2,
+            "body_bytes": 771121
+          }
+        }
+      ]
+    },
+    {
+      "engine": "sql_compact_vortex",
+      "task": "all_pressure",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 155.9352,
+          "result": {
+            "rows": 3312,
+            "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+          },
+          "http": {
+            "requests": 25,
+            "range_requests": 24,
+            "http_200": 1,
+            "http_206": 24,
+            "body_bytes": 72726931
+          }
+        },
+        {
+          "run": "repeat",
+          "seconds": 76.6534,
+          "result": {
+            "rows": 3312,
+            "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+          },
+          "http": {
+            "requests": 23,
+            "range_requests": 23,
+            "http_206": 23,
+            "body_bytes": 72661396
+          }
+        }
+      ]
+    },
+    {
+      "engine": "polars_compact_vortex",
+      "task": "all_pressure",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 98.3543,
+          "result": {
+            "rows": 3312,
+            "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+          },
+          "http": {
+            "requests": 25,
+            "range_requests": 24,
+            "http_200": 1,
+            "http_206": 24,
+            "body_bytes": 72726931
+          }
+        },
+        {
+          "run": "repeat",
+          "seconds": 90.8994,
+          "result": {
+            "rows": 3312,
+            "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+          },
+          "http": {
+            "requests": 25,
+            "range_requests": 24,
+            "http_200": 1,
+            "http_206": 24,
+            "body_bytes": 72726931
+          }
+        }
+      ]
+    },
+    {
+      "engine": "sql_parquet",
+      "task": "all_pressure",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 435.4867,
+          "result": {
+            "rows": 3312,
+            "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+          },
+          "http": {
+            "requests": 1116,
+            "range_requests": 1115,
+            "http_200": 1,
+            "http_206": 946,
+            "body_bytes": 123744450,
+            "http_429": 169,
+            "upstream_errors": 78
+          }
+        },
+        {
+          "run": "repeat",
+          "seconds": 0.4844,
+          "result": {
+            "rows": 3312,
+            "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+          },
+          "http": {
+            "requests": 1,
+            "http_200": 1
+          }
+        }
+      ]
+    },
+    {
+      "engine": "polars_parquet",
+      "task": "all_pressure",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 379.0758,
+          "result": {
+            "rows": 3312,
+            "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+          },
+          "http": {
+            "requests": 1015,
+            "range_requests": 1015,
+            "http_206": 864,
+            "body_bytes": 124424750,
+            "http_429": 151
+          }
+        },
+        {
+          "run": "repeat",
+          "seconds": 415.5329,
+          "result": {
+            "rows": 3312,
+            "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+          },
+          "http": {
+            "requests": 1063,
+            "range_requests": 1063,
+            "http_206": 864,
+            "body_bytes": 124424838,
+            "http_429": 199
+          }
+        }
+      ]
+    },
+    {
+      "engine": "sql_compact_vortex",
+      "task": "mesh",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 34.1657,
+          "error": "request or response body error",
+          "http": {
+            "requests": 7,
+            "range_requests": 6,
+            "http_200": 1,
+            "http_206": 5,
+            "body_bytes": 14299827,
+            "http_429": 1,
+            "upstream_errors": 1
+          }
+        }
+      ]
+    },
+    {
+      "engine": "polars_compact_vortex",
+      "task": "mesh",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 31.2949,
+          "error": "request or response body error",
+          "http": {
+            "requests": 4,
+            "range_requests": 3,
+            "http_200": 1,
+            "http_206": 3,
+            "body_bytes": 14176143,
+            "upstream_errors": 1
+          }
+        }
+      ]
+    }
+  ],
+  "date": "2026-11-22",
+  "reader_environment": {
+    "duckdb": "2.0.1",
+    "polars": "2.1.0",
+    "vortex-data": "0.93.0",
+    "engine_threads": 4,
+    "max_upstream_requests_in_flight": 4,
+    "run_order": "fixed; rows in completion order"
+  },
+  "extended_mesh": [
+    {
+      "engine": "sql_compact_vortex",
+      "task": "mesh",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 133.4101,
+          "result": {
+            "rows": 1,
+            "stl_bytes": 1153984,
+            "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+          },
+          "http": {
+            "requests": 4,
+            "range_requests": 3,
+            "http_200": 1,
+            "http_206": 3,
+            "body_bytes": 233438307
+          }
+        }
+      ],
+      "adapter": "Vortex Python HTTP store (15m) with DuckDB dataset registration"
+    },
+    {
+      "engine": "polars_compact_vortex",
+      "task": "mesh",
+      "runs": [
+        {
+          "run": "first",
+          "seconds": 100.1346,
+          "result": {
+            "rows": 1,
+            "stl_bytes": 1153984,
+            "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+          },
+          "http": {
+            "requests": 4,
+            "range_requests": 3,
+            "http_200": 1,
+            "http_206": 3,
+            "body_bytes": 233438307
+          }
+        }
+      ],
+      "adapter": "Vortex Python HTTP store (15m) with Polars lazy scan"
+    }
+  ]
+}

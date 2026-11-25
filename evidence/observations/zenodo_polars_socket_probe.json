@@ -1,0 +1,338 @@
+{
+  "packages": {
+    "polars": "2.1.0",
+    "pandas": "3.1.1",
+    "pyarrow": "26.0.1"
+  },
+  "queries_executed": 5,
+  "method": {
+    "trace_syscalls": "%network,pread64,preadv,preadv2,read,readv,recvfrom,recvmmsg,recvmsg,copy_file_range,sendfile,splice,io_uring_setup,io_uring_register,io_uring_enter,restart_syscall",
+    "counter": "Sum successful receive/read syscall return bytes on every TCP socket across the entire fresh worker and all threads; recvmmsg sums returned message lengths. Per-TID unfinished/resumed lines are reconstructed.",
+    "measurement_kind": "ENCRYPTED_TRANSPORT_UPPER_BOUND_ON_DELIVERED_HTTP_BODY_BYTES",
+    "includes": "TLS handshake/record overhead, HTTP framing/headers and every TCP connection; repeated or peeked receives overcount conservatively. Not IP/TCP packet bytes or retransmissions.",
+    "unsupported_paths_gate": "Any successful io_uring operation, transfer bypass, unclassified descriptor, non-DNS UDP, kernel-TLS/zero-copy operation, unresolved trace record or unfinished receive withholds partial-transfer verdict.",
+    "url_and_transport": "Same unmodified direct HTTPS URL. Original three cases use matrix.query; added two cases express the identical selection with literal numeric equality in native Polars expressions/SQL. No proxy added, URL alias, custom reader adapter, installer or TLS interception.",
+    "limitations": [
+      "Platform-specific diagnostic, one run per reader; timings are not compared.",
+      "No HTTP request count, range status or exact HTTP payload byte count is obtained from encrypted sockets.",
+      "The full-file comparison assumes no HTTP content compression; Parquet is served as the same binary object validated by the full-download control. Native response headers are encrypted and not independently decoded here.",
+      "Fresh processes rule out process-local reader caches; external/server caching is not measured."
+    ]
+  },
+  "checked_utc": "2026-11-13T20:19:17.615682+00:00",
+  "fixture": {
+    "key": "co_min_mean.parquet",
+    "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+    "size": 3330851,
+    "checksum": "md5:3076425c5535527a08cb0bbee87d9832",
+    "whole_file_checksum_verified": true
+  },
+  "parser_control": {
+    "status": "PASS",
+    "expected_tcp_bytes": 21,
+    "observed_tcp_bytes": 21,
+    "checks": "Per-TID resumed syscall, read/readv/recvmsg/recvmmsg lengths, DNS exclusion, failed-read exclusion, io_uring ambiguity gate"
+  },
+  "conclusion": {
+    "all_reference_matched": true,
+    "native_polars_less_than_full_file_transport_demonstrated": false,
+    "native_query_forms_with_less_than_full_file_transport": [],
+    "native_results_by_predicate_kind": {
+      "numeric_singleton_IN": {
+        "polars_native_http": {
+          "tcp_received_bytes": 3575621,
+          "less_than_full_file_transport_demonstrated": false
+        },
+        "polars_sql_native_http": {
+          "tcp_received_bytes": 3569083,
+          "less_than_full_file_transport_demonstrated": false
+        }
+      },
+      "numeric_equality": {
+        "polars_native_http_equality": {
+          "tcp_received_bytes": 3576153,
+          "less_than_full_file_transport_demonstrated": false
+        },
+        "polars_sql_native_http_equality": {
+          "tcp_received_bytes": 3579167,
+          "less_than_full_file_transport_demonstrated": false
+        }
+      }
+    },
+    "native_polars_whole_file_http_payload_proven": false,
+    "interpretation": "Assess each predicate form separately. Totals below file size bound transferred data under the stated no-HTTP-content-compression assumption. Totals at or above file size cannot distinguish full-file payload from partial payload plus TLS/HTTP overhead, duplicate ranges or repeated receives, and do not prove a whole-file HTTP payload read.",
+    "scope": "Bounded received TCP/TLS bytes on this public scalar fixture; not a PPDS performance measurement or HTTP-body counter."
+  },
+  "cases": [
+    {
+      "reader": "pandas_url_default",
+      "predicate_kind": "numeric_singleton_IN",
+      "matches_checked_reference": true,
+      "less_than_full_file_transport_demonstrated": false,
+      "transport": {
+        "tcp_received_bytes": 3343389,
+        "syscall_counts": {
+          "read": {
+            "calls": 2825,
+            "successful_calls": 2687,
+            "tcp_successful_calls": 708,
+            "tcp_received_bytes": 3343389
+          },
+          "pread64": {
+            "calls": 6,
+            "successful_calls": 6,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "setsockopt": {
+            "calls": 2,
+            "successful_calls": 2,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "recvfrom": {
+            "calls": 2,
+            "successful_calls": 2,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "recvmsg": {
+            "calls": 2,
+            "successful_calls": 2,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "getsockopt": {
+            "calls": 2,
+            "successful_calls": 2,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          }
+        },
+        "reconstructed_unfinished_resumed_pairs": 6,
+        "unresolved_records": [],
+        "coverage_ambiguities": [],
+        "coverage_complete_for_observed_receive_paths": true,
+        "positive_tcp_receive_calls": 708,
+        "trace_sha256": "45017d9aa360ab92051d89ab6d2a91584e7968e948bd8924cb4df584898d8d7d",
+        "trace_bytes": 504103
+      }
+    },
+    {
+      "reader": "polars_native_http",
+      "predicate_kind": "numeric_singleton_IN",
+      "matches_checked_reference": true,
+      "less_than_full_file_transport_demonstrated": false,
+      "transport": {
+        "tcp_received_bytes": 3575621,
+        "syscall_counts": {
+          "read": {
+            "calls": 2577,
+            "successful_calls": 2577,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "pread64": {
+            "calls": 6,
+            "successful_calls": 6,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "setsockopt": {
+            "calls": 367,
+            "successful_calls": 367,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "recvfrom": {
+            "calls": 683,
+            "successful_calls": 667,
+            "tcp_successful_calls": 665,
+            "tcp_received_bytes": 3575621
+          },
+          "recvmsg": {
+            "calls": 2,
+            "successful_calls": 2,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "getsockopt": {
+            "calls": 11,
+            "successful_calls": 11,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          }
+        },
+        "reconstructed_unfinished_resumed_pairs": 553,
+        "unresolved_records": [],
+        "coverage_ambiguities": [],
+        "coverage_complete_for_observed_receive_paths": true,
+        "positive_tcp_receive_calls": 665,
+        "trace_sha256": "10a8dddcf609a9aeca7de31e0cff008ae13e15a98ff91e25899240202175ab96",
+        "trace_bytes": 663182
+      }
+    },
+    {
+      "reader": "polars_sql_native_http",
+      "predicate_kind": "numeric_singleton_IN",
+      "matches_checked_reference": true,
+      "less_than_full_file_transport_demonstrated": false,
+      "transport": {
+        "tcp_received_bytes": 3569083,
+        "syscall_counts": {
+          "read": {
+            "calls": 2586,
+            "successful_calls": 2586,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "pread64": {
+            "calls": 6,
+            "successful_calls": 6,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "setsockopt": {
+            "calls": 367,
+            "successful_calls": 367,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "recvfrom": {
+            "calls": 674,
+            "successful_calls": 649,
+            "tcp_successful_calls": 647,
+            "tcp_received_bytes": 3569083
+          },
+          "recvmsg": {
+            "calls": 2,
+            "successful_calls": 2,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "getsockopt": {
+            "calls": 11,
+            "successful_calls": 11,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          }
+        },
+        "reconstructed_unfinished_resumed_pairs": 537,
+        "unresolved_records": [],
+        "coverage_ambiguities": [],
+        "coverage_complete_for_observed_receive_paths": true,
+        "positive_tcp_receive_calls": 647,
+        "trace_sha256": "a2ddf7ecf7efb88f13a5ab46c1788d204d53d199172250c730f0067b658bd43a",
+        "trace_bytes": 660922
+      }
+    },
+    {
+      "reader": "polars_native_http_equality",
+      "predicate_kind": "numeric_equality",
+      "matches_checked_reference": true,
+      "less_than_full_file_transport_demonstrated": false,
+      "transport": {
+        "tcp_received_bytes": 3576153,
+        "syscall_counts": {
+          "read": {
+            "calls": 2577,
+            "successful_calls": 2577,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "pread64": {
+            "calls": 6,
+            "successful_calls": 6,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "setsockopt": {
+            "calls": 397,
+            "successful_calls": 397,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "recvfrom": {
+            "calls": 796,
+            "successful_calls": 781,
+            "tcp_successful_calls": 779,
+            "tcp_received_bytes": 3576153
+          },
+          "recvmsg": {
+            "calls": 2,
+            "successful_calls": 2,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "getsockopt": {
+            "calls": 11,
+            "successful_calls": 11,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          }
+        },
+        "reconstructed_unfinished_resumed_pairs": 548,
+        "unresolved_records": [],
+        "coverage_ambiguities": [],
+        "coverage_complete_for_observed_receive_paths": true,
+        "positive_tcp_receive_calls": 779,
+        "trace_sha256": "b3a22107f538d37717e3f749cf9fdfa435797263c22d7fb533d97047b54b9985",
+        "trace_bytes": 688812
+      }
+    },
+    {
+      "reader": "polars_sql_native_http_equality",
+      "predicate_kind": "numeric_equality",
+      "matches_checked_reference": true,
+      "less_than_full_file_transport_demonstrated": false,
+      "transport": {
+        "tcp_received_bytes": 3579167,
+        "syscall_counts": {
+          "read": {
+            "calls": 2587,
+            "successful_calls": 2587,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "pread64": {
+            "calls": 6,
+            "successful_calls": 6,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "setsockopt": {
+            "calls": 397,
+            "successful_calls": 397,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "recvfrom": {
+            "calls": 674,
+            "successful_calls": 652,
+            "tcp_successful_calls": 650,
+            "tcp_received_bytes": 3579167
+          },
+          "recvmsg": {
+            "calls": 2,
+            "successful_calls": 2,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          },
+          "getsockopt": {
+            "calls": 11,
+            "successful_calls": 11,
+            "tcp_successful_calls": 0,
+            "tcp_received_bytes": 0
+          }
+        },
+        "reconstructed_unfinished_resumed_pairs": 546,
+        "unresolved_records": [],
+        "coverage_ambiguities": [],
+        "coverage_complete_for_observed_receive_paths": true,
+        "positive_tcp_receive_calls": 650,
+        "trace_sha256": "3cc60255d2faa300cf664c2adfe744b4b8dbcefc1ed3d231084ab4824eae3465",
+        "trace_bytes": 666090
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "packages": {
+    "pylance": "14.0.2",
+    "lancedb": "0.41.0",
+    "duckdb": "2.0.0",
+    "pyarrow": "26.0.1",
+    "fsspec": "2026.9.0",
+    "aiohttp": "3.14.5"
+  },
+  "scope": "Public Zenodo URI-provider and standard Python adapter capability; bounded public archive subset controls; no PPDS payload access or remote writes.",
+  "verdict": {
+    "native_public_https": "UNSUPPORTED in these installed versions: all tested APIs reject https at object-store provider selection before any INET connect, including standalone LanceFileReader and DuckDB after registering fsspec HTTP filesystem.",
+    "s3_endpoint_alias": "TRANSPORT PASS: native LanceFileSession reads exact Zenodo prefix/tail ranges through anonymous path-style S3 endpoint configuration. No custom bridge required. Successful valid standalone Lance payload read remains NOT TESTED; the public fixture is a ZIP of legacy files.",
+    "standard_python_adapters": "REJECTED: tested file-like handles and PyArrow filesystem keyword are not accepted by installed APIs; fsspec zip chain URI is not a native Lance provider.",
+    "public_fixture": "FOUND and validated as legacy Lance through native table readers after selective local extraction; this is a download-and-read control, not direct remote querying.",
+    "unpacked_public_https_valid_lance_payload": "NOT TESTED: no top-level .lance fixture or exposed Lance table directory located within bounded search. Actual Zenodo archive URL exercises provider selection only.",
+    "custom_bridge": "NOT TESTED; no custom S3/HTTP bridge or custom Rust provider implemented."
+  }
+}

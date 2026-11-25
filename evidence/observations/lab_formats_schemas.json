@@ -1,0 +1,165 @@
+{
+  "tables": {
+    "footprints": {
+      "parquet_annotation_keys": 1,
+      "readers": {
+        "sql_duckdb": {
+          "same_field_names": true,
+          "same_types": true,
+          "matching_annotations": 0
+        },
+        "vortex": {
+          "same_field_names": true,
+          "same_types": false,
+          "matching_annotations": 0
+        },
+        "vortex_compact": {
+          "same_field_names": true,
+          "same_types": false,
+          "matching_annotations": 0
+        }
+      }
+    },
+    "grf": {
+      "parquet_annotation_keys": 1,
+      "readers": {
+        "sql_duckdb": {
+          "same_field_names": true,
+          "same_types": true,
+          "matching_annotations": 0
+        },
+        "vortex": {
+          "same_field_names": true,
+          "same_types": false,
+          "matching_annotations": 0
+        },
+        "vortex_compact": {
+          "same_field_names": true,
+          "same_types": false,
+          "matching_annotations": 0
+        }
+      }
+    },
+    "grf_cycle": {
+      "parquet_annotation_keys": 1,
+      "readers": {
+        "sql_duckdb": {
+          "same_field_names": true,
+          "same_types": true,
+          "matching_annotations": 0
+        },
+        "vortex": {
+          "same_field_names": true,
+          "same_types": false,
+          "matching_annotations": 0
+        },
+        "vortex_compact": {
+          "same_field_names": true,
+          "same_types": false,
+          "matching_annotations": 0
+        }
+      }
+    },
+    "pressure": {
+      "parquet_annotation_keys": 4,
+      "readers": {
+        "sql_duckdb": {
+          "same_field_names": true,
+          "same_types": true,
+          "matching_annotations": 0
+        },
+        "vortex": {
+          "same_field_names": true,
+          "same_types": true,
+          "matching_annotations": 0
+        },
+        "vortex_compact": {
+          "same_field_names": true,
+          "same_types": true,
+          "matching_annotations": 0
+        }
+      }
+    },
+    "scans": {
+      "parquet_annotation_keys": 0,
+      "readers": {
+        "sql_duckdb": {
+          "same_field_names": true,
+          "same_types": true,
+          "matching_annotations": 0
+        },
+        "vortex": {
+          "same_field_names": true,
+          "same_types": false,
+          "matching_annotations": 0
+        },
+        "vortex_compact": {
+          "same_field_names": true,
+          "same_types": false,
+          "matching_annotations": 0
+        }
+      }
+    },
+    "spatiotemporal": {
+      "parquet_annotation_keys": 1,
+      "readers": {
+        "sql_duckdb": {
+          "same_field_names": true,
+          "same_types": true,
+          "matching_annotations": 0
+        },
+        "vortex": {
+          "same_field_names": true,
+          "same_types": false,
+          "matching_annotations": 0
+        },
+        "vortex_compact": {
+          "same_field_names": true,
+          "same_types": false,
+          "matching_annotations": 0
+        }
+      }
+    },
+    "subjects": {
+      "parquet_annotation_keys": 1,
+      "readers": {
+        "sql_duckdb": {
+          "same_field_names": true,
+          "same_types": true,
+          "matching_annotations": 0
+        },
+        "vortex": {
+          "same_field_names": true,
+          "same_types": false,
+          "matching_annotations": 0
+        },
+        "vortex_compact": {
+          "same_field_names": true,
+          "same_types": false,
+          "matching_annotations": 0
+        }
+      }
+    },
+    "trials": {
+      "parquet_annotation_keys": 0,
+      "readers": {
+        "sql_duckdb": {
+          "same_field_names": true,
+          "same_types": true,
+          "matching_annotations": 0
+        },
+        "vortex": {
+          "same_field_names": true,
+          "same_types": false,
+          "matching_annotations": 0
+        },
+        "vortex_compact": {
+          "same_field_names": true,
+          "same_types": false,
+          "matching_annotations": 0
+        }
+      }
+    }
+  },
+  "definition": "Source table-level and field-level key/value annotations, counted separately per field. Parquet file schema, native SQL result schema and Vortex dtype schema are the observed public surfaces."
+}

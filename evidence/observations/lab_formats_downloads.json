@@ -1,0 +1,164 @@
+{
+  "date": "2026-11-21T22:54:48.156276+00:00",
+  "measurement": "Sequential HTTPS GET and streaming SHA-256 of every file. Two repetitions per package on loopback.",
+  "files": {
+    "parquet/footprints.parquet": {
+      "bytes": 40736905,
+      "sha256": "ab874c69624434205e01fd78d9c19630b95d9cafb8ebb2094c53db41585adf32"
+    },
+    "parquet/grf.parquet": {
+      "bytes": 6455696,
+      "sha256": "3dd302eff7ca10636d5cdeee676fe080a16543f3e9c405ea51abb77b565efb87"
+    },
+    "parquet/grf_cycle.parquet": {
+      "bytes": 432045,
+      "sha256": "403d00e20a8c9c0b821f4c33addc9cf4d7c1f51e3786e228c3f1db0f7b4e0b18"
+    },
+    "parquet/pressure.parquet": {
+      "bytes": 124162610,
+      "sha256": "07b7f6a218ede17b88e1e94467cfe71183b50cffe94b59eb399d61f533fbf18c"
+    },
+    "parquet/scans.parquet": {
+      "bytes": 217951896,
+      "sha256": "50395b682bf62083aec0cb68771e798d6388bd5a29a3854b3e3d34211f625867"
+    },
+    "parquet/spatiotemporal.parquet": {
+      "bytes": 144957,
+      "sha256": "e6cbb8381e69b001ed2f9154f7372728df92465e2c321551aa7675f1b41ef6e0"
+    },
+    "parquet/subjects.parquet": {
+      "bytes": 22349,
+      "sha256": "7951e60108f281f389ce6f547eafbd6ff4b7afed0f35248ed0d9f56bca83f907"
+    },
+    "parquet/trials.parquet": {
+      "bytes": 28745,
+      "sha256": "537f329ae5b738967ae917028d68d679d7204bb241cd399e4f9cb620d2dac6fd"
+    },
+    "ppds.duckdb": {
+      "bytes": 599011328,
+      "sha256": "683d4143c8bbcfc37eacee621b66ff49130332d157fc55fe85e45e6a96caa272"
+    },
+    "vortex/footprints.vortex": {
+      "bytes": 33950256,
+      "sha256": "52f03db70a3ee826b2ab44eb479172a4b0d697962e3be9a7fdd81ed48618a78c"
+    },
+    "vortex/grf.vortex": {
+      "bytes": 10639524,
+      "sha256": "4c0bd81a6dc6b96a2e9e44581c8405d73c8f814169d43606036e4310c55f1ef7"
+    },
+    "vortex/grf_cycle.vortex": {
+      "bytes": 444296,
+      "sha256": "6d018a332d57cce70f1e23e2b97ee4eba7bec1a9c045db5355b3db06de94cac7"
+    },
+    "vortex/pressure.vortex": {
+      "bytes": 245598524,
+      "sha256": "3600492f420cb84b5ce82770e81b3542495b55609defd9d2f5937d22572ce88c"
+    },
+    "vortex/scans.vortex": {
+      "bytes": 491916088,
+      "sha256": "433a787aa96663a957ec7050bef918f4432e9ae2febf34b69cf688db48139da8"
+    },
+    "vortex/spatiotemporal.vortex": {
+      "bytes": 183648,
+      "sha256": "69e0ffac8f64d7ae8228a39046d2733b7e29c881a40dbf4a22ed3d33712b5dc2"
+    },
+    "vortex/subjects.vortex": {
+      "bytes": 47824,
+      "sha256": "20de325a8826dbd46a749a6d9b53680ffbe04c1ffe33de03256e8441acf4045f"
+    },
+    "vortex/trials.vortex": {
+      "bytes": 27284,
+      "sha256": "a56708bf25c0088317c2844d479a6eb04210b25ad28bdfd201751cef5f34a49c"
+    },
+    "vortex_compact/footprints.vortex": {
+      "bytes": 31912960,
+      "sha256": "e8f4f2b39e5d07cea9a3f3a7d809295ad7bb1a76c7d893159ff7675e581380eb"
+    },
+    "vortex_compact/grf.vortex": {
+      "bytes": 3582156,
+      "sha256": "39f14a6f499ad71743fc057b92431deaac1a661493c387c98251c62236ba80ab"
+    },
+    "vortex_compact/grf_cycle.vortex": {
+      "bytes": 274344,
+      "sha256": "38b2846d3803a7c3449ceec3bcac94a52ce2b4b93ea42dde3ebc6387c066009d"
+    },
+    "vortex_compact/pressure.vortex": {
+      "bytes": 131587388,
+      "sha256": "a1bc012671b27966a4f79a543c4d1706218ec70dfa8e06446698610dad30a1b6"
+    },
+    "vortex_compact/scans.vortex": {
+      "bytes": 233376808,
+      "sha256": "ce0c78667b4b1c7801b623f8570c34059e242a8153a3967a0a7494c604a51e7b"
+    },
+    "vortex_compact/spatiotemporal.vortex": {
+      "bytes": 102608,
+      "sha256": "231c0ba2f010df2548030ec3f91b6f67c9b3dd0e94fb61ba9ef9cb777bcd9e6d"
+    },
+    "vortex_compact/subjects.vortex": {
+      "bytes": 38872,
+      "sha256": "3eba0b8b203ca447c66a47b17c711d7c74e671ae73985e1ed1fb9323a6433e84"
+    },
+    "vortex_compact/trials.vortex": {
+      "bytes": 17548,
+      "sha256": "287fd138e82d46bcaf883b8b79d7fda1686600e7a24c85e51d0ac43e2a19a76a"
+    }
+  },
+  "runs": [
+    {
+      "format": "vortex_compact",
+      "seconds": 0.9798867439385504,
+      "bytes": 400892684,
+      "get_requests": 8,
+      "matches": true
+    },
+    {
+      "format": "vortex_compact",
+      "seconds": 1.0174549029907212,
+      "bytes": 400892684,
+      "get_requests": 8,
+      "matches": true
+    },
+    {
+      "format": "parquet",
+      "seconds": 0.9821303369244561,
+      "bytes": 389935203,
+      "get_requests": 8,
+      "matches": true
+    },
+    {
+      "format": "duckdb",
+      "seconds": 1.4624223440187052,
+      "bytes": 599011328,
+      "get_requests": 1,
+      "matches": true
+    },
+    {
+      "format": "vortex",
+      "seconds": 1.9604800469242036,
+      "bytes": 782807444,
+      "get_requests": 8,
+      "matches": true
+    },
+    {
+      "format": "vortex",
+      "seconds": 1.950121848960407,
+      "bytes": 782807444,
+      "get_requests": 8,
+      "matches": true
+    },
+    {
+      "format": "duckdb",
+      "seconds": 1.5080666929716244,
+      "bytes": 599011328,
+      "get_requests": 1,
+      "matches": true
+    },
+    {
+      "format": "parquet",
+      "seconds": 1.0068285840097815,
+      "bytes": 389935203,
+      "get_requests": 8,
+      "matches": true
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "main_series": [
+    {
+      "series": "local",
+      "successful_accesses": 440,
+      "expected_uri_failures": 0
+    },
+    {
+      "series": "aggregate",
+      "successful_accesses": 36,
+      "expected_uri_failures": 0
+    },
+    {
+      "series": "blob_local",
+      "successful_accesses": 5,
+      "expected_uri_failures": 0
+    },
+    {
+      "series": "short_trial",
+      "successful_accesses": 33,
+      "expected_uri_failures": 0
+    },
+    {
+      "series": "long_trial",
+      "successful_accesses": 33,
+      "expected_uri_failures": 0
+    },
+    {
+      "series": "http",
+      "successful_accesses": 192,
+      "expected_uri_failures": 0
+    },
+    {
+      "series": "http_20ms",
+      "successful_accesses": 96,
+      "expected_uri_failures": 0
+    },
+    {
+      "series": "pandas_url",
+      "successful_accesses": 3,
+      "expected_uri_failures": 0
+    },
+    {
+      "series": "lance_http_capability",
+      "successful_accesses": 0,
+      "expected_uri_failures": 8
+    },
+    {
+      "series": "subset_local",
+      "successful_accesses": 33,
+      "expected_uri_failures": 0
+    },
+    {
+      "series": "subset_http",
+      "successful_accesses": 24,
+      "expected_uri_failures": 0
+    },
+    {
+      "series": "s3",
+      "successful_accesses": 60,
+      "expected_uri_failures": 0
+    },
+    {
+      "series": "s3_20ms",
+      "successful_accesses": 30,
+      "expected_uri_failures": 0
+    },
+    {
+      "series": "memory",
+      "successful_accesses": 33,
+      "expected_uri_failures": 0
+    },
+    {
+      "series": "memory_pandas_batches",
+      "successful_accesses": 1,
+      "expected_uri_failures": 0
+    }
+  ],
+  "matching_successful_accesses": 1019,
+  "intentional_unsupported_uri_attempts": 8,
+  "scientific_verification": {
+    "pressure_full_sha256": true,
+    "pressure_scientific_schema": true,
+    "standing_scientific_schema": true,
+    "standing_values": true,
+    "subjects_scientific_schema": true,
+    "subjects_values": true,
+    "trials_scientific_schema": true,
+    "trials_values": true,
+    "footprints_scientific_schema": true,
+    "footprints_values": true,
+    "spatiotemporal_scientific_schema": true,
+    "spatiotemporal_values": true,
+    "grf_scientific_schema": true,
+    "grf_values": true,
+    "grf_cycle_scientific_schema": true,
+    "grf_cycle_values": true,
+    "scans_scientific_schema": true,
+    "all_scans_binary_and_blob_sha256": true,
+    "trial_parquet_export_values_types_metadata": true,
+    "source_files_unchanged": true
+  },
+  "reliability_probe": {
+    "all_routes_completed": true,
+    "default_values_and_binary_exact": true,
+    "explicit_contract_exports_exact": true,
+    "all_expected_failures_rejected": true,
+    "probe_execution_passed": true
+  },
+  "zenodo_followup": {
+    "verified_at_utc": "2026-11-13T20:25:09.606913+00:00",
+    "source_files_unchanged_sha256": 296,
+    "candidate_formats": [
+      "Parquet",
+      "native DuckDB",
+      "HDF5",
+      "Zarr ZIP",
+      "Lance/LanceDB",
+      "SQLite"
+    ],
+    "parquet_fresh_process_accesses": 18,
+    "parquet_all_match_checksum_verified_local_reference": true,
+    "parquet_range_only_partial_accesses": 6,
+    "native_duckdb_real_zenodo_query_passed": true,
+    "hdf5_and_zarr_real_zenodo_slices_passed": true,
+    "whole_file_md5_verified_fixtures": 5,
+    "lance_raw_https_provider_rejections": 6,
+    "lance_native_s3_endpoint_zenodo_byte_transport_passed": true,
+    "lance_valid_unpacked_remote_dataset_query": "not tested; no suitable public unpacked fixture located",
+    "polars_socket_cases": 5,
+    "polars_socket_all_match_checked_reference": true,
+    "polars_socket_coverage_review_passed": true,
+    "polars_native_transfer_below_file_size_demonstrated": false,
+    "polars_whole_file_http_payload_proven": false,
+    "marimo_version": "0.25.2",
+    "marimo_real_remote_reader_paths_passed": 7,
+    "marimo_headless_html_export_verified": true,
+    "marimo_browser_or_reactive_reruns_tested": false,
+    "sqlite_packaged_web_vfs_attempts_http403": 2,
+    "sqlite_independent_python_range_and_checked_local_queries_passed": true,
+    "sqlite_remote_query_bytes": "unknown",
+    "new_zenodo_uploads": 0,
+    "new_results_included_in_original_985_timing_total": false,
+    "access_report_sha256": "853cb52616c24f1d7a869c3d1ae9cf2a944b277fdb046b38bdb3800e500bd8b6",
+    "evidence_sha256": {
+      "docs/benchmarks/zenodo_array_probe.json": "6aec2a7993ea5959a0681dc42bae37756bdbd5a111a0825aca01072a368e4886",
+      "docs/benchmarks/zenodo_duckdb_probe.json": "458ad8f3be5263e6b09f95c385e0e509ed832e57b4412f5f2ddcf64c31f91332",
+      "docs/benchmarks/zenodo_lance_probe.json": "f5ae336f87af52c04d9f85590208db6a1a05054558c88df8205786a3c03d0176",
+      "docs/benchmarks/zenodo_marimo_smoke.json": "7bac20e8775a783f9d9524b78761a721f1dbe54cbfe06305cd4c36c568ec3d7b",
+      "docs/benchmarks/zenodo_parquet_followup_checks.json": "2d1baeacc33fdfa10dca3855c0da280519ef6775f77e8070600eda4ca21aee7a",
+      "docs/benchmarks/zenodo_parquet_matrix.json": "f66f5e8acb4d844db7ac40514f3aac81fdfd15dc56c22592560545c74a200996",
+      "docs/benchmarks/zenodo_polars_socket_probe.json": "aafa96f7067cb314cdbb66f9d5f15ded43f023735483bf08ee46f8a3bfcbab37",
+      "docs/benchmarks/zenodo_polars_transport_probe.json": "92dc37ac237fded396dd16151d713bb61cbff9597f067942509cde8b01169ff9",
+      "docs/benchmarks/zenodo_reader_probe.json": "2ccc704651a8d560c90bfd2668fad748239d4826d16a2c9171f980a3687282f7",
+      "docs/benchmarks/zenodo_sqlite_probe.json": "10b86022a622fa415c4b45ecbc43344548b7d033e3f82c3e0643447f8f15c59c",
+      "benchmarks/zenodo_array_probe.py": "36549eb46c2036ad7163a3c22e4b3bcfd87376cfbf6c7ed6ee2f52982a960025",
+      "benchmarks/zenodo_duckdb_probe.py": "1b11e3b234f921e91736872f571db1cca6f479b1bddcaeee74cf1dfcf0ea8b2f",
+      "benchmarks/zenodo_lance_probe.py": "2805bcf4490e6c19b722447b63f739347bb4e1347408eec241fba3c7b95239d9",
+      "benchmarks/zenodo_marimo_smoke.py": "0ee1ea425c377bedf956ad1e2ec1240d1a554797c565c3cd768530e008bae99b",
+      "benchmarks/zenodo_parquet_matrix.py": "ecf68052e73c48302ce7e5f7452ece4817f140d7751183ca30ee59804c4943f7",
+      "benchmarks/zenodo_polars_socket_probe.py": "3e536261b5984df1f87993a034d0f523c291297f4cbc721a602d11cbfd5d5710",
+      "benchmarks/zenodo_polars_transport_probe.py": "8188514cf7b63aa721d32dc89ce0029789dcfaacbb80f9761b855c6eb8d37fb0",
+      "benchmarks/zenodo_reader_probe.py": "6adb1417a3542931c8f600747dfc03b09e0e1f0c6c2655ffaa2b43631ea771cd",
+      "benchmarks/zenodo_sqlite_probe.py": "a759d84e447beb7751f7ed8a491609d4870bb8b4794ee18cfaa95489cf6f1d6f"
+    }
+  }
+}

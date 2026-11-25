@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "all_routes_completed": true,
+    "default_values_and_binary_exact": true,
+    "explicit_contract_exports_exact": true,
+    "all_expected_failures_rejected": true,
+    "probe_execution_passed": true
+  },
+  "limitations": [
+    "A small synthetic contract probe, not a general reliability ranking or failure-rate study",
+    "Only these types, null patterns and finite float values are tested; not every PPDS table/type",
+    "Binary columns are ordinary payload bytes, not Lance Blob v2 descriptors or external references",
+    "Truncation removes the final 8 Parquet bytes; missing Lance files are deleted only from temporary copies",
+    "No hosted access, concurrent writes, optional extensions, process crashes or power-loss recovery tested"
+  ],
+  "failure_probes": [
+    {
+      "probe": "truncated_parquet/pyarrow",
+      "rejected": true
+    },
+    {
+      "probe": "truncated_parquet/pandas",
+      "rejected": true
+    },
+    {
+      "probe": "truncated_parquet/polars",
+      "rejected": true
+    },
+    {
+      "probe": "truncated_parquet/duckdb",
+      "rejected": true
+    },
+    {
+      "probe": "missing_lance_data/lance",
+      "rejected": true
+    },
+    {
+      "probe": "missing_lance_data/lancedb",
+      "rejected": true
+    }
+  ]
+}

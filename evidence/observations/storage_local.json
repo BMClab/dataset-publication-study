@@ -1,0 +1,7827 @@
+{
+  "manifest": {
+    "scope": "complete",
+    "products": {
+      "parquet_trial": {
+        "path": "pressure_trial.parquet",
+        "bytes": 132513536,
+        "write_seconds": 36.06386532529723,
+        "row_groups": 3188
+      },
+      "parquet_128k": {
+        "path": "pressure_128k.parquet",
+        "bytes": 123176276,
+        "write_seconds": 31.231021017068997,
+        "row_groups": 885
+      },
+      "hdf5": {
+        "path": "pressure.h5",
+        "bytes": 150324544,
+        "write_seconds": 286.15242434851825,
+        "chunks": [
+          64,
+          353,
+          64
+        ]
+      },
+      "zarr": {
+        "path": "pressure.zarr.zip",
+        "bytes": 229763944,
+        "write_seconds": 92.17122882278636,
+        "chunks": [
+          64,
+          353,
+          64
+        ]
+      },
+      "duckdb": {
+        "path": "pressure.duckdb",
+        "bytes": 347353088,
+        "build_seconds": 23.419365871930495
+      },
+      "baseline": {
+        "files": 98,
+        "bytes": 132814351
+      },
+      "complete_parquet": {
+        "bytes": 395769040,
+        "files": 9,
+        "scan_build_seconds": 19.091754514025524
+      },
+      "complete_duckdb": {
+        "path": "complete.duckdb",
+        "bytes": 633090048,
+        "files": 1,
+        "additional_build_seconds": 14.11267683294136
+      },
+      "pressure_package_extra_parquet_bytes": 95569
+    },
+    "target": {
+      "trial_id": 1507,
+      "row_group": 12,
+      "subject": "s050",
+      "condition": "wc",
+      "trial": 3,
+      "n_frames": 280,
+      "duration_s": 2.8,
+      "n_cells": 32266,
+      "frame": 140
+    },
+    "threads": 4,
+    "chunk_frames": 64,
+    "n_trials": 3188,
+    "n_frames": 867585,
+    "n_pressure_rows": 109852252,
+    "dense_bytes": 39200960640,
+    "dense_sha256": "4020b81d73e14388d7a9153be4cdba6d5016d8aa24c0d9d635f205086f790d11",
+    "sparse_sha256": "8f2213c4a3409e94a0944d6f1fe8cf5dcbe07d4d8d9d0822b987ea27214bce86",
+    "versions": {
+      "duckdb": "2.0.0",
+      "pyarrow": "26.0.1",
+      "numpy": "2.5.4",
+      "h5py": "3.16.0",
+      "zarr": "3.4.2",
+      "fsspec": "2026.9.0",
+      "psutil": "7.2.2"
+    },
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-7.0.0-43-generic-x86_64-with-glibc2.43",
+    "machine": {
+      "cpus": 16,
+      "memory_bytes": 65746612224,
+      "load_average": [
+        38.43505859375,
+        35.033203125,
+        31.3662109375
+      ]
+    }
+  },
+  "run_config": {
+    "started_utc": "2026-11-13T06:59:34.102209+00:00",
+    "benchmark_script_sha256": "07b4067ab5dea3fd876eebb1aa35054e7f2718352a8093a3165aa91de7d97be6",
+    "repetitions": 5,
+    "aggregate_repetitions": 1,
+    "formats": [
+      "baseline",
+      "parquet_trial",
+      "parquet_indexed",
+      "parquet_128k",
+      "parquet_duckdb",
+      "parquet_128k_duckdb",
+      "duckdb",
+      "hdf5",
+      "zarr"
+    ],
+    "queries": [
+      "frame",
+      "trial",
+      "subject",
+      "standing"
+    ],
+    "http_latency_ms": null,
+    "load_average_at_start": [
+      17.4111328125,
+      28.9990234375,
+      31.42919921875
+    ]
+  },
+  "records": [
+    {
+      "open_s": 0.012692858930677176,
+      "query_s": 0.010200334014371037,
+      "total_s": 0.022893192945048213,
+      "peak_rss_mib": 183.31640625,
+      "initial_rss_mib": 96.96484375,
+      "incremental_peak_rss_mib": 86.3515625,
+      "dependency_setup_s": 0.05084978404920548,
+      "warm_query_s": [
+        0.0081425029784441,
+        0.007629378000274301
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.4111328125,
+        28.9990234375,
+        31.42919921875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "frame",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.015328124980442226,
+      "query_s": 0.010251965024508536,
+      "total_s": 0.025580090004950762,
+      "peak_rss_mib": 170.9453125,
+      "initial_rss_mib": 97.01953125,
+      "incremental_peak_rss_mib": 73.92578125,
+      "dependency_setup_s": 0.06318424094934016,
+      "warm_query_s": [
+        0.008250102051533759,
+        0.007622016011737287
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.4111328125,
+        28.9990234375,
+        31.42919921875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "frame",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.010330625926144421,
+      "query_s": 0.009232051088474691,
+      "total_s": 0.019562677014619112,
+      "peak_rss_mib": 173.05859375,
+      "initial_rss_mib": 96.92578125,
+      "incremental_peak_rss_mib": 76.1328125,
+      "dependency_setup_s": 0.044096788042224944,
+      "warm_query_s": [
+        0.007154094986617565,
+        0.006368901929818094
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.4111328125,
+        28.9990234375,
+        31.42919921875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "frame",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01200497499667108,
+      "query_s": 0.007310390006750822,
+      "total_s": 0.019315365003421903,
+      "peak_rss_mib": 174.96875,
+      "initial_rss_mib": 96.921875,
+      "incremental_peak_rss_mib": 78.046875,
+      "dependency_setup_s": 0.04395020904485136,
+      "warm_query_s": [
+        0.009151595062576234,
+        0.008777500945143402
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.4111328125,
+        28.9990234375,
+        31.42919921875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "frame",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.011791276978328824,
+      "query_s": 0.009715314023196697,
+      "total_s": 0.02150659100152552,
+      "peak_rss_mib": 171.16796875,
+      "initial_rss_mib": 96.9765625,
+      "incremental_peak_rss_mib": 74.19140625,
+      "dependency_setup_s": 0.04479845194146037,
+      "warm_query_s": [
+        0.006271534017287195,
+        0.005667623016051948
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.4111328125,
+        28.9990234375,
+        31.42919921875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "frame",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01033451093826443,
+      "query_s": 0.07111432298552245,
+      "total_s": 0.08144883392378688,
+      "peak_rss_mib": 194.2109375,
+      "initial_rss_mib": 97.03125,
+      "incremental_peak_rss_mib": 97.1796875,
+      "dependency_setup_s": 0.05926927307154983,
+      "warm_query_s": [
+        0.05107036407571286,
+        0.05109119205735624
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.4111328125,
+        28.9990234375,
+        31.42919921875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "frame",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012382234912365675,
+      "query_s": 0.1218492150073871,
+      "total_s": 0.13423144991975278,
+      "peak_rss_mib": 198.390625,
+      "initial_rss_mib": 97.0859375,
+      "incremental_peak_rss_mib": 101.3046875,
+      "dependency_setup_s": 0.04358804109506309,
+      "warm_query_s": [
+        0.06574277300387621,
+        0.054760265978984535
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.4111328125,
+        28.9990234375,
+        31.42919921875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "frame",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.015047135995700955,
+      "query_s": 0.1206658580340445,
+      "total_s": 0.13571299402974546,
+      "peak_rss_mib": 196.4296875,
+      "initial_rss_mib": 97.0859375,
+      "incremental_peak_rss_mib": 99.34375,
+      "dependency_setup_s": 0.06702538498211652,
+      "warm_query_s": [
+        0.06951125198975205,
+        0.06208776996936649
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.4111328125,
+        28.9990234375,
+        31.42919921875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "frame",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014709181967191398,
+      "query_s": 0.12061624997295439,
+      "total_s": 0.1353254319401458,
+      "peak_rss_mib": 196.17578125,
+      "initial_rss_mib": 96.96875,
+      "incremental_peak_rss_mib": 99.20703125,
+      "dependency_setup_s": 0.06419431394897401,
+      "warm_query_s": [
+        0.08462112001143396,
+        0.08262397104408592
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.9775390625,
+        28.716796875,
+        31.32470703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "frame",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01672382897231728,
+      "query_s": 0.11768562800716609,
+      "total_s": 0.13440945697948337,
+      "peak_rss_mib": 196.0078125,
+      "initial_rss_mib": 96.93359375,
+      "incremental_peak_rss_mib": 99.07421875,
+      "dependency_setup_s": 0.06465638999361545,
+      "warm_query_s": [
+        0.08172276697587222,
+        0.08379209600389004
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.9775390625,
+        28.716796875,
+        31.32470703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "frame",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.015048246015794575,
+      "query_s": 0.0419094410026446,
+      "total_s": 0.056957687018439174,
+      "peak_rss_mib": 194.01171875,
+      "initial_rss_mib": 96.94921875,
+      "incremental_peak_rss_mib": 97.0625,
+      "dependency_setup_s": 0.06400304497219622,
+      "warm_query_s": [
+        0.006438868003897369,
+        0.005461235996335745
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.9775390625,
+        28.716796875,
+        31.32470703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "frame",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014818363008089364,
+      "query_s": 0.046709294081665576,
+      "total_s": 0.06152765708975494,
+      "peak_rss_mib": 202.40625,
+      "initial_rss_mib": 97.05078125,
+      "incremental_peak_rss_mib": 105.35546875,
+      "dependency_setup_s": 0.06277247203979641,
+      "warm_query_s": [
+        0.00659342494327575,
+        0.0071733989752829075
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.9775390625,
+        28.716796875,
+        31.32470703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "frame",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.015253297053277493,
+      "query_s": 0.04281248990446329,
+      "total_s": 0.058065786957740784,
+      "peak_rss_mib": 188.16796875,
+      "initial_rss_mib": 96.984375,
+      "incremental_peak_rss_mib": 91.18359375,
+      "dependency_setup_s": 0.06431604700628668,
+      "warm_query_s": [
+        0.005967697943560779,
+        0.007033728063106537
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.9775390625,
+        28.716796875,
+        31.32470703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "frame",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.010411710012704134,
+      "query_s": 0.027363931061699986,
+      "total_s": 0.03777564107440412,
+      "peak_rss_mib": 192.28125,
+      "initial_rss_mib": 96.9921875,
+      "incremental_peak_rss_mib": 95.2890625,
+      "dependency_setup_s": 0.04390563897322863,
+      "warm_query_s": [
+        0.004656150937080383,
+        0.005695120897144079
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.9775390625,
+        28.716796875,
+        31.32470703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "frame",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01266986201517284,
+      "query_s": 0.0321747160051018,
+      "total_s": 0.04484457802027464,
+      "peak_rss_mib": 196.33203125,
+      "initial_rss_mib": 97.03125,
+      "incremental_peak_rss_mib": 99.30078125,
+      "dependency_setup_s": 0.05265599593985826,
+      "warm_query_s": [
+        0.0053710900247097015,
+        0.005323304096236825
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.9775390625,
+        28.716796875,
+        31.32470703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "frame",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014977857004851103,
+      "query_s": 0.06974323198664933,
+      "total_s": 0.08472108899150044,
+      "peak_rss_mib": 222.9453125,
+      "initial_rss_mib": 97.03125,
+      "incremental_peak_rss_mib": 125.9140625,
+      "dependency_setup_s": 0.0572467289166525,
+      "warm_query_s": [
+        0.06533305300399661,
+        0.05491210101172328
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.9775390625,
+        28.716796875,
+        31.32470703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "frame",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014643755974248052,
+      "query_s": 0.06446724303532392,
+      "total_s": 0.07911099900957197,
+      "peak_rss_mib": 241.17578125,
+      "initial_rss_mib": 97.0859375,
+      "incremental_peak_rss_mib": 144.08984375,
+      "dependency_setup_s": 0.0652907140320167,
+      "warm_query_s": [
+        0.05965257796924561,
+        0.05523699498735368
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.9775390625,
+        28.716796875,
+        31.32470703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "frame",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014992555021308362,
+      "query_s": 0.058154641068540514,
+      "total_s": 0.07314719608984888,
+      "peak_rss_mib": 231.40625,
+      "initial_rss_mib": 97.19140625,
+      "incremental_peak_rss_mib": 134.21484375,
+      "dependency_setup_s": 0.051175941014662385,
+      "warm_query_s": [
+        0.04370863805525005,
+        0.047799110994674265
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.9775390625,
+        28.716796875,
+        31.32470703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "frame",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012925224960781634,
+      "query_s": 0.06995378399733454,
+      "total_s": 0.08287900895811617,
+      "peak_rss_mib": 223.16015625,
+      "initial_rss_mib": 96.98046875,
+      "incremental_peak_rss_mib": 126.1796875,
+      "dependency_setup_s": 0.051010638009756804,
+      "warm_query_s": [
+        0.047096722992137074,
+        0.046366879949346185
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.57861328125,
+        28.43896484375,
+        31.220703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "frame",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014850531937554479,
+      "query_s": 0.07956588210072368,
+      "total_s": 0.09441641403827816,
+      "peak_rss_mib": 238.96484375,
+      "initial_rss_mib": 97.03515625,
+      "incremental_peak_rss_mib": 141.9296875,
+      "dependency_setup_s": 0.0506586889969185,
+      "warm_query_s": [
+        0.05247877398505807,
+        0.05405613000039011
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.57861328125,
+        28.43896484375,
+        31.220703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "frame",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.12179374694824219,
+      "query_s": 0.2633566070580855,
+      "total_s": 0.3851503540063277,
+      "peak_rss_mib": 170.75390625,
+      "initial_rss_mib": 96.9375,
+      "incremental_peak_rss_mib": 73.81640625,
+      "dependency_setup_s": 0.05069462303072214,
+      "warm_query_s": [
+        0.24659829097799957,
+        0.16805059695616364
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.57861328125,
+        28.43896484375,
+        31.220703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "frame",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.11328513291664422,
+      "query_s": 0.2632978870533407,
+      "total_s": 0.3765830199699849,
+      "peak_rss_mib": 170.57421875,
+      "initial_rss_mib": 96.9921875,
+      "incremental_peak_rss_mib": 73.58203125,
+      "dependency_setup_s": 0.04603279591538012,
+      "warm_query_s": [
+        0.25034633197356015,
+        0.20564920001197606
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.57861328125,
+        28.43896484375,
+        31.220703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "frame",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.12348517891950905,
+      "query_s": 0.2644164350349456,
+      "total_s": 0.38790161395445466,
+      "peak_rss_mib": 170.44140625,
+      "initial_rss_mib": 97.04296875,
+      "incremental_peak_rss_mib": 73.3984375,
+      "dependency_setup_s": 0.055502024944871664,
+      "warm_query_s": [
+        0.21620527806226164,
+        0.16649418091401458
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.57861328125,
+        28.43896484375,
+        31.220703125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "frame",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08025288896169513,
+      "query_s": 0.22543871903326362,
+      "total_s": 0.30569160799495876,
+      "peak_rss_mib": 170.71875,
+      "initial_rss_mib": 97.00390625,
+      "incremental_peak_rss_mib": 73.71484375,
+      "dependency_setup_s": 0.05102811101824045,
+      "warm_query_s": [
+        0.2514982511056587,
+        0.19620047509670258
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.4521484375,
+        28.2158203125,
+        31.13330078125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "frame",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.12381258397363126,
+      "query_s": 0.2517954120412469,
+      "total_s": 0.37560799601487815,
+      "peak_rss_mib": 173.09375,
+      "initial_rss_mib": 96.9609375,
+      "incremental_peak_rss_mib": 76.1328125,
+      "dependency_setup_s": 0.06311047496274114,
+      "warm_query_s": [
+        0.25424868799746037,
+        0.25120622594840825
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.4521484375,
+        28.2158203125,
+        31.13330078125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "frame",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08074050291907042,
+      "query_s": 0.08785215602256358,
+      "total_s": 0.168592658941634,
+      "peak_rss_mib": 148.890625,
+      "initial_rss_mib": 97.0078125,
+      "incremental_peak_rss_mib": 51.8828125,
+      "dependency_setup_s": 0.04997265210840851,
+      "warm_query_s": [
+        0.07388262695167214,
+        0.0803824330214411
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.4521484375,
+        28.2158203125,
+        31.13330078125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "frame",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.06730102002620697,
+      "query_s": 0.0640606569359079,
+      "total_s": 0.13136167696211487,
+      "peak_rss_mib": 149.1171875,
+      "initial_rss_mib": 96.97265625,
+      "incremental_peak_rss_mib": 52.14453125,
+      "dependency_setup_s": 0.048886373988352716,
+      "warm_query_s": [
+        0.05493439000565559,
+        0.06906846002675593
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.4521484375,
+        28.2158203125,
+        31.13330078125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "frame",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.052431541960686445,
+      "query_s": 0.07002557499799877,
+      "total_s": 0.12245711695868522,
+      "peak_rss_mib": 149.41015625,
+      "initial_rss_mib": 97.01953125,
+      "incremental_peak_rss_mib": 52.390625,
+      "dependency_setup_s": 0.04457553697284311,
+      "warm_query_s": [
+        0.0743314370047301,
+        0.07355119404383004
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.4521484375,
+        28.2158203125,
+        31.13330078125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "frame",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.06108096695970744,
+      "query_s": 0.07626641099341214,
+      "total_s": 0.13734737795311958,
+      "peak_rss_mib": 149.375,
+      "initial_rss_mib": 97.17578125,
+      "incremental_peak_rss_mib": 52.19921875,
+      "dependency_setup_s": 0.06332563108298928,
+      "warm_query_s": [
+        0.06521360797341913,
+        0.07398760307114571
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.4521484375,
+        28.2158203125,
+        31.13330078125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "frame",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.0505529580404982,
+      "query_s": 0.05404963798355311,
+      "total_s": 0.10460259602405131,
+      "peak_rss_mib": 149.58984375,
+      "initial_rss_mib": 97.19140625,
+      "incremental_peak_rss_mib": 52.3984375,
+      "dependency_setup_s": 0.043951950035989285,
+      "warm_query_s": [
+        0.07711530604865402,
+        0.05359627795405686
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.4521484375,
+        28.2158203125,
+        31.13330078125
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "frame",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.03223307803273201,
+      "query_s": 0.007471858989447355,
+      "total_s": 0.039704937022179365,
+      "peak_rss_mib": 145.12109375,
+      "initial_rss_mib": 96.98828125,
+      "incremental_peak_rss_mib": 48.1328125,
+      "dependency_setup_s": 0.0441665070829913,
+      "warm_query_s": [
+        0.003467372036539018,
+        0.002935442025773227
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.6171875,
+        28.26220703125,
+        31.13232421875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "frame",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.03145322005730122,
+      "query_s": 0.008140668040141463,
+      "total_s": 0.03959388809744269,
+      "peak_rss_mib": 145.51171875,
+      "initial_rss_mib": 97.03515625,
+      "incremental_peak_rss_mib": 48.4765625,
+      "dependency_setup_s": 0.051400457974523306,
+      "warm_query_s": [
+        0.0036409259773790836,
+        0.0033897709799930453
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.6171875,
+        28.26220703125,
+        31.13232421875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "frame",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.051992679946124554,
+      "query_s": 0.00936468702275306,
+      "total_s": 0.061357366968877614,
+      "peak_rss_mib": 145.40625,
+      "initial_rss_mib": 97.12109375,
+      "incremental_peak_rss_mib": 48.28515625,
+      "dependency_setup_s": 0.05176081205718219,
+      "warm_query_s": [
+        0.002614686032757163,
+        0.002288457937538624
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.6171875,
+        28.26220703125,
+        31.13232421875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "frame",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.045302251004613936,
+      "query_s": 0.012606611009687185,
+      "total_s": 0.05790886201430112,
+      "peak_rss_mib": 145.33984375,
+      "initial_rss_mib": 97.12109375,
+      "incremental_peak_rss_mib": 48.21875,
+      "dependency_setup_s": 0.06227977806702256,
+      "warm_query_s": [
+        0.003452313016168773,
+        0.0032404109369963408
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.6171875,
+        28.26220703125,
+        31.13232421875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "frame",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.03899231308605522,
+      "query_s": 0.01055902591906488,
+      "total_s": 0.0495513390051201,
+      "peak_rss_mib": 145.234375,
+      "initial_rss_mib": 97.0703125,
+      "incremental_peak_rss_mib": 48.1640625,
+      "dependency_setup_s": 0.05650063802022487,
+      "warm_query_s": [
+        0.003492502961307764,
+        0.003163265995681286
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.6171875,
+        28.26220703125,
+        31.13232421875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "frame",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.010639903950504959,
+      "query_s": 0.008313323021866381,
+      "total_s": 0.01895322697237134,
+      "peak_rss_mib": 106.8203125,
+      "initial_rss_mib": 97.1328125,
+      "incremental_peak_rss_mib": 9.6875,
+      "dependency_setup_s": 0.0368836639681831,
+      "warm_query_s": [
+        0.007817937061190605,
+        0.007843067985959351
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.6171875,
+        28.26220703125,
+        31.13232421875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "frame",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.013040528050623834,
+      "query_s": 0.008964477921836078,
+      "total_s": 0.022005005972459912,
+      "peak_rss_mib": 106.96875,
+      "initial_rss_mib": 97.06640625,
+      "incremental_peak_rss_mib": 9.90234375,
+      "dependency_setup_s": 0.040928095928393304,
+      "warm_query_s": [
+        0.009147178963758051,
+        0.009004967985674739
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.6171875,
+        28.26220703125,
+        31.13232421875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "frame",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01237097498960793,
+      "query_s": 0.009021334000863135,
+      "total_s": 0.021392308990471065,
+      "peak_rss_mib": 106.3671875,
+      "initial_rss_mib": 97.03125,
+      "incremental_peak_rss_mib": 9.3359375,
+      "dependency_setup_s": 0.0372645539464429,
+      "warm_query_s": [
+        0.008439074037596583,
+        0.007541440078057349
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.6171875,
+        28.26220703125,
+        31.13232421875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "frame",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.010721978964284062,
+      "query_s": 0.008208541083149612,
+      "total_s": 0.018930520047433674,
+      "peak_rss_mib": 106.61328125,
+      "initial_rss_mib": 97.22265625,
+      "incremental_peak_rss_mib": 9.390625,
+      "dependency_setup_s": 0.039678510976955295,
+      "warm_query_s": [
+        0.007770786993205547,
+        0.00795426603872329
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.6171875,
+        28.26220703125,
+        31.13232421875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "frame",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012316811014898121,
+      "query_s": 0.008478580974042416,
+      "total_s": 0.020795391988940537,
+      "peak_rss_mib": 106.80078125,
+      "initial_rss_mib": 97.05078125,
+      "incremental_peak_rss_mib": 9.75,
+      "dependency_setup_s": 0.04063286096788943,
+      "warm_query_s": [
+        0.00880874798167497,
+        0.008862504037097096
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.6171875,
+        28.26220703125,
+        31.13232421875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "frame",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.10552518698386848,
+      "query_s": 0.007395369000732899,
+      "total_s": 0.11292055598460138,
+      "peak_rss_mib": 113.625,
+      "initial_rss_mib": 98.08203125,
+      "incremental_peak_rss_mib": 15.54296875,
+      "dependency_setup_s": 0.15165537095163018,
+      "warm_query_s": [
+        0.0044891920406371355,
+        0.0033010339830070734
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.6171875,
+        28.26220703125,
+        31.13232421875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "frame",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.0978660270338878,
+      "query_s": 0.007406523916870356,
+      "total_s": 0.10527255095075816,
+      "peak_rss_mib": 113.58984375,
+      "initial_rss_mib": 97.96484375,
+      "incremental_peak_rss_mib": 15.625,
+      "dependency_setup_s": 0.1818635289091617,
+      "warm_query_s": [
+        0.004664283012971282,
+        0.0035323030315339565
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.1669921875,
+        27.9921875,
+        31.029296875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "frame",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08442463201936334,
+      "query_s": 0.0037702550180256367,
+      "total_s": 0.08819488703738898,
+      "peak_rss_mib": 114.015625,
+      "initial_rss_mib": 98.171875,
+      "incremental_peak_rss_mib": 15.84375,
+      "dependency_setup_s": 0.1454059329116717,
+      "warm_query_s": [
+        0.0030150989769026637,
+        0.002244281000457704
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.1669921875,
+        27.9921875,
+        31.029296875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "frame",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.07312710396945477,
+      "query_s": 0.003659978974610567,
+      "total_s": 0.07678708294406533,
+      "peak_rss_mib": 113.65234375,
+      "initial_rss_mib": 98.01953125,
+      "incremental_peak_rss_mib": 15.6328125,
+      "dependency_setup_s": 0.13990324002224952,
+      "warm_query_s": [
+        0.005007736035622656,
+        0.0033295699395239353
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.1669921875,
+        27.9921875,
+        31.029296875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "frame",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.1071690289536491,
+      "query_s": 0.004660499049350619,
+      "total_s": 0.11182952800299972,
+      "peak_rss_mib": 113.65625,
+      "initial_rss_mib": 98.06640625,
+      "incremental_peak_rss_mib": 15.58984375,
+      "dependency_setup_s": 0.1833806730573997,
+      "warm_query_s": [
+        0.004643344087526202,
+        0.003609123989008367
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.1669921875,
+        27.9921875,
+        31.029296875
+      ],
+      "signature": {
+        "sha256": "65a7ede36dc7e038d30d96aba5cce932063256d2fcefd23a5ba0a2252d1f1647",
+        "shapes": [
+          [
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "frame",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014980723964981735,
+      "query_s": 0.011790337972342968,
+      "total_s": 0.026771061937324703,
+      "peak_rss_mib": 206.86328125,
+      "initial_rss_mib": 97.13671875,
+      "incremental_peak_rss_mib": 109.7265625,
+      "dependency_setup_s": 0.0635314229875803,
+      "warm_query_s": [
+        0.009641004027798772,
+        0.006831798003986478
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.1669921875,
+        27.9921875,
+        31.029296875
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "trial",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012685134075582027,
+      "query_s": 0.011427595978602767,
+      "total_s": 0.024112730054184794,
+      "peak_rss_mib": 206.6953125,
+      "initial_rss_mib": 97.04296875,
+      "incremental_peak_rss_mib": 109.65234375,
+      "dependency_setup_s": 0.045004246989265084,
+      "warm_query_s": [
+        0.009771009907126427,
+        0.009974297950975597
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.1669921875,
+        27.9921875,
+        31.029296875
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "trial",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014967433991841972,
+      "query_s": 0.013327246997505426,
+      "total_s": 0.0282946809893474,
+      "peak_rss_mib": 206.85546875,
+      "initial_rss_mib": 97.0703125,
+      "incremental_peak_rss_mib": 109.78515625,
+      "dependency_setup_s": 0.06554345204494894,
+      "warm_query_s": [
+        0.011720999027602375,
+        0.010084190987981856
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.1669921875,
+        27.9921875,
+        31.029296875
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "trial",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01413070794660598,
+      "query_s": 0.010750922025181353,
+      "total_s": 0.024881629971787333,
+      "peak_rss_mib": 206.65625,
+      "initial_rss_mib": 97.09765625,
+      "incremental_peak_rss_mib": 109.55859375,
+      "dependency_setup_s": 0.058453275938518345,
+      "warm_query_s": [
+        0.008583296090364456,
+        0.008812392014078796
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.1669921875,
+        27.9921875,
+        31.029296875
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "trial",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01333461795002222,
+      "query_s": 0.01087266905233264,
+      "total_s": 0.02420728700235486,
+      "peak_rss_mib": 194.5,
+      "initial_rss_mib": 97.0703125,
+      "incremental_peak_rss_mib": 97.4296875,
+      "dependency_setup_s": 0.05729789601173252,
+      "warm_query_s": [
+        0.0087461790535599,
+        0.009817008045502007
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.8330078125,
+        27.7431640625,
+        30.93212890625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "trial",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.010405273060314357,
+      "query_s": 0.07273105590138584,
+      "total_s": 0.0831363289617002,
+      "peak_rss_mib": 221.95703125,
+      "initial_rss_mib": 97.125,
+      "incremental_peak_rss_mib": 124.83203125,
+      "dependency_setup_s": 0.04248695506248623,
+      "warm_query_s": [
+        0.054454350960440934,
+        0.08603950892575085
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.8330078125,
+        27.7431640625,
+        30.93212890625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "trial",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.010821523959748447,
+      "query_s": 0.07406961405649781,
+      "total_s": 0.08489113801624626,
+      "peak_rss_mib": 229.50390625,
+      "initial_rss_mib": 97.00390625,
+      "incremental_peak_rss_mib": 132.5,
+      "dependency_setup_s": 0.044348653056658804,
+      "warm_query_s": [
+        0.05343025701586157,
+        0.052581949974410236
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.8330078125,
+        27.7431640625,
+        30.93212890625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "trial",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01506701298058033,
+      "query_s": 0.10277922998648137,
+      "total_s": 0.1178462429670617,
+      "peak_rss_mib": 227.3515625,
+      "initial_rss_mib": 97.06640625,
+      "incremental_peak_rss_mib": 130.28515625,
+      "dependency_setup_s": 0.06523559195920825,
+      "warm_query_s": [
+        0.052756533958017826,
+        0.059984478051774204
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.8330078125,
+        27.7431640625,
+        30.93212890625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "trial",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.015152591979131103,
+      "query_s": 0.11246191198006272,
+      "total_s": 0.12761450395919383,
+      "peak_rss_mib": 229.3046875,
+      "initial_rss_mib": 96.98828125,
+      "incremental_peak_rss_mib": 132.31640625,
+      "dependency_setup_s": 0.06283978698775172,
+      "warm_query_s": [
+        0.08469057094771415,
+        0.06117493496276438
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.8330078125,
+        27.7431640625,
+        30.93212890625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "trial",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014866089913994074,
+      "query_s": 0.12317212705966085,
+      "total_s": 0.13803821697365493,
+      "peak_rss_mib": 225.50390625,
+      "initial_rss_mib": 96.93359375,
+      "incremental_peak_rss_mib": 128.5703125,
+      "dependency_setup_s": 0.06167997804004699,
+      "warm_query_s": [
+        0.051600613980554044,
+        0.060054500005207956
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.8330078125,
+        27.7431640625,
+        30.93212890625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "trial",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.0148088299902156,
+      "query_s": 0.04399203404318541,
+      "total_s": 0.05880086403340101,
+      "peak_rss_mib": 229.4765625,
+      "initial_rss_mib": 97.03125,
+      "incremental_peak_rss_mib": 132.4453125,
+      "dependency_setup_s": 0.06312730594072491,
+      "warm_query_s": [
+        0.007567230029962957,
+        0.006269278936088085
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.8330078125,
+        27.7431640625,
+        30.93212890625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "trial",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012388770934194326,
+      "query_s": 0.0429738360689953,
+      "total_s": 0.05536260700318962,
+      "peak_rss_mib": 225.4296875,
+      "initial_rss_mib": 97.015625,
+      "incremental_peak_rss_mib": 128.4140625,
+      "dependency_setup_s": 0.060438732034526765,
+      "warm_query_s": [
+        0.00964907300658524,
+        0.00776993902400136
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.8330078125,
+        27.7431640625,
+        30.93212890625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "trial",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014496928080916405,
+      "query_s": 0.04378492489922792,
+      "total_s": 0.05828185298014432,
+      "peak_rss_mib": 223.65625,
+      "initial_rss_mib": 97.015625,
+      "incremental_peak_rss_mib": 126.640625,
+      "dependency_setup_s": 0.06310321297496557,
+      "warm_query_s": [
+        0.00793774810153991,
+        0.006581183057278395
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.28564453125,
+        27.4482421875,
+        30.8193359375
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "trial",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014744660933502018,
+      "query_s": 0.046969760092906654,
+      "total_s": 0.06171442102640867,
+      "peak_rss_mib": 221.8046875,
+      "initial_rss_mib": 97.13671875,
+      "incremental_peak_rss_mib": 124.66796875,
+      "dependency_setup_s": 0.0539557789452374,
+      "warm_query_s": [
+        0.008052092045545578,
+        0.007565802079625428
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.28564453125,
+        27.4482421875,
+        30.8193359375
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "trial",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012948156101629138,
+      "query_s": 0.044711101916618645,
+      "total_s": 0.05765925801824778,
+      "peak_rss_mib": 227.8203125,
+      "initial_rss_mib": 97.01953125,
+      "incremental_peak_rss_mib": 130.80078125,
+      "dependency_setup_s": 0.04968927695881575,
+      "warm_query_s": [
+        0.006554952007718384,
+        0.008003948954865336
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.28564453125,
+        27.4482421875,
+        30.8193359375
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "trial",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.010581330046989024,
+      "query_s": 0.06515203590970486,
+      "total_s": 0.07573336595669389,
+      "peak_rss_mib": 264.2109375,
+      "initial_rss_mib": 96.953125,
+      "incremental_peak_rss_mib": 167.2578125,
+      "dependency_setup_s": 0.044907998060807586,
+      "warm_query_s": [
+        0.057277400977909565,
+        0.054681455017998815
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.28564453125,
+        27.4482421875,
+        30.8193359375
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "trial",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012407447095029056,
+      "query_s": 0.08453475392889231,
+      "total_s": 0.09694220102392137,
+      "peak_rss_mib": 252.12890625,
+      "initial_rss_mib": 96.9453125,
+      "incremental_peak_rss_mib": 155.18359375,
+      "dependency_setup_s": 0.0630542179569602,
+      "warm_query_s": [
+        0.05564668297301978,
+        0.05889465205837041
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.28564453125,
+        27.4482421875,
+        30.8193359375
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "trial",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012923130998387933,
+      "query_s": 0.07332702504936606,
+      "total_s": 0.08625015604775399,
+      "peak_rss_mib": 254.41796875,
+      "initial_rss_mib": 96.984375,
+      "incremental_peak_rss_mib": 157.43359375,
+      "dependency_setup_s": 0.05537204397842288,
+      "warm_query_s": [
+        0.04624463792424649,
+        0.03864348109345883
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.28564453125,
+        27.4482421875,
+        30.8193359375
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "trial",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.010992735042236745,
+      "query_s": 0.04665885795839131,
+      "total_s": 0.057651593000628054,
+      "peak_rss_mib": 264.4765625,
+      "initial_rss_mib": 97.05078125,
+      "incremental_peak_rss_mib": 167.42578125,
+      "dependency_setup_s": 0.04277468100190163,
+      "warm_query_s": [
+        0.038089873967692256,
+        0.05138621502555907
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.28564453125,
+        27.4482421875,
+        30.8193359375
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "trial",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.010685209068469703,
+      "query_s": 0.044268841040320694,
+      "total_s": 0.0549540501087904,
+      "peak_rss_mib": 252.6328125,
+      "initial_rss_mib": 97.13671875,
+      "incremental_peak_rss_mib": 155.49609375,
+      "dependency_setup_s": 0.04376948100980371,
+      "warm_query_s": [
+        0.040084715001285076,
+        0.04911646293476224
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.28564453125,
+        27.4482421875,
+        30.8193359375
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "trial",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.09691553900483996,
+      "query_s": 0.17631498898845166,
+      "total_s": 0.2732305279932916,
+      "peak_rss_mib": 207.84765625,
+      "initial_rss_mib": 96.99609375,
+      "incremental_peak_rss_mib": 110.8515625,
+      "dependency_setup_s": 0.05759336601477116,
+      "warm_query_s": [
+        0.2069468729896471,
+        0.20729841000866145
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.7021484375,
+        27.1416015625,
+        30.70166015625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "trial",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.09470735397189856,
+      "query_s": 0.17923908005468547,
+      "total_s": 0.27394643402658403,
+      "peak_rss_mib": 209.37890625,
+      "initial_rss_mib": 97.015625,
+      "incremental_peak_rss_mib": 112.36328125,
+      "dependency_setup_s": 0.0506205529673025,
+      "warm_query_s": [
+        0.2425802629441023,
+        0.18338495295029134
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.7021484375,
+        27.1416015625,
+        30.70166015625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "trial",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.11506332806311548,
+      "query_s": 0.18812977499328554,
+      "total_s": 0.303193103056401,
+      "peak_rss_mib": 210.02734375,
+      "initial_rss_mib": 97.0078125,
+      "incremental_peak_rss_mib": 113.01953125,
+      "dependency_setup_s": 0.04546981700696051,
+      "warm_query_s": [
+        0.20087705401238054,
+        0.20475242496468127
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.7021484375,
+        27.1416015625,
+        30.70166015625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "trial",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.0834141569212079,
+      "query_s": 0.23111261904705316,
+      "total_s": 0.31452677596826106,
+      "peak_rss_mib": 208.7890625,
+      "initial_rss_mib": 97.01953125,
+      "incremental_peak_rss_mib": 111.76953125,
+      "dependency_setup_s": 0.043634513043798506,
+      "warm_query_s": [
+        0.1977436610031873,
+        0.2274675890803337
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.7021484375,
+        27.1416015625,
+        30.70166015625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "trial",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.0886702350107953,
+      "query_s": 0.18881879898253828,
+      "total_s": 0.2774890339933336,
+      "peak_rss_mib": 207.30859375,
+      "initial_rss_mib": 96.890625,
+      "incremental_peak_rss_mib": 110.41796875,
+      "dependency_setup_s": 0.043905642931349576,
+      "warm_query_s": [
+        0.16175973997451365,
+        0.2358767370460555
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.7021484375,
+        27.1416015625,
+        30.70166015625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "trial",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.06309649103786796,
+      "query_s": 0.06566504889633507,
+      "total_s": 0.12876153993420303,
+      "peak_rss_mib": 187.94140625,
+      "initial_rss_mib": 96.92578125,
+      "incremental_peak_rss_mib": 91.015625,
+      "dependency_setup_s": 0.06459879700560123,
+      "warm_query_s": [
+        0.05445410404354334,
+        0.04579341597855091
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.5654296875,
+        26.92333984375,
+        30.61181640625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "trial",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.07992762990761548,
+      "query_s": 0.0595408120425418,
+      "total_s": 0.13946844195015728,
+      "peak_rss_mib": 188.0390625,
+      "initial_rss_mib": 97.07421875,
+      "incremental_peak_rss_mib": 90.96484375,
+      "dependency_setup_s": 0.0628110890975222,
+      "warm_query_s": [
+        0.049232969991862774,
+        0.0753070970531553
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.5654296875,
+        26.92333984375,
+        30.61181640625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "trial",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.045749971992336214,
+      "query_s": 0.04881171404849738,
+      "total_s": 0.09456168604083359,
+      "peak_rss_mib": 188.18359375,
+      "initial_rss_mib": 97.0078125,
+      "incremental_peak_rss_mib": 91.17578125,
+      "dependency_setup_s": 0.0450449800118804,
+      "warm_query_s": [
+        0.04697941802442074,
+        0.05363187298644334
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.5654296875,
+        26.92333984375,
+        30.61181640625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "trial",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.06420311098918319,
+      "query_s": 0.07060623506549746,
+      "total_s": 0.13480934605468065,
+      "peak_rss_mib": 188.3359375,
+      "initial_rss_mib": 97.05078125,
+      "incremental_peak_rss_mib": 91.28515625,
+      "dependency_setup_s": 0.06046480103395879,
+      "warm_query_s": [
+        0.0695526150520891,
+        0.07355062908027321
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.5654296875,
+        26.92333984375,
+        30.61181640625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "trial",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.047368398983962834,
+      "query_s": 0.05126584996469319,
+      "total_s": 0.09863424894865602,
+      "peak_rss_mib": 186.70703125,
+      "initial_rss_mib": 96.92578125,
+      "incremental_peak_rss_mib": 89.78125,
+      "dependency_setup_s": 0.0461392099969089,
+      "warm_query_s": [
+        0.05929885397199541,
+        0.059783415985293686
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.5654296875,
+        26.92333984375,
+        30.61181640625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "trial",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.04368947702459991,
+      "query_s": 0.010692268027924001,
+      "total_s": 0.05438174505252391,
+      "peak_rss_mib": 182.73046875,
+      "initial_rss_mib": 96.99609375,
+      "incremental_peak_rss_mib": 85.734375,
+      "dependency_setup_s": 0.06425118097104132,
+      "warm_query_s": [
+        0.006101666018366814,
+        0.006212157080881298
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.5654296875,
+        26.92333984375,
+        30.61181640625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "trial",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.04455770493950695,
+      "query_s": 0.013691700994968414,
+      "total_s": 0.05824940593447536,
+      "peak_rss_mib": 181.32421875,
+      "initial_rss_mib": 96.94921875,
+      "incremental_peak_rss_mib": 84.375,
+      "dependency_setup_s": 0.0647303470177576,
+      "warm_query_s": [
+        0.005572998896241188,
+        0.004799962975084782
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.5654296875,
+        26.92333984375,
+        30.61181640625
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "trial",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.03931161400396377,
+      "query_s": 0.010793109075166285,
+      "total_s": 0.050104723079130054,
+      "peak_rss_mib": 183.43359375,
+      "initial_rss_mib": 97.00390625,
+      "incremental_peak_rss_mib": 86.4296875,
+      "dependency_setup_s": 0.06270779203623533,
+      "warm_query_s": [
+        0.005737893050536513,
+        0.006027359049767256
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.27978515625,
+        26.67529296875,
+        30.51171875
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "trial",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.04205074405763298,
+      "query_s": 0.014152355026453733,
+      "total_s": 0.056203099084086716,
+      "peak_rss_mib": 181.26953125,
+      "initial_rss_mib": 97.14453125,
+      "incremental_peak_rss_mib": 84.125,
+      "dependency_setup_s": 0.0665170680731535,
+      "warm_query_s": [
+        0.006433887057937682,
+        0.006485170917585492
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.27978515625,
+        26.67529296875,
+        30.51171875
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "trial",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.04628213297110051,
+      "query_s": 0.011983816046267748,
+      "total_s": 0.05826594901736826,
+      "peak_rss_mib": 181.16015625,
+      "initial_rss_mib": 96.96875,
+      "incremental_peak_rss_mib": 84.19140625,
+      "dependency_setup_s": 0.06404604704584926,
+      "warm_query_s": [
+        0.006423062062822282,
+        0.0063273770501837134
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.27978515625,
+        26.67529296875,
+        30.51171875
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "trial",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.013294443022459745,
+      "query_s": 0.04098196397535503,
+      "total_s": 0.054276406997814775,
+      "peak_rss_mib": 155.1171875,
+      "initial_rss_mib": 97.19921875,
+      "incremental_peak_rss_mib": 57.91796875,
+      "dependency_setup_s": 0.0413104040781036,
+      "warm_query_s": [
+        0.04076644591987133,
+        0.03362302505411208
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.27978515625,
+        26.67529296875,
+        30.51171875
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "trial",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.008412908995524049,
+      "query_s": 0.033686551032587886,
+      "total_s": 0.042099460028111935,
+      "peak_rss_mib": 155.2109375,
+      "initial_rss_mib": 97.18359375,
+      "incremental_peak_rss_mib": 58.02734375,
+      "dependency_setup_s": 0.028922678087837994,
+      "warm_query_s": [
+        0.03348872798960656,
+        0.037899832939729095
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.27978515625,
+        26.67529296875,
+        30.51171875
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "trial",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012694678967818618,
+      "query_s": 0.03421796194743365,
+      "total_s": 0.04691264091525227,
+      "peak_rss_mib": 155.04296875,
+      "initial_rss_mib": 97.16015625,
+      "incremental_peak_rss_mib": 57.8828125,
+      "dependency_setup_s": 0.04223903303500265,
+      "warm_query_s": [
+        0.033694254932925105,
+        0.03896449797321111
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.27978515625,
+        26.67529296875,
+        30.51171875
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "trial",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.011967054917477071,
+      "query_s": 0.03842659806832671,
+      "total_s": 0.05039365298580378,
+      "peak_rss_mib": 155.01953125,
+      "initial_rss_mib": 97.0703125,
+      "incremental_peak_rss_mib": 57.94921875,
+      "dependency_setup_s": 0.03935040393844247,
+      "warm_query_s": [
+        0.033806566963903606,
+        0.034015723038464785
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.27978515625,
+        26.67529296875,
+        30.51171875
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "trial",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.008321100031025708,
+      "query_s": 0.03355804202146828,
+      "total_s": 0.04187914205249399,
+      "peak_rss_mib": 154.875,
+      "initial_rss_mib": 97.0546875,
+      "incremental_peak_rss_mib": 57.8203125,
+      "dependency_setup_s": 0.03436195699032396,
+      "warm_query_s": [
+        0.03247903089504689,
+        0.03394694905728102
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.27978515625,
+        26.67529296875,
+        30.51171875
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "trial",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.0736646840814501,
+      "query_s": 0.01119318197015673,
+      "total_s": 0.08485786605160683,
+      "peak_rss_mib": 158.62890625,
+      "initial_rss_mib": 98.0234375,
+      "incremental_peak_rss_mib": 60.60546875,
+      "dependency_setup_s": 0.16995401203166693,
+      "warm_query_s": [
+        0.008474593982100487,
+        0.008816336980089545
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.27978515625,
+        26.67529296875,
+        30.51171875
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "trial",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.1089592050993815,
+      "query_s": 0.009697917965240777,
+      "total_s": 0.11865712306462228,
+      "peak_rss_mib": 161.1171875,
+      "initial_rss_mib": 97.9375,
+      "incremental_peak_rss_mib": 63.1796875,
+      "dependency_setup_s": 0.20134379994124174,
+      "warm_query_s": [
+        0.011625415994785726,
+        0.01378290296997875
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.619140625,
+        26.76416015625,
+        30.52001953125
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "trial",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.10825830500107259,
+      "query_s": 0.010061993030831218,
+      "total_s": 0.1183202980319038,
+      "peak_rss_mib": 161.41796875,
+      "initial_rss_mib": 98.1796875,
+      "incremental_peak_rss_mib": 63.23828125,
+      "dependency_setup_s": 0.1552881490206346,
+      "warm_query_s": [
+        0.008443447994068265,
+        0.008794858935289085
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.619140625,
+        26.76416015625,
+        30.52001953125
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "trial",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.07225411001127213,
+      "query_s": 0.011866476968862116,
+      "total_s": 0.08412058698013425,
+      "peak_rss_mib": 158.140625,
+      "initial_rss_mib": 98.05859375,
+      "incremental_peak_rss_mib": 60.08203125,
+      "dependency_setup_s": 0.14397225703578442,
+      "warm_query_s": [
+        0.008935240912251174,
+        0.009866008069366217
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.619140625,
+        26.76416015625,
+        30.52001953125
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "trial",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.09255687694530934,
+      "query_s": 0.011668959050439298,
+      "total_s": 0.10422583599574864,
+      "peak_rss_mib": 160.9921875,
+      "initial_rss_mib": 97.9921875,
+      "incremental_peak_rss_mib": 63.0,
+      "dependency_setup_s": 0.14827223506290466,
+      "warm_query_s": [
+        0.008573277038522065,
+        0.008922343025915325
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.619140625,
+        26.76416015625,
+        30.52001953125
+      ],
+      "signature": {
+        "sha256": "6abed7c2007f3702a37952031cb1a3c7747d1ada85ed3cc861e771ab7a0dfac3",
+        "shapes": [
+          [
+            280,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "trial",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.011413285974413157,
+      "query_s": 0.08209355699364096,
+      "total_s": 0.09350684296805412,
+      "peak_rss_mib": 540.421875,
+      "initial_rss_mib": 96.94921875,
+      "incremental_peak_rss_mib": 443.47265625,
+      "dependency_setup_s": 0.0432386010652408,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.0888671875,
+        26.48583984375,
+        30.40966796875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "subject",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.013305920059792697,
+      "query_s": 0.0840128519339487,
+      "total_s": 0.0973187719937414,
+      "peak_rss_mib": 554.83203125,
+      "initial_rss_mib": 97.05078125,
+      "incremental_peak_rss_mib": 457.78125,
+      "dependency_setup_s": 0.0433248650515452,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.0888671875,
+        26.48583984375,
+        30.40966796875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "subject",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012722092098556459,
+      "query_s": 0.09401041700039059,
+      "total_s": 0.10673250909894705,
+      "peak_rss_mib": 550.55078125,
+      "initial_rss_mib": 96.94921875,
+      "incremental_peak_rss_mib": 453.6015625,
+      "dependency_setup_s": 0.0459692960139364,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.0888671875,
+        26.48583984375,
+        30.40966796875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "subject",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.013378864037804306,
+      "query_s": 0.07449555105995387,
+      "total_s": 0.08787441509775817,
+      "peak_rss_mib": 550.5703125,
+      "initial_rss_mib": 97.0703125,
+      "incremental_peak_rss_mib": 453.5,
+      "dependency_setup_s": 0.06524662708397955,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.0888671875,
+        26.48583984375,
+        30.40966796875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "subject",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01189375703688711,
+      "query_s": 0.09084628301206976,
+      "total_s": 0.10274004004895687,
+      "peak_rss_mib": 556.66015625,
+      "initial_rss_mib": 97.0234375,
+      "incremental_peak_rss_mib": 459.63671875,
+      "dependency_setup_s": 0.042310683988034725,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.0888671875,
+        26.48583984375,
+        30.40966796875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "subject",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.013324775034561753,
+      "query_s": 0.15073807793669403,
+      "total_s": 0.16406285297125578,
+      "peak_rss_mib": 577.51953125,
+      "initial_rss_mib": 97.07421875,
+      "incremental_peak_rss_mib": 480.4453125,
+      "dependency_setup_s": 0.06415310606826097,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.76123046875,
+        26.2451171875,
+        30.310546875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "subject",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012388773960992694,
+      "query_s": 0.18986605701502413,
+      "total_s": 0.20225483097601682,
+      "peak_rss_mib": 575.23828125,
+      "initial_rss_mib": 96.94140625,
+      "incremental_peak_rss_mib": 478.296875,
+      "dependency_setup_s": 0.04288731806445867,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.76123046875,
+        26.2451171875,
+        30.310546875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "subject",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.013432235922664404,
+      "query_s": 0.1922676240792498,
+      "total_s": 0.2056998600019142,
+      "peak_rss_mib": 571.2734375,
+      "initial_rss_mib": 97.0078125,
+      "incremental_peak_rss_mib": 474.265625,
+      "dependency_setup_s": 0.05777612200472504,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.76123046875,
+        26.2451171875,
+        30.310546875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "subject",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014902107999660075,
+      "query_s": 0.15897622401826084,
+      "total_s": 0.1738783320179209,
+      "peak_rss_mib": 571.41015625,
+      "initial_rss_mib": 97.0,
+      "incremental_peak_rss_mib": 474.41015625,
+      "dependency_setup_s": 0.05562623403966427,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.2998046875,
+        25.97509765625,
+        30.201171875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "subject",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01036890794057399,
+      "query_s": 0.15868081501685083,
+      "total_s": 0.16904972295742482,
+      "peak_rss_mib": 575.67578125,
+      "initial_rss_mib": 97.01953125,
+      "incremental_peak_rss_mib": 478.65625,
+      "dependency_setup_s": 0.04242303199134767,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.2998046875,
+        25.97509765625,
+        30.201171875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "subject",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.010435751057229936,
+      "query_s": 0.1153489249991253,
+      "total_s": 0.12578467605635524,
+      "peak_rss_mib": 581.62890625,
+      "initial_rss_mib": 97.01953125,
+      "incremental_peak_rss_mib": 484.609375,
+      "dependency_setup_s": 0.04246363393031061,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.2998046875,
+        25.97509765625,
+        30.201171875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "subject",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.016693098936229944,
+      "query_s": 0.12174352398142219,
+      "total_s": 0.13843662291765213,
+      "peak_rss_mib": 575.56640625,
+      "initial_rss_mib": 97.0546875,
+      "incremental_peak_rss_mib": 478.51171875,
+      "dependency_setup_s": 0.06632044306024909,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.2998046875,
+        25.97509765625,
+        30.201171875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "subject",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.011076729977503419,
+      "query_s": 0.12260930892080069,
+      "total_s": 0.1336860388983041,
+      "peak_rss_mib": 575.6171875,
+      "initial_rss_mib": 96.98046875,
+      "incremental_peak_rss_mib": 478.63671875,
+      "dependency_setup_s": 0.051403471967205405,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.115234375,
+        25.75927734375,
+        30.1083984375
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "subject",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014912980026565492,
+      "query_s": 0.11757920403033495,
+      "total_s": 0.13249218405690044,
+      "peak_rss_mib": 591.5078125,
+      "initial_rss_mib": 96.8984375,
+      "incremental_peak_rss_mib": 494.609375,
+      "dependency_setup_s": 0.06534307694528252,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.115234375,
+        25.75927734375,
+        30.1083984375
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "subject",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014442917075939476,
+      "query_s": 0.12677162501495332,
+      "total_s": 0.1412145420908928,
+      "peak_rss_mib": 577.5234375,
+      "initial_rss_mib": 96.9765625,
+      "incremental_peak_rss_mib": 480.546875,
+      "dependency_setup_s": 0.062290619942359626,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.115234375,
+        25.75927734375,
+        30.1083984375
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "subject",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.015390852000564337,
+      "query_s": 0.10661859705578536,
+      "total_s": 0.1220094490563497,
+      "peak_rss_mib": 557.96484375,
+      "initial_rss_mib": 96.90625,
+      "incremental_peak_rss_mib": 461.05859375,
+      "dependency_setup_s": 0.0654938539955765,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.115234375,
+        25.75927734375,
+        30.1083984375
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "subject",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.015658330055885017,
+      "query_s": 0.12587427895050496,
+      "total_s": 0.14153260900638998,
+      "peak_rss_mib": 558.15234375,
+      "initial_rss_mib": 97.01953125,
+      "incremental_peak_rss_mib": 461.1328125,
+      "dependency_setup_s": 0.05344271089415997,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.02587890625,
+        25.56396484375,
+        30.021484375
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "subject",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01592615491244942,
+      "query_s": 0.13322555203922093,
+      "total_s": 0.14915170695167035,
+      "peak_rss_mib": 554.3125,
+      "initial_rss_mib": 97.01953125,
+      "incremental_peak_rss_mib": 457.29296875,
+      "dependency_setup_s": 0.06638068100437522,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.02587890625,
+        25.56396484375,
+        30.021484375
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "subject",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01350919296965003,
+      "query_s": 0.10971647792030126,
+      "total_s": 0.12322567088995129,
+      "peak_rss_mib": 556.15625,
+      "initial_rss_mib": 96.95703125,
+      "incremental_peak_rss_mib": 459.19921875,
+      "dependency_setup_s": 0.06518348096869886,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.02587890625,
+        25.56396484375,
+        30.021484375
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "subject",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.010900306981056929,
+      "query_s": 0.09140379109885544,
+      "total_s": 0.10230409807991236,
+      "peak_rss_mib": 562.25,
+      "initial_rss_mib": 97.0234375,
+      "incremental_peak_rss_mib": 465.2265625,
+      "dependency_setup_s": 0.04423319606576115,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.703125,
+        25.32177734375,
+        29.9189453125
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "subject",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08357190003152937,
+      "query_s": 0.18743419996462762,
+      "total_s": 0.271006099996157,
+      "peak_rss_mib": 547.90625,
+      "initial_rss_mib": 96.9296875,
+      "incremental_peak_rss_mib": 450.9765625,
+      "dependency_setup_s": 0.045455815037712455,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.703125,
+        25.32177734375,
+        29.9189453125
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "subject",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.10636873100884259,
+      "query_s": 0.2514651649398729,
+      "total_s": 0.3578338959487155,
+      "peak_rss_mib": 552.1328125,
+      "initial_rss_mib": 96.98046875,
+      "incremental_peak_rss_mib": 455.15234375,
+      "dependency_setup_s": 0.05005305598024279,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.703125,
+        25.32177734375,
+        29.9189453125
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "subject",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.1285968798911199,
+      "query_s": 0.3016352340346202,
+      "total_s": 0.4302321139257401,
+      "peak_rss_mib": 551.7734375,
+      "initial_rss_mib": 97.0390625,
+      "incremental_peak_rss_mib": 454.734375,
+      "dependency_setup_s": 0.06603637093212456,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.40625,
+        25.083984375,
+        29.81689453125
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "subject",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.0917448130203411,
+      "query_s": 0.23023752495646477,
+      "total_s": 0.32198233797680587,
+      "peak_rss_mib": 551.0859375,
+      "initial_rss_mib": 97.0390625,
+      "incremental_peak_rss_mib": 454.046875,
+      "dependency_setup_s": 0.04347933910321444,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.40625,
+        25.083984375,
+        29.81689453125
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "subject",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.12407844793051481,
+      "query_s": 0.26055509701836854,
+      "total_s": 0.38463354494888335,
+      "peak_rss_mib": 551.00390625,
+      "initial_rss_mib": 97.05859375,
+      "incremental_peak_rss_mib": 453.9453125,
+      "dependency_setup_s": 0.043161796987988055,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.40625,
+        25.083984375,
+        29.81689453125
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "subject",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.07171814306639135,
+      "query_s": 0.11510815494693816,
+      "total_s": 0.1868262980133295,
+      "peak_rss_mib": 529.52734375,
+      "initial_rss_mib": 97.01953125,
+      "incremental_peak_rss_mib": 432.5078125,
+      "dependency_setup_s": 0.055144154001027346,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.40625,
+        25.083984375,
+        29.81689453125
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "subject",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.05044718203134835,
+      "query_s": 0.1112875510007143,
+      "total_s": 0.16173473303206265,
+      "peak_rss_mib": 529.671875,
+      "initial_rss_mib": 97.05859375,
+      "incremental_peak_rss_mib": 432.61328125,
+      "dependency_setup_s": 0.04679856600705534,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.29345703125,
+        24.88330078125,
+        29.7265625
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "subject",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.05403068196028471,
+      "query_s": 0.1171629399759695,
+      "total_s": 0.1711936219362542,
+      "peak_rss_mib": 530.69921875,
+      "initial_rss_mib": 96.9921875,
+      "incremental_peak_rss_mib": 433.70703125,
+      "dependency_setup_s": 0.04429617593996227,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.29345703125,
+        24.88330078125,
+        29.7265625
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "subject",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.06452897703275084,
+      "query_s": 0.12832482298836112,
+      "total_s": 0.19285380002111197,
+      "peak_rss_mib": 529.48828125,
+      "initial_rss_mib": 97.02734375,
+      "incremental_peak_rss_mib": 432.4609375,
+      "dependency_setup_s": 0.042502488009631634,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.29345703125,
+        24.88330078125,
+        29.7265625
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "subject",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.07403261703439057,
+      "query_s": 0.1601871009916067,
+      "total_s": 0.23421971802599728,
+      "peak_rss_mib": 528.74609375,
+      "initial_rss_mib": 97.03125,
+      "incremental_peak_rss_mib": 431.71484375,
+      "dependency_setup_s": 0.06843329395633191,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.55126953125,
+        24.96826171875,
+        29.728515625
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "subject",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.038683880935423076,
+      "query_s": 0.07069966697599739,
+      "total_s": 0.10938354791142046,
+      "peak_rss_mib": 535.21875,
+      "initial_rss_mib": 97.0234375,
+      "incremental_peak_rss_mib": 438.1953125,
+      "dependency_setup_s": 0.04523980605881661,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.55126953125,
+        24.96826171875,
+        29.728515625
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "subject",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.04422897507902235,
+      "query_s": 0.06469246500637382,
+      "total_s": 0.10892144008539617,
+      "peak_rss_mib": 535.33984375,
+      "initial_rss_mib": 96.96484375,
+      "incremental_peak_rss_mib": 438.375,
+      "dependency_setup_s": 0.0645428909920156,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.55126953125,
+        24.96826171875,
+        29.728515625
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "subject",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.04589207505341619,
+      "query_s": 0.06629136693663895,
+      "total_s": 0.11218344199005514,
+      "peak_rss_mib": 534.63671875,
+      "initial_rss_mib": 96.93359375,
+      "incremental_peak_rss_mib": 437.703125,
+      "dependency_setup_s": 0.06442741898354143,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.55126953125,
+        24.96826171875,
+        29.728515625
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "subject",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.048476997995749116,
+      "query_s": 0.061621687025763094,
+      "total_s": 0.11009868502151221,
+      "peak_rss_mib": 534.765625,
+      "initial_rss_mib": 97.01953125,
+      "incremental_peak_rss_mib": 437.74609375,
+      "dependency_setup_s": 0.05645579600241035,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.4267578125,
+        24.7861328125,
+        29.6435546875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "subject",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.03681869397405535,
+      "query_s": 0.0657927900319919,
+      "total_s": 0.10261148400604725,
+      "peak_rss_mib": 535.42578125,
+      "initial_rss_mib": 96.984375,
+      "incremental_peak_rss_mib": 438.44140625,
+      "dependency_setup_s": 0.05425097804982215,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.4267578125,
+        24.7861328125,
+        29.6435546875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "subject",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.008455903036519885,
+      "query_s": 0.7416906779399142,
+      "total_s": 0.750146580976434,
+      "peak_rss_mib": 477.12109375,
+      "initial_rss_mib": 97.24609375,
+      "incremental_peak_rss_mib": 379.875,
+      "dependency_setup_s": 0.056912660016678274,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.4267578125,
+        24.7861328125,
+        29.6435546875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "subject",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.008258174057118595,
+      "query_s": 0.7694541970267892,
+      "total_s": 0.7777123710839078,
+      "peak_rss_mib": 477.20703125,
+      "initial_rss_mib": 97.23046875,
+      "incremental_peak_rss_mib": 379.9765625,
+      "dependency_setup_s": 0.02992159395944327,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.15234375,
+        24.57373046875,
+        29.54833984375
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "subject",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.008202433004043996,
+      "query_s": 0.7723499709973112,
+      "total_s": 0.7805524040013552,
+      "peak_rss_mib": 477.12890625,
+      "initial_rss_mib": 97.1796875,
+      "incremental_peak_rss_mib": 379.94921875,
+      "dependency_setup_s": 0.030591764021664858,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        15.15234375,
+        24.57373046875,
+        29.54833984375
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "subject",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.010621627909131348,
+      "query_s": 0.8063100990839303,
+      "total_s": 0.8169317269930616,
+      "peak_rss_mib": 477.1328125,
+      "initial_rss_mib": 97.14453125,
+      "incremental_peak_rss_mib": 379.98828125,
+      "dependency_setup_s": 0.03163334494456649,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.89990234375,
+        24.36474609375,
+        29.45361328125
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "subject",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012701646075583994,
+      "query_s": 0.7883738939417526,
+      "total_s": 0.8010755400173366,
+      "peak_rss_mib": 477.203125,
+      "initial_rss_mib": 97.1875,
+      "incremental_peak_rss_mib": 380.015625,
+      "dependency_setup_s": 0.04094447905663401,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.89990234375,
+        24.36474609375,
+        29.45361328125
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "subject",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.06838474306277931,
+      "query_s": 0.140265678986907,
+      "total_s": 0.2086504220496863,
+      "peak_rss_mib": 473.31640625,
+      "initial_rss_mib": 98.02734375,
+      "incremental_peak_rss_mib": 375.2890625,
+      "dependency_setup_s": 0.13347013003658503,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.89990234375,
+        24.36474609375,
+        29.45361328125
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "subject",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.11091652896720916,
+      "query_s": 0.15501938003581017,
+      "total_s": 0.26593590900301933,
+      "peak_rss_mib": 470.46875,
+      "initial_rss_mib": 98.12890625,
+      "incremental_peak_rss_mib": 372.33984375,
+      "dependency_setup_s": 0.14622104389127344,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.58740234375,
+        24.142578125,
+        29.3544921875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "subject",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.0693379930453375,
+      "query_s": 0.17396913596894592,
+      "total_s": 0.24330712901428342,
+      "peak_rss_mib": 481.3984375,
+      "initial_rss_mib": 97.9765625,
+      "incremental_peak_rss_mib": 383.421875,
+      "dependency_setup_s": 0.1525718190241605,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.58740234375,
+        24.142578125,
+        29.3544921875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "subject",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.11444407200906426,
+      "query_s": 0.1755377990193665,
+      "total_s": 0.28998187102843076,
+      "peak_rss_mib": 476.17578125,
+      "initial_rss_mib": 98.05859375,
+      "incremental_peak_rss_mib": 378.1171875,
+      "dependency_setup_s": 0.14644703397061676,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.58740234375,
+        24.142578125,
+        29.3544921875
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "subject",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.10091943992301822,
+      "query_s": 0.22640246408991516,
+      "total_s": 0.3273219040129334,
+      "peak_rss_mib": 483.953125,
+      "initial_rss_mib": 98.12109375,
+      "incremental_peak_rss_mib": 385.83203125,
+      "dependency_setup_s": 0.20649800403043628,
+      "warm_query_s": [],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.78076171875,
+        24.02392578125,
+        29.2880859375
+      ],
+      "signature": {
+        "sha256": "33be3181bdb9a19f67ec8a94d0e7f752ac463450775713da984aa40be95f431a",
+        "shapes": [
+          [
+            8137,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "subject",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.011122114025056362,
+      "query_s": 0.003726073889993131,
+      "total_s": 0.014848187915049493,
+      "peak_rss_mib": 166.78515625,
+      "initial_rss_mib": 96.96484375,
+      "incremental_peak_rss_mib": 69.8203125,
+      "dependency_setup_s": 0.059130660025402904,
+      "warm_query_s": [
+        0.002482200972735882,
+        0.0019702090648934245
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.78076171875,
+        24.02392578125,
+        29.2880859375
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "standing",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01350114494562149,
+      "query_s": 0.004019307089038193,
+      "total_s": 0.017520452034659684,
+      "peak_rss_mib": 166.51953125,
+      "initial_rss_mib": 96.95703125,
+      "incremental_peak_rss_mib": 69.5625,
+      "dependency_setup_s": 0.05608678294811398,
+      "warm_query_s": [
+        0.0029958089580759406,
+        0.002154685091227293
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.78076171875,
+        24.02392578125,
+        29.2880859375
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "standing",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.011123181087896228,
+      "query_s": 0.0035102919209748507,
+      "total_s": 0.014633473008871078,
+      "peak_rss_mib": 162.62890625,
+      "initial_rss_mib": 97.01953125,
+      "incremental_peak_rss_mib": 65.609375,
+      "dependency_setup_s": 0.04329254908952862,
+      "warm_query_s": [
+        0.002600679057650268,
+        0.002780902897939086
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.78076171875,
+        24.02392578125,
+        29.2880859375
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "standing",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.015208363998681307,
+      "query_s": 0.0041351610561832786,
+      "total_s": 0.019343525054864585,
+      "peak_rss_mib": 164.9375,
+      "initial_rss_mib": 97.04296875,
+      "incremental_peak_rss_mib": 67.89453125,
+      "dependency_setup_s": 0.06501525302883238,
+      "warm_query_s": [
+        0.003963749040849507,
+        0.00233644200488925
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.78076171875,
+        24.02392578125,
+        29.2880859375
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "standing",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.010552651016041636,
+      "query_s": 0.0030479170382022858,
+      "total_s": 0.013600568054243922,
+      "peak_rss_mib": 162.8359375,
+      "initial_rss_mib": 97.06640625,
+      "incremental_peak_rss_mib": 65.76953125,
+      "dependency_setup_s": 0.06269340601284057,
+      "warm_query_s": [
+        0.0020590119529515505,
+        0.0018729899311438203
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.78076171875,
+        24.02392578125,
+        29.2880859375
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "baseline",
+      "query": "standing",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012003544019535184,
+      "query_s": 0.00615207792725414,
+      "total_s": 0.018155621946789324,
+      "peak_rss_mib": 162.85546875,
+      "initial_rss_mib": 97.02734375,
+      "incremental_peak_rss_mib": 65.828125,
+      "dependency_setup_s": 0.04494540998712182,
+      "warm_query_s": [
+        0.003578652977012098,
+        0.0027019050903618336
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.78076171875,
+        24.02392578125,
+        29.2880859375
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "standing",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.013177359942346811,
+      "query_s": 0.003215384087525308,
+      "total_s": 0.01639274402987212,
+      "peak_rss_mib": 160.71484375,
+      "initial_rss_mib": 97.015625,
+      "incremental_peak_rss_mib": 63.69921875,
+      "dependency_setup_s": 0.049378360039554536,
+      "warm_query_s": [
+        0.0024096410488709807,
+        0.00256515690125525
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.78076171875,
+        24.02392578125,
+        29.2880859375
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "standing",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.013003099942579865,
+      "query_s": 0.0037015440175309777,
+      "total_s": 0.016704643960110843,
+      "peak_rss_mib": 164.90625,
+      "initial_rss_mib": 97.078125,
+      "incremental_peak_rss_mib": 67.828125,
+      "dependency_setup_s": 0.058634927961975336,
+      "warm_query_s": [
+        0.003170659067109227,
+        0.002230163081549108
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.78076171875,
+        24.02392578125,
+        29.2880859375
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "standing",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014654493075795472,
+      "query_s": 0.004052646923810244,
+      "total_s": 0.018707139999605715,
+      "peak_rss_mib": 164.71484375,
+      "initial_rss_mib": 96.94921875,
+      "incremental_peak_rss_mib": 67.765625,
+      "dependency_setup_s": 0.06378306599799544,
+      "warm_query_s": [
+        0.0037789070047438145,
+        0.002542556030675769
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.78076171875,
+        24.02392578125,
+        29.2880859375
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "standing",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.015141120064072311,
+      "query_s": 0.003447798895649612,
+      "total_s": 0.018588918959721923,
+      "peak_rss_mib": 160.75,
+      "initial_rss_mib": 96.984375,
+      "incremental_peak_rss_mib": 63.765625,
+      "dependency_setup_s": 0.06038573698606342,
+      "warm_query_s": [
+        0.003387274919077754,
+        0.0023480700328946114
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.7177734375,
+        23.857421875,
+        29.20556640625
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_trial",
+      "query": "standing",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.015564008965156972,
+      "query_s": 0.0057442099787294865,
+      "total_s": 0.02130821894388646,
+      "peak_rss_mib": 172.859375,
+      "initial_rss_mib": 97.04296875,
+      "incremental_peak_rss_mib": 75.81640625,
+      "dependency_setup_s": 0.0619755849475041,
+      "warm_query_s": [
+        0.005184932961128652,
+        0.0028050050605088472
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.7177734375,
+        23.857421875,
+        29.20556640625
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "standing",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014847320038825274,
+      "query_s": 0.0035188799956813455,
+      "total_s": 0.01836620003450662,
+      "peak_rss_mib": 164.94921875,
+      "initial_rss_mib": 97.0703125,
+      "incremental_peak_rss_mib": 67.87890625,
+      "dependency_setup_s": 0.06472191598732024,
+      "warm_query_s": [
+        0.003137505962513387,
+        0.0024872359354048967
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.7177734375,
+        23.857421875,
+        29.20556640625
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "standing",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.010542231029830873,
+      "query_s": 0.0028703149873763323,
+      "total_s": 0.013412546017207205,
+      "peak_rss_mib": 166.80078125,
+      "initial_rss_mib": 97.0078125,
+      "incremental_peak_rss_mib": 69.79296875,
+      "dependency_setup_s": 0.05481911404058337,
+      "warm_query_s": [
+        0.002470616018399596,
+        0.005958231980912387
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.7177734375,
+        23.857421875,
+        29.20556640625
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "standing",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01266745594330132,
+      "query_s": 0.0033430500188842416,
+      "total_s": 0.01601050596218556,
+      "peak_rss_mib": 156.80078125,
+      "initial_rss_mib": 97.0078125,
+      "incremental_peak_rss_mib": 59.79296875,
+      "dependency_setup_s": 0.050406293012201786,
+      "warm_query_s": [
+        0.005511065013706684,
+        0.0025661129038780928
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.7177734375,
+        23.857421875,
+        29.20556640625
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "standing",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01489656895864755,
+      "query_s": 0.003366461955010891,
+      "total_s": 0.01826303091365844,
+      "peak_rss_mib": 166.828125,
+      "initial_rss_mib": 97.01171875,
+      "incremental_peak_rss_mib": 69.81640625,
+      "dependency_setup_s": 0.05574676301330328,
+      "warm_query_s": [
+        0.006062414031475782,
+        0.006353679927997291
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.7177734375,
+        23.857421875,
+        29.20556640625
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_indexed",
+      "query": "standing",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014210839057341218,
+      "query_s": 0.004060875973664224,
+      "total_s": 0.018271715031005442,
+      "peak_rss_mib": 150.73828125,
+      "initial_rss_mib": 97.140625,
+      "incremental_peak_rss_mib": 53.59765625,
+      "dependency_setup_s": 0.06008823704905808,
+      "warm_query_s": [
+        0.0027503740275278687,
+        0.0024170000106096268
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.7177734375,
+        23.857421875,
+        29.20556640625
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "standing",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012629903969354928,
+      "query_s": 0.003887303057126701,
+      "total_s": 0.01651720702648163,
+      "peak_rss_mib": 158.80078125,
+      "initial_rss_mib": 96.984375,
+      "incremental_peak_rss_mib": 61.81640625,
+      "dependency_setup_s": 0.051748643978498876,
+      "warm_query_s": [
+        0.00265634898096323,
+        0.0036868799943476915
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.7177734375,
+        23.857421875,
+        29.20556640625
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "standing",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.015606499975547194,
+      "query_s": 0.0032771090045571327,
+      "total_s": 0.018883608980104327,
+      "peak_rss_mib": 161.02734375,
+      "initial_rss_mib": 97.21875,
+      "incremental_peak_rss_mib": 63.80859375,
+      "dependency_setup_s": 0.05708982201758772,
+      "warm_query_s": [
+        0.0028744719456881285,
+        0.00207960803527385
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.7177734375,
+        23.857421875,
+        29.20556640625
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "standing",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.01532074494753033,
+      "query_s": 0.0035243460442870855,
+      "total_s": 0.018845090991817415,
+      "peak_rss_mib": 154.84765625,
+      "initial_rss_mib": 97.00390625,
+      "incremental_peak_rss_mib": 57.84375,
+      "dependency_setup_s": 0.06605353695340455,
+      "warm_query_s": [
+        0.002625368069857359,
+        0.0019891910487785935
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.7177734375,
+        23.857421875,
+        29.20556640625
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "standing",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.014845948084257543,
+      "query_s": 0.004414579947479069,
+      "total_s": 0.019260528031736612,
+      "peak_rss_mib": 156.66015625,
+      "initial_rss_mib": 97.046875,
+      "incremental_peak_rss_mib": 59.61328125,
+      "dependency_setup_s": 0.06485909200273454,
+      "warm_query_s": [
+        0.0032531709875911474,
+        0.0022461330518126488
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.7177734375,
+        23.857421875,
+        29.20556640625
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_128k",
+      "query": "standing",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.11589532101061195,
+      "query_s": 0.004242246970534325,
+      "total_s": 0.12013756798114628,
+      "peak_rss_mib": 165.23046875,
+      "initial_rss_mib": 96.921875,
+      "incremental_peak_rss_mib": 68.30859375,
+      "dependency_setup_s": 0.04188114800490439,
+      "warm_query_s": [
+        0.0027227660175412893,
+        0.002606751979328692
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        14.7177734375,
+        23.857421875,
+        29.20556640625
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "standing",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.12249825603794307,
+      "query_s": 0.004280269960872829,
+      "total_s": 0.1267785259988159,
+      "peak_rss_mib": 165.9765625,
+      "initial_rss_mib": 97.0703125,
+      "incremental_peak_rss_mib": 68.90625,
+      "dependency_setup_s": 0.053317776997573674,
+      "warm_query_s": [
+        0.0028883180348202586,
+        0.0027071110671386123
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.30322265625,
+        24.24169921875,
+        29.30126953125
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "standing",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.11438319005537778,
+      "query_s": 0.004361753002740443,
+      "total_s": 0.11874494305811822,
+      "peak_rss_mib": 165.875,
+      "initial_rss_mib": 96.93359375,
+      "incremental_peak_rss_mib": 68.94140625,
+      "dependency_setup_s": 0.04261013399809599,
+      "warm_query_s": [
+        0.003065448021516204,
+        0.0028904560022056103
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.30322265625,
+        24.24169921875,
+        29.30126953125
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "standing",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.1258855490013957,
+      "query_s": 0.00470559298992157,
+      "total_s": 0.13059114199131727,
+      "peak_rss_mib": 165.5703125,
+      "initial_rss_mib": 96.96484375,
+      "incremental_peak_rss_mib": 68.60546875,
+      "dependency_setup_s": 0.04643106600269675,
+      "warm_query_s": [
+        0.0033010580809786916,
+        0.003006775979883969
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.30322265625,
+        24.24169921875,
+        29.30126953125
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "standing",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.09404190699569881,
+      "query_s": 0.004634460085071623,
+      "total_s": 0.09867636708077043,
+      "peak_rss_mib": 165.3515625,
+      "initial_rss_mib": 97.00390625,
+      "incremental_peak_rss_mib": 68.34765625,
+      "dependency_setup_s": 0.0638060609344393,
+      "warm_query_s": [
+        0.003093059058301151,
+        0.002909086993895471
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.30322265625,
+        24.24169921875,
+        29.30126953125
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_duckdb",
+      "query": "standing",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.07057047390844673,
+      "query_s": 0.0048134090611711144,
+      "total_s": 0.07538388296961784,
+      "peak_rss_mib": 147.18359375,
+      "initial_rss_mib": 97.0703125,
+      "incremental_peak_rss_mib": 50.11328125,
+      "dependency_setup_s": 0.06421796302311122,
+      "warm_query_s": [
+        0.00323191296774894,
+        0.002868624054826796
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.30322265625,
+        24.24169921875,
+        29.30126953125
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "standing",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.06892878492362797,
+      "query_s": 0.0047053160378709435,
+      "total_s": 0.07363410096149892,
+      "peak_rss_mib": 147.484375,
+      "initial_rss_mib": 97.02734375,
+      "incremental_peak_rss_mib": 50.45703125,
+      "dependency_setup_s": 0.06476635404396802,
+      "warm_query_s": [
+        0.003367986995726824,
+        0.0030277889454737306
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.30322265625,
+        24.24169921875,
+        29.30126953125
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "standing",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08611238398589194,
+      "query_s": 0.004415207076817751,
+      "total_s": 0.09052759106270969,
+      "peak_rss_mib": 146.796875,
+      "initial_rss_mib": 97.05078125,
+      "incremental_peak_rss_mib": 49.74609375,
+      "dependency_setup_s": 0.06426600203849375,
+      "warm_query_s": [
+        0.0032421459909528494,
+        0.0026508249575272202
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.30322265625,
+        24.24169921875,
+        29.30126953125
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "standing",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.07057375297881663,
+      "query_s": 0.004426181083545089,
+      "total_s": 0.07499993406236172,
+      "peak_rss_mib": 146.32421875,
+      "initial_rss_mib": 96.93359375,
+      "incremental_peak_rss_mib": 49.390625,
+      "dependency_setup_s": 0.06373060599435121,
+      "warm_query_s": [
+        0.003135737031698227,
+        0.003579639014787972
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.30322265625,
+        24.24169921875,
+        29.30126953125
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "standing",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.06526489101815969,
+      "query_s": 0.004083751933649182,
+      "total_s": 0.06934864295180887,
+      "peak_rss_mib": 147.078125,
+      "initial_rss_mib": 97.05859375,
+      "incremental_peak_rss_mib": 50.01953125,
+      "dependency_setup_s": 0.06215743802022189,
+      "warm_query_s": [
+        0.0029815949965268373,
+        0.002769147977232933
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.30322265625,
+        24.24169921875,
+        29.30126953125
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "parquet_128k_duckdb",
+      "query": "standing",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.04681977292057127,
+      "query_s": 0.003193735028617084,
+      "total_s": 0.05001350794918835,
+      "peak_rss_mib": 142.0703125,
+      "initial_rss_mib": 96.94921875,
+      "incremental_peak_rss_mib": 45.12109375,
+      "dependency_setup_s": 0.06401648197788745,
+      "warm_query_s": [
+        0.0017189449863508344,
+        0.0014355200110003352
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.30322265625,
+        24.24169921875,
+        29.30126953125
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "standing",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.030418129987083375,
+      "query_s": 0.0027138550067320466,
+      "total_s": 0.03313198499381542,
+      "peak_rss_mib": 141.84375,
+      "initial_rss_mib": 96.94140625,
+      "incremental_peak_rss_mib": 44.90234375,
+      "dependency_setup_s": 0.047935185953974724,
+      "warm_query_s": [
+        0.0016414769925177097,
+        0.0012899329885840416
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.19873046875,
+        24.1044921875,
+        29.2294921875
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "standing",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.05035452905576676,
+      "query_s": 0.0038397019961848855,
+      "total_s": 0.05419423105195165,
+      "peak_rss_mib": 141.83203125,
+      "initial_rss_mib": 96.953125,
+      "incremental_peak_rss_mib": 44.87890625,
+      "dependency_setup_s": 0.044965912005864084,
+      "warm_query_s": [
+        0.002260048990137875,
+        0.0019488900434225798
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.19873046875,
+        24.1044921875,
+        29.2294921875
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "standing",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.045165149960666895,
+      "query_s": 0.0038056140765547752,
+      "total_s": 0.04897076403722167,
+      "peak_rss_mib": 142.33984375,
+      "initial_rss_mib": 97.0625,
+      "incremental_peak_rss_mib": 45.27734375,
+      "dependency_setup_s": 0.06423156405799091,
+      "warm_query_s": [
+        0.002304738969542086,
+        0.0027295559411868453
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.19873046875,
+        24.1044921875,
+        29.2294921875
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "standing",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.04628733801655471,
+      "query_s": 0.0030049149645492435,
+      "total_s": 0.04929225298110396,
+      "peak_rss_mib": 141.5859375,
+      "initial_rss_mib": 97.0703125,
+      "incremental_peak_rss_mib": 44.515625,
+      "dependency_setup_s": 0.049981407006271183,
+      "warm_query_s": [
+        0.0018911079969257116,
+        0.0014705690555274487
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.19873046875,
+        24.1044921875,
+        29.2294921875
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "duckdb",
+      "query": "standing",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.008128209970891476,
+      "query_s": 0.0006097879959270358,
+      "total_s": 0.008737997966818511,
+      "peak_rss_mib": 101.3203125,
+      "initial_rss_mib": 97.140625,
+      "incremental_peak_rss_mib": 4.1796875,
+      "dependency_setup_s": 0.028018841054290533,
+      "warm_query_s": [
+        0.0002850720193237066,
+        0.0002635110868141055
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.19873046875,
+        24.1044921875,
+        29.2294921875
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "standing",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.012806843034923077,
+      "query_s": 0.0008829230209812522,
+      "total_s": 0.013689766055904329,
+      "peak_rss_mib": 101.40625,
+      "initial_rss_mib": 97.12890625,
+      "incremental_peak_rss_mib": 4.27734375,
+      "dependency_setup_s": 0.041596094029955566,
+      "warm_query_s": [
+        0.00047715799883008003,
+        0.00047364505007863045
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.19873046875,
+        24.1044921875,
+        29.2294921875
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "standing",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.013217326020821929,
+      "query_s": 0.0008971639908850193,
+      "total_s": 0.014114490011706948,
+      "peak_rss_mib": 101.40234375,
+      "initial_rss_mib": 97.08984375,
+      "incremental_peak_rss_mib": 4.3125,
+      "dependency_setup_s": 0.03873574605677277,
+      "warm_query_s": [
+        0.000501505914144218,
+        0.00048229796811938286
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.19873046875,
+        24.1044921875,
+        29.2294921875
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "standing",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.008462758967652917,
+      "query_s": 0.0006059049628674984,
+      "total_s": 0.009068663930520415,
+      "peak_rss_mib": 101.4453125,
+      "initial_rss_mib": 96.94140625,
+      "incremental_peak_rss_mib": 4.50390625,
+      "dependency_setup_s": 0.030400876072235405,
+      "warm_query_s": [
+        0.00029193097725510597,
+        0.0002794229658320546
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.19873046875,
+        24.1044921875,
+        29.2294921875
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "standing",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.008757482981309295,
+      "query_s": 0.0008164590690284967,
+      "total_s": 0.009573942050337791,
+      "peak_rss_mib": 101.47265625,
+      "initial_rss_mib": 97.25,
+      "incremental_peak_rss_mib": 4.22265625,
+      "dependency_setup_s": 0.03242002800107002,
+      "warm_query_s": [
+        0.00035659107379615307,
+        0.0002755780005827546
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.19873046875,
+        24.1044921875,
+        29.2294921875
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "hdf5",
+      "query": "standing",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.10020888701546937,
+      "query_s": 0.0038012380246073008,
+      "total_s": 0.10401012504007667,
+      "peak_rss_mib": 110.88671875,
+      "initial_rss_mib": 98.04296875,
+      "incremental_peak_rss_mib": 12.84375,
+      "dependency_setup_s": 0.19544513197615743,
+      "warm_query_s": [
+        0.0027592479018494487,
+        0.002845536917448044
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.19873046875,
+        24.1044921875,
+        29.2294921875
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "standing",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.0717277399962768,
+      "query_s": 0.0025435439310967922,
+      "total_s": 0.07427128392737359,
+      "peak_rss_mib": 111.20703125,
+      "initial_rss_mib": 98.07421875,
+      "incremental_peak_rss_mib": 13.1328125,
+      "dependency_setup_s": 0.15829651802778244,
+      "warm_query_s": [
+        0.0017458340153098106,
+        0.001719071064144373
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        17.19873046875,
+        24.1044921875,
+        29.2294921875
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "standing",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.11340691102668643,
+      "query_s": 0.003526753978803754,
+      "total_s": 0.11693366500549018,
+      "peak_rss_mib": 110.89453125,
+      "initial_rss_mib": 98.05078125,
+      "incremental_peak_rss_mib": 12.84375,
+      "dependency_setup_s": 0.20158671005629003,
+      "warm_query_s": [
+        0.006109065958298743,
+        0.0026794299483299255
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.8623046875,
+        23.919921875,
+        29.14208984375
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "standing",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.07559214299544692,
+      "query_s": 0.002515004016458988,
+      "total_s": 0.07810714701190591,
+      "peak_rss_mib": 111.1015625,
+      "initial_rss_mib": 97.95703125,
+      "incremental_peak_rss_mib": 13.14453125,
+      "dependency_setup_s": 0.17643955105450004,
+      "warm_query_s": [
+        0.001838647061958909,
+        0.0018477990524843335
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.8623046875,
+        23.919921875,
+        29.14208984375
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "standing",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.07511628000065684,
+      "query_s": 0.0034345060121268034,
+      "total_s": 0.07855078601278365,
+      "peak_rss_mib": 110.7109375,
+      "initial_rss_mib": 97.94140625,
+      "incremental_peak_rss_mib": 12.76953125,
+      "dependency_setup_s": 0.13606061006430537,
+      "warm_query_s": [
+        0.0024717029882594943,
+        0.002526729949750006
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        16.8623046875,
+        23.919921875,
+        29.14208984375
+      ],
+      "signature": {
+        "sha256": "93a2622ed886cb38873f767111c3bfb7dc068357d2d7ff145a30c30c905b9d9e",
+        "shapes": [
+          [
+            26,
+            10
+          ],
+          [
+            27,
+            10
+          ]
+        ]
+      },
+      "format": "zarr",
+      "query": "standing",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    }
+  ],
+  "failures": [],
+  "cache_conditions": "Fresh process/reader; OS page cache uncontrolled and usually warm; verification hashing excluded from timings; RSS includes imports and verification."
+}

@@ -1,0 +1,8 @@
+{
+  "parquet_trial": true,
+  "parquet_128k": true,
+  "duckdb": true,
+  "hdf5": true,
+  "zarr": true,
+  "source_files_unchanged": true
+}

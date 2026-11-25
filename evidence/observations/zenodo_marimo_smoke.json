@@ -1,0 +1,76 @@
+{
+  "status": "pass",
+  "scope": "Headless marimo integration smoke; unrelated fixtures; no storage-format timing ranking",
+  "limitations": [
+    "Headless cell execution and static HTML export do not test browser widgets, UI interaction or reactive reruns.",
+    "Selected outputs reuse previously checksum-verified references; full-file checksums are not re-downloaded here.",
+    "Native Polars HTTPS byte traffic is not instrumented; other traffic comes from the individual probe adapters.",
+    "Zarr coverage is a format-2 ZIP store and HDF5 uses the fileobj driver; this does not exercise a direct Zarr tree or ROS3."
+  ],
+  "execution": {
+    "kind": "marimo export html; actual remote queries evaluated inside a notebook cell",
+    "run_id": "66b8246b-bd5a-459b-8046-db0936942154",
+    "started_at_utc": "2026-11-13T20:14:27.903206+00:00",
+    "marimo_version": "0.25.2",
+    "full_reference_downloads_this_run": 0,
+    "elapsed_seconds": 28.588119036052376,
+    "completed_at_utc": "2026-11-13T20:14:56.489549+00:00"
+  },
+  "export_verification": {
+    "returncode": 0,
+    "wall_seconds": 30.99357695900835,
+    "subprocess_timeout_seconds": 240,
+    "timed_out": false,
+    "json_fresh_run_id_matches": true,
+    "json_mtime_after_invocation": true,
+    "html_exists": true,
+    "html_bytes": 76647,
+    "html_sha256": "e30826bf418ccefae086ae7b993241c784b96fa6cecbc7a534708c9949afd2f7",
+    "html_mtime_after_invocation": true,
+    "passed": true
+  },
+  "readers": [
+    {
+      "reader": "pyarrow_fsspec_known_size",
+      "status": "pass",
+      "matches_verified_reference": true,
+      "elapsed_seconds": 2.2111699880333617
+    },
+    {
+      "reader": "pandas_fsspec_known_size",
+      "status": "pass",
+      "matches_verified_reference": true,
+      "elapsed_seconds": 2.879904631059617
+    },
+    {
+      "reader": "polars_native_http",
+      "status": "pass",
+      "matches_verified_reference": true,
+      "elapsed_seconds": 3.7740379869937897
+    },
+    {
+      "reader": "polars_sql_native_http",
+      "status": "pass",
+      "matches_verified_reference": true,
+      "elapsed_seconds": 1.7012181340251118
+    },
+    {
+      "reader": "duckdb_native_database_https",
+      "status": "pass",
+      "matches_verified_reference": true,
+      "elapsed_seconds": 6.07196374097839
+    },
+    {
+      "reader": "hdf5_fsspec_fileobj",
+      "status": "pass",
+      "matches_verified_reference": true,
+      "elapsed_seconds": 3.959290571976453
+    },
+    {
+      "reader": "zarr_v2_zip_fsspec_fileobj",
+      "status": "pass",
+      "matches_verified_reference": true,
+      "elapsed_seconds": 7.960957496892661
+    }
+  ]
+}

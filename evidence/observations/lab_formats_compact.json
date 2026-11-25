@@ -1,0 +1,46 @@
+{
+  "tables": {
+    "footprints": {
+      "rows": 4219239,
+      "bytes": 31912960,
+      "write_s": 0.9707962340908125
+    },
+    "grf": {
+      "rows": 1503305,
+      "bytes": 3582156,
+      "write_s": 1.0544602220179513
+    },
+    "grf_cycle": {
+      "rows": 64400,
+      "bytes": 274344,
+      "write_s": 0.0610441459575668
+    },
+    "pressure": {
+      "rows": 112965976,
+      "bytes": 131587388,
+      "write_s": 10.739590841927566
+    },
+    "scans": {
+      "rows": 190,
+      "bytes": 233376808,
+      "write_s": 48.15100748895202
+    },
+    "spatiotemporal": {
+      "rows": 322,
+      "bytes": 102608,
+      "write_s": 0.18070516700390726
+    },
+    "subjects": {
+      "rows": 95,
+      "bytes": 38872,
+      "write_s": 0.07750060700345784
+    },
+    "trials": {
+      "rows": 3312,
+      "bytes": 17548,
+      "write_s": 0.047418646048754454
+    }
+  },
+  "bytes": 400892684,
+  "verification": "Full ordered values against the same Parquet inputs."
+}

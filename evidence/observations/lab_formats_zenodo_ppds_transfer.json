@@ -1,0 +1,219 @@
+{
+  "date": "2026-11-22",
+  "production_draft_controls": {
+    "status": "new_version_draft",
+    "published": false,
+    "file_visibility": "restricted",
+    "entries": [
+      {
+        "key": "subjects.vortex",
+        "size": 38872,
+        "status": "completed",
+        "checksum": "md5:24ee167bfe9e1a9be63f66396180b92a"
+      },
+      {
+        "key": "grf.vortex",
+        "size": 3582156,
+        "status": "completed",
+        "checksum": "md5:a4297885226985798cdd6e5a63d7bafc"
+      },
+      {
+        "key": "LICENSE",
+        "size": 1063,
+        "status": "completed",
+        "checksum": "md5:9b625ca9bd33248706e660e76b75303c"
+      },
+      {
+        "key": "scans.vortex",
+        "size": 233376808,
+        "status": "completed",
+        "checksum": "md5:f53a537d03f0d25eec29a9fa74bd60ae"
+      },
+      {
+        "key": "pressure.parquet",
+        "size": 124162610,
+        "status": "completed",
+        "checksum": "md5:01ef04f214b47bfcbaec4ca0894e4f9c"
+      },
+      {
+        "key": "subjects.parquet",
+        "size": 22349,
+        "status": "completed",
+        "checksum": "md5:2a84430e8d587c098938371554c914b0"
+      },
+      {
+        "key": "trials.parquet",
+        "size": 28745,
+        "status": "completed",
+        "checksum": "md5:05b2447928f0d8a142b90ecc4be7905f"
+      },
+      {
+        "key": "trials.vortex",
+        "size": 17548,
+        "status": "completed",
+        "checksum": "md5:e1b98145bba309e9880a2ceb5816d400"
+      },
+      {
+        "key": "grf.parquet",
+        "size": 6455696,
+        "status": "completed",
+        "checksum": "md5:87c687e778488304f37e7c24c8da92e2"
+      },
+      {
+        "key": "pressure.vortex",
+        "size": 131587388,
+        "status": "completed",
+        "checksum": "md5:4e71e4e95ec0765dbfa54f5389c0791f"
+      },
+      {
+        "key": "scans.parquet",
+        "size": 217951896,
+        "status": "completed",
+        "checksum": "md5:b4518550b9d4afdc970edd1083d6def8"
+      }
+    ],
+    "oversized_suffix": {
+      "requested_range": "bytes=-262144",
+      "status": 206,
+      "content_range": "bytes 18446744073709311821-22348/22349",
+      "declared_length": "262144"
+    },
+    "vortex_first_eight": {
+      "requested_range": "bytes=0-7",
+      "status": 206,
+      "content_range": "bytes 0-7/38872",
+      "declared_length": "8"
+    },
+    "anonymous_file_status": 403
+  },
+  "uploads": {
+    "LICENSE": {
+      "bytes": 1063,
+      "content_upload_s": 0.352,
+      "md5": "md5:9b625ca9bd33248706e660e76b75303c",
+      "existing_license": true
+    },
+    "trials.vortex": {
+      "bytes": 17548,
+      "content_upload_s": 0.491,
+      "md5": "md5:e1b98145bba309e9880a2ceb5816d400",
+      "existing_license": false
+    },
+    "subjects.parquet": {
+      "bytes": 22349,
+      "content_upload_s": 0.371,
+      "md5": "md5:2a84430e8d587c098938371554c914b0",
+      "existing_license": false
+    },
+    "trials.parquet": {
+      "bytes": 28745,
+      "content_upload_s": 0.332,
+      "md5": "md5:05b2447928f0d8a142b90ecc4be7905f",
+      "existing_license": false
+    },
+    "subjects.vortex": {
+      "bytes": 38872,
+      "content_upload_s": 0.347,
+      "md5": "md5:24ee167bfe9e1a9be63f66396180b92a",
+      "existing_license": false
+    },
+    "grf.vortex": {
+      "bytes": 3582156,
+      "content_upload_s": 3.222,
+      "md5": "md5:a4297885226985798cdd6e5a63d7bafc",
+      "existing_license": false
+    },
+    "grf.parquet": {
+      "bytes": 6455696,
+      "content_upload_s": 6.107,
+      "md5": "md5:87c687e778488304f37e7c24c8da92e2",
+      "existing_license": false
+    },
+    "pressure.parquet": {
+      "bytes": 124162610,
+      "content_upload_s": 21.728,
+      "md5": "md5:01ef04f214b47bfcbaec4ca0894e4f9c",
+      "existing_license": false
+    },
+    "pressure.vortex": {
+      "bytes": 131587388,
+      "content_upload_s": 12.917,
+      "md5": "md5:4e71e4e95ec0765dbfa54f5389c0791f",
+      "existing_license": false
+    },
+    "scans.parquet": {
+      "bytes": 217951896,
+      "content_upload_s": 19.683,
+      "md5": "md5:b4518550b9d4afdc970edd1083d6def8",
+      "existing_license": false
+    },
+    "scans.vortex": {
+      "bytes": 233376808,
+      "content_upload_s": 20.951,
+      "md5": "md5:f53a537d03f0d25eec29a9fa74bd60ae",
+      "existing_license": false
+    }
+  },
+  "downloads": {
+    "trials.vortex": {
+      "bytes": 17548,
+      "download_and_sha256_s": 1.558,
+      "sha256": "287fd138e82d46bcaf883b8b79d7fda1686600e7a24c85e51d0ac43e2a19a76a"
+    },
+    "subjects.parquet": {
+      "bytes": 22349,
+      "download_and_sha256_s": 0.267,
+      "sha256": "7951e60108f281f389ce6f547eafbd6ff4b7afed0f35248ed0d9f56bca83f907"
+    },
+    "trials.parquet": {
+      "bytes": 28745,
+      "download_and_sha256_s": 0.282,
+      "sha256": "537f329ae5b738967ae917028d68d679d7204bb241cd399e4f9cb620d2dac6fd"
+    },
+    "subjects.vortex": {
+      "bytes": 38872,
+      "download_and_sha256_s": 0.301,
+      "sha256": "3eba0b8b203ca447c66a47b17c711d7c74e671ae73985e1ed1fb9323a6433e84"
+    },
+    "grf.vortex": {
+      "bytes": 3582156,
+      "download_and_sha256_s": 7.554,
+      "sha256": "39f14a6f499ad71743fc057b92431deaac1a661493c387c98251c62236ba80ab"
+    },
+    "grf.parquet": {
+      "bytes": 6455696,
+      "download_and_sha256_s": 12.688,
+      "sha256": "3dd302eff7ca10636d5cdeee676fe080a16543f3e9c405ea51abb77b565efb87"
+    },
+    "pressure.parquet": {
+      "bytes": 124162610,
+      "download_and_sha256_s": 163.841,
+      "sha256": "07b7f6a218ede17b88e1e94467cfe71183b50cffe94b59eb399d61f533fbf18c"
+    },
+    "pressure.vortex": {
+      "bytes": 131587388,
+      "download_and_sha256_s": 65.507,
+      "sha256": "a1bc012671b27966a4f79a543c4d1706218ec70dfa8e06446698610dad30a1b6"
+    },
+    "scans.parquet": {
+      "bytes": 217951896,
+      "download_and_sha256_s": 112.039,
+      "sha256": "50395b682bf62083aec0cb68771e798d6388bd5a29a3854b3e3d34211f625867"
+    },
+    "scans.vortex": {
+      "bytes": 233376808,
+      "download_and_sha256_s": 109.41,
+      "sha256": "ce0c78667b4b1c7801b623f8570c34059e242a8153a3967a0a7494c604a51e7b"
+    }
+  },
+  "direct_marimo": {
+    "duckdb_parquet": {
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+    },
+    "polars_compact_vortex": {
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+    }
+  }
+}

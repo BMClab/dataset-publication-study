@@ -1,0 +1,412 @@
+{
+  "repository": "BMClab/ppds-internal (local research archive)",
+  "revision": "f9fd4d2b9e63d201bfb18a2bdad9d05562fc38f3",
+  "files": [
+    {
+      "file": "LICENSE",
+      "source": "LICENSE",
+      "source_sha256": "ab336fee428ce9e3fc5b3b33800aa0e27244a9781c67e5c7984595a25d7219e7",
+      "sha256": "ab336fee428ce9e3fc5b3b33800aa0e27244a9781c67e5c7984595a25d7219e7",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/methods/storage-requirements.txt",
+      "source": "benchmarks/storage-requirements.txt",
+      "source_sha256": "630aa7858f66aa86a3bc7dafe63c52a4dec0003f5bb4112354074da305df2420",
+      "sha256": "630aa7858f66aa86a3bc7dafe63c52a4dec0003f5bb4112354074da305df2420",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/methods/reader-requirements.txt",
+      "source": "benchmarks/reader-requirements.txt",
+      "source_sha256": "19911f7311ea52999417915df56eb107a3222c35dbfddb09934e5f0a5277fcc0",
+      "sha256": "19911f7311ea52999417915df56eb107a3222c35dbfddb09934e5f0a5277fcc0",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/methods/lab-format-requirements.txt",
+      "source": "benchmarks/lab-format-requirements.txt",
+      "source_sha256": "aa16de0488ee770bbd2c5a80aa7c6e5f5ce5a3b31963af01c9faa49971c58a76",
+      "sha256": "aa16de0488ee770bbd2c5a80aa7c6e5f5ce5a3b31963af01c9faa49971c58a76",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/methods/lab_format_tables.py",
+      "source": "benchmarks/lab_format_tables.py",
+      "source_sha256": "56e3a13bd43397761457198cb3e609455e6bd789410f898dda7d043e3ed1468e",
+      "sha256": "56e3a13bd43397761457198cb3e609455e6bd789410f898dda7d043e3ed1468e",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/methods/lab_format_queries.py",
+      "source": "benchmarks/lab_format_queries.py",
+      "source_sha256": "3c1784b22420217ffd21ac136b14678a643888c175a4dfb6cf9f265269327106",
+      "sha256": "3c1784b22420217ffd21ac136b14678a643888c175a4dfb6cf9f265269327106",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/methods/lab_format_build.py",
+      "source": "benchmarks/lab_format_build.py",
+      "source_sha256": "67226512ae9b156439ef972509c0eaba26188ee41a917e387e60294771ad6343",
+      "sha256": "67226512ae9b156439ef972509c0eaba26188ee41a917e387e60294771ad6343",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/reports/storage_benchmark.md",
+      "source": "benchmarks/results/storage_benchmark.md",
+      "source_sha256": "d4f4127f4e712275823b8f5da4e55aff780e98f3d867c1e90f8373115d7649c5",
+      "sha256": "42d8caa70a1d28cd7719eba65db5d75b7c0cbaa94d946961ab15221d6313ccae",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable"
+    },
+    {
+      "file": "evidence/reports/reader_benchmark.md",
+      "source": "benchmarks/results/reader_benchmark.md",
+      "source_sha256": "d1f888672c500ffe3709243295891e08552cebb2f467d85ea609167d22e5e048",
+      "sha256": "b04bee892f7e92d0ad14ddee8f071a11d9dcb9542840a399760e080af01bcace",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable"
+    },
+    {
+      "file": "evidence/reports/zenodo_access_tests.md",
+      "source": "benchmarks/results/zenodo_access_tests.md",
+      "source_sha256": "818f29e07c3d601015ffbc8b5b95680e36edbd9b21509292c638df0816967bfc",
+      "sha256": "3f4785403f354e36fbb491cfc19c4fa568736f7f12f2a41ca4ca4412557eabc8",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable"
+    },
+    {
+      "file": "evidence/reports/lab_format_benchmark.md",
+      "source": "benchmarks/results/lab_format_benchmark.md",
+      "source_sha256": "e768e8c2cf3a3320376c11f7dc6f0c0724193d7b59bb9e19b47748a45a341532",
+      "sha256": "433a42143e72729b8eb64fe658c2816a8468d1a459ce72e655533bfcb0066cdd",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable"
+    },
+    {
+      "file": "evidence/reports/lab_formats_zenodo_ppds.md",
+      "source": "benchmarks/results/lab_formats_zenodo_ppds.md",
+      "source_sha256": "2292ba3df4112987b440ed4d5e657c92b8010e785487824f283421e156eea805",
+      "sha256": "bdb78c373250937a03e81107dab9d1ae5b7b9f1c61b3ddc534517451c69da408",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable"
+    },
+    {
+      "file": "evidence/reports/lab_formats_zenodo_ppds_local.md",
+      "source": "benchmarks/results/lab_formats_zenodo_ppds_local.md",
+      "source_sha256": "d71dbc697cc4c8f8504fbf9be0880e78b9cd64a655d76c6e7b0266e48ea812e9",
+      "sha256": "9a2c7cc17823265de378a6ec23b8e1dc22269faaeaf787571d2387431b4fcf21",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable"
+    },
+    {
+      "file": "evidence/reports/lab_formats_peer_review.md",
+      "source": "benchmarks/results/lab_formats_peer_review.md",
+      "source_sha256": "f4f41a73c88274c486cad1fd8fc8db9b48ed286c13f945c04ca32b87c90cb472",
+      "sha256": "dd6baf5ec68c9f13556cbe646cb6dc4efeebcb36725b0e1ddc4af82f21fded16",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable"
+    },
+    {
+      "file": "evidence/reports/storage_hosting_assessment.md",
+      "source": "benchmarks/results/storage_hosting_assessment.md",
+      "source_sha256": "ee9b1b1d47a884889a85eb921993f441990b9e35140b846f852abe75d18088b9",
+      "sha256": "8377a0a59586f0fec6f60f7c84ba632f336e70cd75efeefcd17e9dc964aa4f77",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable"
+    },
+    {
+      "file": "evidence/reports/storage_format_discussion.md",
+      "source": "benchmarks/storage_format_discussion.md",
+      "source_sha256": "210c8b2245ad1abc54933168d94ff1fc9ef6321d4843e0ebf94769129a8d77b0",
+      "sha256": "a1ff9219b443d808e5fd7e090058844bf8d7d9f766c88c8a300914dda3f5883f",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable"
+    },
+    {
+      "file": "evidence/reports/reader_benchmark_plan.md",
+      "source": "benchmarks/reader_benchmark_plan.md",
+      "source_sha256": "fb440270291a48afa215edbe7d9ee6d44de01f49619145abef0ccbaa9e79e683",
+      "sha256": "d7f5df414157831b919c957c602b2901bfd300973cdb2a7ff3b3433f825fb0eb",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable"
+    },
+    {
+      "file": "case-studies/ppds/selection-record.md",
+      "source": "framework/docs/data_format_and_reader_selection.md",
+      "source_sha256": "9e0638d17c6e3487df390bb482c69b6f61b9ce5542882aed8bf79ce93836059d",
+      "sha256": "38ade52a838ef91cf9795631eb9dd8339d2f266b64056ff29530f1aef76f1d27",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable"
+    },
+    {
+      "file": "case-studies/ppds/polars-vs-duckdb.md",
+      "source": "framework/docs/polars_vs_duckdb.md",
+      "source_sha256": "03793d8b80e4145bc965230be9efdc2c23fb72c6b9de575541a9500983ddd146",
+      "sha256": "79be767de3204d8396ed5fe07accaa36e24d58ecb5adfb0005a5ccd254bb00e8",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable"
+    },
+    {
+      "file": "evidence/observations/lab_formats_pandas_dtypes.json",
+      "source": "benchmarks/results/lab_formats_pandas_dtypes.json",
+      "source_sha256": "5fd9ad19b69a49b6f4762a43859815bbf72915b1c106a11f41e13d051d1db4c3",
+      "sha256": "5fd9ad19b69a49b6f4762a43859815bbf72915b1c106a11f41e13d051d1db4c3",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/observations/storage_aggregate.json",
+      "source": "benchmarks/results/storage_aggregate.json",
+      "source_sha256": "2af9d83b469ff18046abe7c7440bac83bb16b0a7b9f69350c93f09a4cc8da55b",
+      "sha256": "49f4c37ae9e624a0a7d3cac1c3601b1c17c5528caf43164b17ce403107a24849",
+      "adaptation": "Omitted manifest.source"
+    },
+    {
+      "file": "evidence/observations/storage_local.json",
+      "source": "benchmarks/results/storage_local.json",
+      "source_sha256": "99fc27c2f5478c668fe707bf1e6641fc666f02b09bb48335bcfcc0b26906a69e",
+      "sha256": "1196b1abb4f9207b21be4927ba506bae8cb7a3aab0b4d29f48c9ccb828941f57",
+      "adaptation": "Omitted manifest.source"
+    },
+    {
+      "file": "evidence/observations/storage_http.json",
+      "source": "benchmarks/results/storage_http.json",
+      "source_sha256": "8126dc561a979a126d86a921425727fe53219d4e5a114ff7e06f6b6704440102",
+      "sha256": "f2e25c5addd8829e3a9f671637f6da21e71471e7b07e020faa0252a0668a5482",
+      "adaptation": "Omitted manifest.source"
+    },
+    {
+      "file": "evidence/observations/storage_http_20ms.json",
+      "source": "benchmarks/results/storage_http_20ms.json",
+      "source_sha256": "4e48ce3fdaedafb3216cc4bc3391a2e22954e0eac83146dfd79cb018b55cf3b9",
+      "sha256": "569805f9dae9469129e9d97bb8fe1301f37bf24935e0f248831f551060ef89aa",
+      "adaptation": "Omitted manifest.source"
+    },
+    {
+      "file": "evidence/observations/storage_bundle_local.json",
+      "source": "benchmarks/results/storage_bundle_local.json",
+      "source_sha256": "e526dcfeff5d96302045513fcac1a6faddf2e61d30808eababf38472fecbc6fd",
+      "sha256": "7cc8b8075e4a71c5778c0b4fde578742c48d167b6787bdb45c0737cf49837864",
+      "adaptation": "Omitted manifest.source"
+    },
+    {
+      "file": "evidence/observations/storage_bundle_http.json",
+      "source": "benchmarks/results/storage_bundle_http.json",
+      "source_sha256": "002947dbb1bb0d73a6587fefa74ead900eb6d031ef5f835b61b3ad3cf0b75a04",
+      "sha256": "ddfb828649059eca421c6d1d54a40d5e7a86d186d7b26851f95eb8aebde11369",
+      "adaptation": "Omitted manifest.source"
+    },
+    {
+      "file": "evidence/observations/storage_bundle_http_20ms.json",
+      "source": "benchmarks/results/storage_bundle_http_20ms.json",
+      "source_sha256": "ab298bd62de40745704b5b93fb8674be73f7758ee902535f7b8d134879b4570c",
+      "sha256": "a56e72823306e87a7d621acd2007d1260e27c51ec3141d8ea57b6218b10a6227",
+      "adaptation": "Omitted manifest.source"
+    },
+    {
+      "file": "evidence/observations/bundle_verification.json",
+      "source": "benchmarks/results/bundle_verification.json",
+      "source_sha256": "3cfa0966da58c31765bf34de9ccc26aba41803b6fcd9e0982936b82b037f5bc7",
+      "sha256": "3cfa0966da58c31765bf34de9ccc26aba41803b6fcd9e0982936b82b037f5bc7",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/observations/verification.json",
+      "source": "benchmarks/results/verification.json",
+      "source_sha256": "e39e0674f6410ada496dfd4b018aa72e1848c26833fd5a9fc1e38cf1d9709f34",
+      "sha256": "e39e0674f6410ada496dfd4b018aa72e1848c26833fd5a9fc1e38cf1d9709f34",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/observations/reader_aggregate.json",
+      "source": "benchmarks/results/reader_aggregate.json",
+      "source_sha256": "10e9f4cc08f72345ccf87b8723116b187ac0916211f34472b883f768e0a3aa02",
+      "sha256": "6d13e5ee691232566da341ede14d4965b0174ec1bdc044c06aadeb7bafda3acd",
+      "adaptation": "Omitted manifest.source; Omitted manifest.original_work"
+    },
+    {
+      "file": "evidence/observations/reader_local.json",
+      "source": "benchmarks/results/reader_local.json",
+      "source_sha256": "029b0547a123bf2753cd929b3e7940be33447f02e3a666dd9533660e5acee998",
+      "sha256": "6100eef1079a07f5f902421b741ac339d6f2382a021de6edba4c9995e0570e1c",
+      "adaptation": "Omitted manifest.source; Omitted manifest.original_work"
+    },
+    {
+      "file": "evidence/observations/reader_http.json",
+      "source": "benchmarks/results/reader_http.json",
+      "source_sha256": "ef6de2c3f968fa2b3e222e21964442322908dc5e31553f66bfb20135cdc821e0",
+      "sha256": "88394d3cc80bc82883731e525c19c50e464c2deac42819baf74e7cd41829df21",
+      "adaptation": "Omitted manifest.source; Omitted manifest.original_work"
+    },
+    {
+      "file": "evidence/observations/reader_s3.json",
+      "source": "benchmarks/results/reader_s3.json",
+      "source_sha256": "fc07c3b3a5551662dc520ec6c09f6e2d55a9f27b967c9fbed600ab06c0544280",
+      "sha256": "4224c0cc3d8c1639f2bf155fb27915d3d7b54bc9d11488e7fc69d1b43872caf7",
+      "adaptation": "Omitted manifest.source; Omitted manifest.original_work"
+    },
+    {
+      "file": "evidence/observations/reader_verification.json",
+      "source": "benchmarks/results/reader_verification.json",
+      "source_sha256": "dac5a15705c2967f49b565fdbd905cb4969f027f69337918a6c20eef08667cd0",
+      "sha256": "dac5a15705c2967f49b565fdbd905cb4969f027f69337918a6c20eef08667cd0",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/observations/polars_sql_check.json",
+      "source": "benchmarks/results/polars_sql_check.json",
+      "source_sha256": "fb910cf89f213e9d59d7c7f1abeb963422a86a00a499405ff223eb32a8f19d6e",
+      "sha256": "d8c6e0fc990b4d7c6e066aa78ca03b5da6cd38c6bd9a5a3b618465e8b57d5120",
+      "adaptation": "Replaced workstation paths in optimized plans with input basenames"
+    },
+    {
+      "file": "evidence/observations/lab_formats_build.json",
+      "source": "benchmarks/results/lab_formats_build.json",
+      "source_sha256": "75d0f1357a866718a620915955b81aaa8ddbbabdb395a0b90b0e6162aaa18420",
+      "sha256": "75d0f1357a866718a620915955b81aaa8ddbbabdb395a0b90b0e6162aaa18420",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/observations/lab_formats_compact.json",
+      "source": "benchmarks/results/lab_formats_compact.json",
+      "source_sha256": "7444a8e28b8e92236501f18aa9f92aa67df1ce2309ed0d7e49a6320b4da6a9f2",
+      "sha256": "7444a8e28b8e92236501f18aa9f92aa67df1ce2309ed0d7e49a6320b4da6a9f2",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/observations/lab_formats_schemas.json",
+      "source": "benchmarks/results/lab_formats_schemas.json",
+      "source_sha256": "1828d7f8747a181fb61f88ea04403a20ded38c4c3ed310d9d49365e4d28164e3",
+      "sha256": "1828d7f8747a181fb61f88ea04403a20ded38c4c3ed310d9d49365e4d28164e3",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/observations/lab_formats_local.json",
+      "source": "benchmarks/results/lab_formats_local.json",
+      "source_sha256": "21255c23ed2819b2d4c314781937f4cfec65dc683f128c703fe1e1677d6d59e5",
+      "sha256": "21255c23ed2819b2d4c314781937f4cfec65dc683f128c703fe1e1677d6d59e5",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/observations/lab_formats_https.json",
+      "source": "benchmarks/results/lab_formats_https.json",
+      "source_sha256": "da834abade068b62dac37fe8fc7ba169b2678abc46501532092bfbab0c045eb7",
+      "sha256": "da834abade068b62dac37fe8fc7ba169b2678abc46501532092bfbab0c045eb7",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/observations/lab_formats_downloads.json",
+      "source": "benchmarks/results/lab_formats_downloads.json",
+      "source_sha256": "5ca2e3335ff82faa80da505f7ceaeb24fe7b3a0ceee18827ebda828fe606ef59",
+      "sha256": "5ca2e3335ff82faa80da505f7ceaeb24fe7b3a0ceee18827ebda828fe606ef59",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/observations/lab_formats_hosted.json",
+      "source": "benchmarks/results/lab_formats_hosted.json",
+      "source_sha256": "ab01978683de25798932f331a12ea8b3c7848d426a93f98b82e8c8aae77ac6fb",
+      "sha256": "ab01978683de25798932f331a12ea8b3c7848d426a93f98b82e8c8aae77ac6fb",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/observations/lab_formats_node.json",
+      "source": "benchmarks/results/lab_formats_node.json",
+      "source_sha256": "5aa5430768343a6085fd63a07a74521b1bd2a4fb9c7b88ed520429745fc37a3c",
+      "sha256": "5aa5430768343a6085fd63a07a74521b1bd2a4fb9c7b88ed520429745fc37a3c",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/observations/lab_formats_marimo.json",
+      "source": "benchmarks/results/lab_formats_marimo.json",
+      "source_sha256": "fa68d62a92232323e60281dfaf8a5688932d2c95a7222262e21fdee760dda91b",
+      "sha256": "fa68d62a92232323e60281dfaf8a5688932d2c95a7222262e21fdee760dda91b",
+      "adaptation": "Byte-identical"
+    },
+    {
+      "file": "evidence/observations/lab_formats_zenodo_ppds_queries.json",
+      "source": "benchmarks/results/lab_formats_zenodo_ppds_queries.json",
+      "source_sha256": "15a9cee3dc2cbcb17b1fd1e324ebcc68ad13e33511b19d3cf806578d111343f5",
+      "sha256": "f3a09e679e017b0999b572198c2b471814873f41ab3df3a5811c1ee8d7682e1c",
+      "adaptation": "Omitted record"
+    },
+    {
+      "file": "evidence/observations/lab_formats_zenodo_ppds_local.json",
+      "source": "benchmarks/results/lab_formats_zenodo_ppds_local.json",
+      "source_sha256": "8b112b3abad069b7a7a4f323351f2645a08559bc43ef864a2c1d3ce43c1270e9",
+      "sha256": "43559063532a1d46c686bb1e75c3819f3d8e3b10113c6dca88bbb6f2d6f2953e",
+      "adaptation": "Omitted zenodo_record"
+    },
+    {
+      "file": "evidence/observations/lab_formats_zenodo_ppds_local_baselines.json",
+      "source": "benchmarks/results/lab_formats_zenodo_ppds_local_baselines.json",
+      "source_sha256": "6ad8667ab94a72b6c1a10a26ef85a5581ee4900d605de7c93bb85cd3d4162e3d",
+      "sha256": "e4632f5284fb4455743e2c12001954af2fd84ee723bfb9932bb046dab0eb27a8",
+      "adaptation": "Omitted zenodo_record"
+    },
+    {
+      "file": "evidence/observations/lab_formats_zenodo_ppds_transfer.json",
+      "source": "benchmarks/results/lab_formats_zenodo_ppds_transfer.json",
+      "source_sha256": "256bbeff3aa97690a605f2f97e3af85f2db9dd927748748256569f15ddbc1758",
+      "sha256": "ce33187cffc6618556c1193cd4e55844748c7cd8d8cd21a2349a2cecc38ddcb9",
+      "adaptation": "Omitted production_draft_controls.draft"
+    },
+    {
+      "file": "evidence/observations/reader_final_verification.json",
+      "source": "benchmarks/results/reader_final_verification.json",
+      "source_sha256": "3fe746f9be2bb24fcefc73afecf6bd5c93efcc37bbc8f03656cedca8fa30bace",
+      "sha256": "02388eb58f007e9dccb3b732ee0f0ae35fc2f8ebae9e09392d6a05c5e767394e",
+      "adaptation": "Selected verification and Zenodo findings"
+    },
+    {
+      "file": "evidence/observations/zenodo_lance_probe.json",
+      "source": "benchmarks/results/zenodo_lance_probe.json",
+      "source_sha256": "f5ae336f87af52c04d9f85590208db6a1a05054558c88df8205786a3c03d0176",
+      "sha256": "baf62b190e76e2e21764ec9fb7a70bab014c1e8e1345d8c9b045fa23ae3723d8",
+      "adaptation": "Selected fields: packages, scope, verdict"
+    },
+    {
+      "file": "evidence/observations/zenodo_array_probe.json",
+      "source": "benchmarks/results/zenodo_array_probe.json",
+      "source_sha256": "6aec2a7993ea5959a0681dc42bae37756bdbd5a111a0825aca01072a368e4886",
+      "sha256": "93759a9dfa386b3de3032bd59b618eb56d1eae89b85d736c80068b65a6cf4482",
+      "adaptation": "Selected fields: versions, purpose, summary; Retained public fixture identity and selective array-read measurements"
+    },
+    {
+      "file": "evidence/observations/zenodo_sqlite_probe.json",
+      "source": "benchmarks/results/zenodo_sqlite_probe.json",
+      "source_sha256": "10b86022a622fa415c4b45ecbc43344548b7d033e3f82c3e0643447f8f15c59c",
+      "sha256": "403b2e07c4fe929d18780ac491814f476a66b2480e9b18011b8be937c2e6de80",
+      "adaptation": "Selected fields: scope, conclusion; Retained adapter, controls, per-endpoint error, versions and HTTP status counters"
+    },
+    {
+      "file": "evidence/observations/zenodo_parquet_matrix.json",
+      "source": "benchmarks/results/zenodo_parquet_matrix.json",
+      "source_sha256": "f66f5e8acb4d844db7ac40514f3aac81fdfd15dc56c22592560545c74a200996",
+      "sha256": "b9f4c1ecb60ad504175021e058fb11e690b3ecd1c6a88da926ef57b8632dff47",
+      "adaptation": "Selected fields: scope, packages, summary; Retained reader identities, reference checks and traffic measurements for all 18 accesses"
+    },
+    {
+      "file": "evidence/observations/zenodo_duckdb_probe.json",
+      "source": "benchmarks/results/zenodo_duckdb_probe.json",
+      "source_sha256": "458ad8f3be5263e6b09f95c385e0e509ed832e57b4412f5f2ddcf64c31f91332",
+      "sha256": "2049353fc5782f4b7741312a4329c5f8fc99bb40914c3af2d91418b52707fa29",
+      "adaptation": "Selected fields: purpose, versions, status, validation; Retained remote traffic, elapsed time, status and settings"
+    },
+    {
+      "file": "evidence/observations/reader_reliability.json",
+      "source": "benchmarks/results/reader_reliability.json",
+      "source_sha256": "228a0fe483e4c40e0ca9aa2fc83cd27243d30593e08e4a0cba512a8290445ddf",
+      "sha256": "6c6653cd2800c49e4e7fcb83fc85e24d8988b8e4ae2a905efd7fd74eb7fabf1d",
+      "adaptation": "Selected fields: summary, limitations; Retained failure probe names and verdicts without exception paths"
+    },
+    {
+      "file": "evidence/observations/zenodo_marimo_smoke.json",
+      "source": "benchmarks/results/zenodo_marimo_smoke.json",
+      "source_sha256": "7bac20e8775a783f9d9524b78761a721f1dbe54cbfe06305cd4c36c568ec3d7b",
+      "sha256": "8764235471a4e9db72c9f8eb778dd2d8af2a467f22e361e2d6cc3272b1f6a6cf",
+      "adaptation": "Selected fields: status, scope, limitations; Retained notebook execution, reader checks and export verification without paths, commands or process output"
+    },
+    {
+      "file": "evidence/observations/zenodo_polars_socket_probe.json",
+      "source": "benchmarks/results/zenodo_polars_socket_probe.json",
+      "source_sha256": "aafa96f7067cb314cdbb66f9d5f15ded43f023735483bf08ee46f8a3bfcbab37",
+      "sha256": "de9a002191c022af1ba89f05f65cb2cabee8dd910bc97cc4c789967baa16b51d",
+      "adaptation": "Selected fields: packages, queries_executed, method; Retained fixture, parser control, conclusions and per-query result checks and transport counters, omitting descriptors and commands"
+    },
+    {
+      "file": "evidence/observations/lab_formats_zenodo_socket.json",
+      "source": "benchmarks/results/lab_formats_zenodo_socket.json",
+      "source_sha256": "d7d71f32cbab2009195dfb7bd5baa3fccbded5b0dd174c076ba5f884a98416f1",
+      "sha256": "24eb5be86612c6007bc39c7ddce61bd3b58f12911f20df31dfccb5c1e4137e53",
+      "adaptation": "Selected fields: packages, queries_executed, method; Retained fixture, parser control, conclusions and per-query result checks and transport counters, omitting descriptors and commands"
+    }
+  ]
+}

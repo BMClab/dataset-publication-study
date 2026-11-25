@@ -1,0 +1,1715 @@
+{
+  "manifest": {
+    "scope": "complete",
+    "products": {
+      "parquet_trial": {
+        "path": "pressure_trial.parquet",
+        "bytes": 132513536,
+        "write_seconds": 36.06386532529723,
+        "row_groups": 3188
+      },
+      "parquet_128k": {
+        "path": "pressure_128k.parquet",
+        "bytes": 123176276,
+        "write_seconds": 31.231021017068997,
+        "row_groups": 885
+      },
+      "hdf5": {
+        "path": "pressure.h5",
+        "bytes": 150324544,
+        "write_seconds": 286.15242434851825,
+        "chunks": [
+          64,
+          353,
+          64
+        ]
+      },
+      "zarr": {
+        "path": "pressure.zarr.zip",
+        "bytes": 229763944,
+        "write_seconds": 92.17122882278636,
+        "chunks": [
+          64,
+          353,
+          64
+        ]
+      },
+      "duckdb": {
+        "path": "pressure.duckdb",
+        "bytes": 347353088,
+        "build_seconds": 23.419365871930495
+      },
+      "baseline": {
+        "files": 98,
+        "bytes": 132814351
+      },
+      "complete_parquet": {
+        "bytes": 395769040,
+        "files": 9,
+        "scan_build_seconds": 19.091754514025524
+      },
+      "complete_duckdb": {
+        "path": "complete.duckdb",
+        "bytes": 633090048,
+        "files": 1,
+        "additional_build_seconds": 14.11267683294136
+      },
+      "pressure_package_extra_parquet_bytes": 95569
+    },
+    "target": {
+      "trial_id": 1507,
+      "row_group": 12,
+      "subject": "s050",
+      "condition": "wc",
+      "trial": 3,
+      "n_frames": 280,
+      "duration_s": 2.8,
+      "n_cells": 32266,
+      "frame": 140
+    },
+    "threads": 4,
+    "chunk_frames": 64,
+    "n_trials": 3188,
+    "n_frames": 867585,
+    "n_pressure_rows": 109852252,
+    "dense_bytes": 39200960640,
+    "dense_sha256": "4020b81d73e14388d7a9153be4cdba6d5016d8aa24c0d9d635f205086f790d11",
+    "sparse_sha256": "8f2213c4a3409e94a0944d6f1fe8cf5dcbe07d4d8d9d0822b987ea27214bce86",
+    "versions": {
+      "duckdb": "2.0.0",
+      "pyarrow": "26.0.1",
+      "numpy": "2.5.4",
+      "h5py": "3.16.0",
+      "zarr": "3.4.2",
+      "fsspec": "2026.9.0",
+      "psutil": "7.2.2"
+    },
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-7.0.0-43-generic-x86_64-with-glibc2.43",
+    "machine": {
+      "cpus": 16,
+      "memory_bytes": 65746612224,
+      "load_average": [
+        38.43505859375,
+        35.033203125,
+        31.3662109375
+      ]
+    }
+  },
+  "run_config": {
+    "started_utc": "2026-11-13T07:06:48.610656+00:00",
+    "benchmark_script_sha256": "07b4067ab5dea3fd876eebb1aa35054e7f2718352a8093a3165aa91de7d97be6",
+    "repetitions": 5,
+    "aggregate_repetitions": 1,
+    "formats": [
+      "complete_parquet",
+      "complete_duckdb"
+    ],
+    "queries": [
+      "cohort",
+      "footprints",
+      "grf",
+      "scan"
+    ],
+    "http_latency_ms": null,
+    "load_average_at_start": [
+      10.53173828125,
+      17.43408203125,
+      25.08349609375
+    ]
+  },
+  "records": [
+    {
+      "open_s": 0.08745086810085922,
+      "query_s": 0.005108186975121498,
+      "total_s": 0.09255905507598072,
+      "peak_rss_mib": 161.46484375,
+      "initial_rss_mib": 96.92578125,
+      "incremental_peak_rss_mib": 64.5390625,
+      "dependency_setup_s": 0.03946127009112388,
+      "warm_query_s": [
+        0.004488150007091463,
+        0.004146835068240762
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        10.16845703125,
+        17.244140625,
+        24.98095703125
+      ],
+      "signature": {
+        "sha256": "0e946f2aaef6d07e321edb78af34625fc7e925d81b6d50b01d69c3b2c6a222ce",
+        "bytes": 591
+      },
+      "format": "complete_parquet",
+      "query": "cohort",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.09222957794554532,
+      "query_s": 0.0051035149954259396,
+      "total_s": 0.09733309294097126,
+      "peak_rss_mib": 161.70703125,
+      "initial_rss_mib": 96.984375,
+      "incremental_peak_rss_mib": 64.72265625,
+      "dependency_setup_s": 0.04014915996231139,
+      "warm_query_s": [
+        0.00467511301394552,
+        0.00443838001228869
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        10.16845703125,
+        17.244140625,
+        24.98095703125
+      ],
+      "signature": {
+        "sha256": "0e946f2aaef6d07e321edb78af34625fc7e925d81b6d50b01d69c3b2c6a222ce",
+        "bytes": 591
+      },
+      "format": "complete_parquet",
+      "query": "cohort",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08627563796471804,
+      "query_s": 0.005306250066496432,
+      "total_s": 0.09158188803121448,
+      "peak_rss_mib": 162.05078125,
+      "initial_rss_mib": 96.90234375,
+      "incremental_peak_rss_mib": 65.1484375,
+      "dependency_setup_s": 0.0399709849152714,
+      "warm_query_s": [
+        0.004520607995800674,
+        0.004357170895673335
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        10.16845703125,
+        17.244140625,
+        24.98095703125
+      ],
+      "signature": {
+        "sha256": "0e946f2aaef6d07e321edb78af34625fc7e925d81b6d50b01d69c3b2c6a222ce",
+        "bytes": 591
+      },
+      "format": "complete_parquet",
+      "query": "cohort",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.0846761780558154,
+      "query_s": 0.005024343961849809,
+      "total_s": 0.08970052201766521,
+      "peak_rss_mib": 162.1796875,
+      "initial_rss_mib": 97.08203125,
+      "incremental_peak_rss_mib": 65.09765625,
+      "dependency_setup_s": 0.03955677303019911,
+      "warm_query_s": [
+        0.004952671006321907,
+        0.004547715885564685
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        10.16845703125,
+        17.244140625,
+        24.98095703125
+      ],
+      "signature": {
+        "sha256": "0e946f2aaef6d07e321edb78af34625fc7e925d81b6d50b01d69c3b2c6a222ce",
+        "bytes": 591
+      },
+      "format": "complete_parquet",
+      "query": "cohort",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.0843260899418965,
+      "query_s": 0.005170566029846668,
+      "total_s": 0.08949665597174317,
+      "peak_rss_mib": 161.43359375,
+      "initial_rss_mib": 96.9296875,
+      "incremental_peak_rss_mib": 64.50390625,
+      "dependency_setup_s": 0.03950348903890699,
+      "warm_query_s": [
+        0.004870895994827151,
+        0.00579437508713454
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        10.16845703125,
+        17.244140625,
+        24.98095703125
+      ],
+      "signature": {
+        "sha256": "0e946f2aaef6d07e321edb78af34625fc7e925d81b6d50b01d69c3b2c6a222ce",
+        "bytes": 591
+      },
+      "format": "complete_parquet",
+      "query": "cohort",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.028818789054639637,
+      "query_s": 0.004999993019737303,
+      "total_s": 0.03381878207437694,
+      "peak_rss_mib": 141.5,
+      "initial_rss_mib": 97.0625,
+      "incremental_peak_rss_mib": 44.4375,
+      "dependency_setup_s": 0.04102242400404066,
+      "warm_query_s": [
+        0.003758442006073892,
+        0.003267516032792628
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        10.16845703125,
+        17.244140625,
+        24.98095703125
+      ],
+      "signature": {
+        "sha256": "0e946f2aaef6d07e321edb78af34625fc7e925d81b6d50b01d69c3b2c6a222ce",
+        "bytes": 591
+      },
+      "format": "complete_duckdb",
+      "query": "cohort",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.02831186493858695,
+      "query_s": 0.004441597033292055,
+      "total_s": 0.032753461971879005,
+      "peak_rss_mib": 141.0703125,
+      "initial_rss_mib": 96.95703125,
+      "incremental_peak_rss_mib": 44.11328125,
+      "dependency_setup_s": 0.04227194201666862,
+      "warm_query_s": [
+        0.003581973956897855,
+        0.0031889090314507484
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        10.16845703125,
+        17.244140625,
+        24.98095703125
+      ],
+      "signature": {
+        "sha256": "0e946f2aaef6d07e321edb78af34625fc7e925d81b6d50b01d69c3b2c6a222ce",
+        "bytes": 591
+      },
+      "format": "complete_duckdb",
+      "query": "cohort",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.028276822064071894,
+      "query_s": 0.003926801960915327,
+      "total_s": 0.03220362402498722,
+      "peak_rss_mib": 141.22265625,
+      "initial_rss_mib": 97.06640625,
+      "incremental_peak_rss_mib": 44.15625,
+      "dependency_setup_s": 0.03969709004741162,
+      "warm_query_s": [
+        0.003182677086442709,
+        0.0026945549761876464
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        10.16845703125,
+        17.244140625,
+        24.98095703125
+      ],
+      "signature": {
+        "sha256": "0e946f2aaef6d07e321edb78af34625fc7e925d81b6d50b01d69c3b2c6a222ce",
+        "bytes": 591
+      },
+      "format": "complete_duckdb",
+      "query": "cohort",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.028777934960089624,
+      "query_s": 0.003840868012048304,
+      "total_s": 0.03261880297213793,
+      "peak_rss_mib": 140.515625,
+      "initial_rss_mib": 96.9609375,
+      "incremental_peak_rss_mib": 43.5546875,
+      "dependency_setup_s": 0.04005443397909403,
+      "warm_query_s": [
+        0.00302763597574085,
+        0.003041659016162157
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        10.16845703125,
+        17.244140625,
+        24.98095703125
+      ],
+      "signature": {
+        "sha256": "0e946f2aaef6d07e321edb78af34625fc7e925d81b6d50b01d69c3b2c6a222ce",
+        "bytes": 591
+      },
+      "format": "complete_duckdb",
+      "query": "cohort",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.02771735901478678,
+      "query_s": 0.0036713420413434505,
+      "total_s": 0.03138870105613023,
+      "peak_rss_mib": 141.45703125,
+      "initial_rss_mib": 97.08203125,
+      "incremental_peak_rss_mib": 44.375,
+      "dependency_setup_s": 0.039841398014687,
+      "warm_query_s": [
+        0.0030125860357657075,
+        0.002802870934829116
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        10.16845703125,
+        17.244140625,
+        24.98095703125
+      ],
+      "signature": {
+        "sha256": "0e946f2aaef6d07e321edb78af34625fc7e925d81b6d50b01d69c3b2c6a222ce",
+        "bytes": 591
+      },
+      "format": "complete_duckdb",
+      "query": "cohort",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08291016309522092,
+      "query_s": 0.022329783998429775,
+      "total_s": 0.1052399470936507,
+      "peak_rss_mib": 161.44140625,
+      "initial_rss_mib": 97.015625,
+      "incremental_peak_rss_mib": 64.42578125,
+      "dependency_setup_s": 0.03925632103346288,
+      "warm_query_s": [
+        0.02446677698753774,
+        0.02167491998989135
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        10.16845703125,
+        17.244140625,
+        24.98095703125
+      ],
+      "signature": {
+        "sha256": "bfd432ec68d6f2009da06969e64c666c34ce0928e3def6e1e0ab7c3b51fbc0b8",
+        "shapes": [
+          [
+            24,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "complete_parquet",
+      "query": "footprints",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.09118837292771786,
+      "query_s": 0.023327044094912708,
+      "total_s": 0.11451541702263057,
+      "peak_rss_mib": 160.91015625,
+      "initial_rss_mib": 96.9609375,
+      "incremental_peak_rss_mib": 63.94921875,
+      "dependency_setup_s": 0.04036857502069324,
+      "warm_query_s": [
+        0.022955619962885976,
+        0.022408679011277854
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        10.16845703125,
+        17.244140625,
+        24.98095703125
+      ],
+      "signature": {
+        "sha256": "bfd432ec68d6f2009da06969e64c666c34ce0928e3def6e1e0ab7c3b51fbc0b8",
+        "shapes": [
+          [
+            24,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "complete_parquet",
+      "query": "footprints",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.0869441170943901,
+      "query_s": 0.021128632011823356,
+      "total_s": 0.10807274910621345,
+      "peak_rss_mib": 161.04296875,
+      "initial_rss_mib": 96.9609375,
+      "incremental_peak_rss_mib": 64.08203125,
+      "dependency_setup_s": 0.03913785598706454,
+      "warm_query_s": [
+        0.022596929920837283,
+        0.022476597921922803
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.67431640625,
+        17.02392578125,
+        24.8681640625
+      ],
+      "signature": {
+        "sha256": "bfd432ec68d6f2009da06969e64c666c34ce0928e3def6e1e0ab7c3b51fbc0b8",
+        "shapes": [
+          [
+            24,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "complete_parquet",
+      "query": "footprints",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08549720305018127,
+      "query_s": 0.025147066917270422,
+      "total_s": 0.11064426996745169,
+      "peak_rss_mib": 161.0703125,
+      "initial_rss_mib": 97.0078125,
+      "incremental_peak_rss_mib": 64.0625,
+      "dependency_setup_s": 0.0397768939146772,
+      "warm_query_s": [
+        0.023594191996380687,
+        0.025142899015918374
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.67431640625,
+        17.02392578125,
+        24.8681640625
+      ],
+      "signature": {
+        "sha256": "bfd432ec68d6f2009da06969e64c666c34ce0928e3def6e1e0ab7c3b51fbc0b8",
+        "shapes": [
+          [
+            24,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "complete_parquet",
+      "query": "footprints",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08941339107695967,
+      "query_s": 0.023445355938747525,
+      "total_s": 0.1128587470157072,
+      "peak_rss_mib": 160.4921875,
+      "initial_rss_mib": 96.92578125,
+      "incremental_peak_rss_mib": 63.56640625,
+      "dependency_setup_s": 0.0391159689752385,
+      "warm_query_s": [
+        0.024212781921960413,
+        0.021288399933837354
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.67431640625,
+        17.02392578125,
+        24.8681640625
+      ],
+      "signature": {
+        "sha256": "bfd432ec68d6f2009da06969e64c666c34ce0928e3def6e1e0ab7c3b51fbc0b8",
+        "shapes": [
+          [
+            24,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "complete_parquet",
+      "query": "footprints",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.027955517056398094,
+      "query_s": 0.002894595032557845,
+      "total_s": 0.03085011208895594,
+      "peak_rss_mib": 146.23828125,
+      "initial_rss_mib": 96.9375,
+      "incremental_peak_rss_mib": 49.30078125,
+      "dependency_setup_s": 0.039595019072294235,
+      "warm_query_s": [
+        0.002167072962038219,
+        0.0024972209939733148
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.67431640625,
+        17.02392578125,
+        24.8681640625
+      ],
+      "signature": {
+        "sha256": "bfd432ec68d6f2009da06969e64c666c34ce0928e3def6e1e0ab7c3b51fbc0b8",
+        "shapes": [
+          [
+            24,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "complete_duckdb",
+      "query": "footprints",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.02975914196576923,
+      "query_s": 0.003418565960600972,
+      "total_s": 0.033177707926370203,
+      "peak_rss_mib": 146.42578125,
+      "initial_rss_mib": 96.9765625,
+      "incremental_peak_rss_mib": 49.44921875,
+      "dependency_setup_s": 0.03957746899686754,
+      "warm_query_s": [
+        0.0022638440132141113,
+        0.002473086933605373
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.67431640625,
+        17.02392578125,
+        24.8681640625
+      ],
+      "signature": {
+        "sha256": "bfd432ec68d6f2009da06969e64c666c34ce0928e3def6e1e0ab7c3b51fbc0b8",
+        "shapes": [
+          [
+            24,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "complete_duckdb",
+      "query": "footprints",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.03159461391624063,
+      "query_s": 0.0029149469919502735,
+      "total_s": 0.034509560908190906,
+      "peak_rss_mib": 144.7890625,
+      "initial_rss_mib": 96.9453125,
+      "incremental_peak_rss_mib": 47.84375,
+      "dependency_setup_s": 0.03918988606892526,
+      "warm_query_s": [
+        0.0023262420436367393,
+        0.00218857207801193
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.67431640625,
+        17.02392578125,
+        24.8681640625
+      ],
+      "signature": {
+        "sha256": "bfd432ec68d6f2009da06969e64c666c34ce0928e3def6e1e0ab7c3b51fbc0b8",
+        "shapes": [
+          [
+            24,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "complete_duckdb",
+      "query": "footprints",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.0314885739935562,
+      "query_s": 0.0029083769768476486,
+      "total_s": 0.03439695097040385,
+      "peak_rss_mib": 146.0859375,
+      "initial_rss_mib": 96.92578125,
+      "incremental_peak_rss_mib": 49.16015625,
+      "dependency_setup_s": 0.04059856105595827,
+      "warm_query_s": [
+        0.0021590169053524733,
+        0.0023628270719200373
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.67431640625,
+        17.02392578125,
+        24.8681640625
+      ],
+      "signature": {
+        "sha256": "bfd432ec68d6f2009da06969e64c666c34ce0928e3def6e1e0ab7c3b51fbc0b8",
+        "shapes": [
+          [
+            24,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "complete_duckdb",
+      "query": "footprints",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.028358560986816883,
+      "query_s": 0.002972707967273891,
+      "total_s": 0.031331268954090774,
+      "peak_rss_mib": 146.43359375,
+      "initial_rss_mib": 97.07421875,
+      "incremental_peak_rss_mib": 49.359375,
+      "dependency_setup_s": 0.040396520984359086,
+      "warm_query_s": [
+        0.002053035073913634,
+        0.002307152026332915
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.67431640625,
+        17.02392578125,
+        24.8681640625
+      ],
+      "signature": {
+        "sha256": "bfd432ec68d6f2009da06969e64c666c34ce0928e3def6e1e0ab7c3b51fbc0b8",
+        "shapes": [
+          [
+            24,
+            353,
+            64
+          ]
+        ]
+      },
+      "format": "complete_duckdb",
+      "query": "footprints",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08937940909527242,
+      "query_s": 0.003638561931438744,
+      "total_s": 0.09301797102671117,
+      "peak_rss_mib": 163.40625,
+      "initial_rss_mib": 97.03515625,
+      "incremental_peak_rss_mib": 66.37109375,
+      "dependency_setup_s": 0.039285458042286336,
+      "warm_query_s": [
+        0.0032901079393923283,
+        0.0032113080378621817
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.67431640625,
+        17.02392578125,
+        24.8681640625
+      ],
+      "signature": {
+        "sha256": "daf1862406f598e0bc783bff5308e069a7f41a7420882f196d23257a6daf9c7f",
+        "shapes": [
+          [
+            5015,
+            4
+          ]
+        ]
+      },
+      "format": "complete_parquet",
+      "query": "grf",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.10526595206465572,
+      "query_s": 0.005335533991456032,
+      "total_s": 0.11060148605611175,
+      "peak_rss_mib": 162.5234375,
+      "initial_rss_mib": 97.015625,
+      "incremental_peak_rss_mib": 65.5078125,
+      "dependency_setup_s": 0.03946859703864902,
+      "warm_query_s": [
+        0.005153172998689115,
+        0.004369438975118101
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.67431640625,
+        17.02392578125,
+        24.8681640625
+      ],
+      "signature": {
+        "sha256": "daf1862406f598e0bc783bff5308e069a7f41a7420882f196d23257a6daf9c7f",
+        "shapes": [
+          [
+            5015,
+            4
+          ]
+        ]
+      },
+      "format": "complete_parquet",
+      "query": "grf",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08345262706279755,
+      "query_s": 0.0035962449619546533,
+      "total_s": 0.0870488720247522,
+      "peak_rss_mib": 163.140625,
+      "initial_rss_mib": 97.01953125,
+      "incremental_peak_rss_mib": 66.12109375,
+      "dependency_setup_s": 0.04187827091664076,
+      "warm_query_s": [
+        0.0032670459477230906,
+        0.003913864027708769
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.67431640625,
+        17.02392578125,
+        24.8681640625
+      ],
+      "signature": {
+        "sha256": "daf1862406f598e0bc783bff5308e069a7f41a7420882f196d23257a6daf9c7f",
+        "shapes": [
+          [
+            5015,
+            4
+          ]
+        ]
+      },
+      "format": "complete_parquet",
+      "query": "grf",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08591279794927686,
+      "query_s": 0.00371284200809896,
+      "total_s": 0.08962563995737582,
+      "peak_rss_mib": 162.2265625,
+      "initial_rss_mib": 97.07421875,
+      "incremental_peak_rss_mib": 65.15234375,
+      "dependency_setup_s": 0.04133099492173642,
+      "warm_query_s": [
+        0.003891394939273596,
+        0.004302260000258684
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.3798828125,
+        16.8408203125,
+        24.7666015625
+      ],
+      "signature": {
+        "sha256": "daf1862406f598e0bc783bff5308e069a7f41a7420882f196d23257a6daf9c7f",
+        "shapes": [
+          [
+            5015,
+            4
+          ]
+        ]
+      },
+      "format": "complete_parquet",
+      "query": "grf",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08393799501936883,
+      "query_s": 0.003989471937529743,
+      "total_s": 0.08792746695689857,
+      "peak_rss_mib": 163.02734375,
+      "initial_rss_mib": 96.94921875,
+      "incremental_peak_rss_mib": 66.078125,
+      "dependency_setup_s": 0.040241814916953444,
+      "warm_query_s": [
+        0.00395289296284318,
+        0.004037932027131319
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.3798828125,
+        16.8408203125,
+        24.7666015625
+      ],
+      "signature": {
+        "sha256": "daf1862406f598e0bc783bff5308e069a7f41a7420882f196d23257a6daf9c7f",
+        "shapes": [
+          [
+            5015,
+            4
+          ]
+        ]
+      },
+      "format": "complete_parquet",
+      "query": "grf",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.028532905969768763,
+      "query_s": 0.0025172620080411434,
+      "total_s": 0.031050167977809906,
+      "peak_rss_mib": 138.4453125,
+      "initial_rss_mib": 97.0625,
+      "incremental_peak_rss_mib": 41.3828125,
+      "dependency_setup_s": 0.0393081319052726,
+      "warm_query_s": [
+        0.0020354300504550338,
+        0.0018638779874891043
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.3798828125,
+        16.8408203125,
+        24.7666015625
+      ],
+      "signature": {
+        "sha256": "daf1862406f598e0bc783bff5308e069a7f41a7420882f196d23257a6daf9c7f",
+        "shapes": [
+          [
+            5015,
+            4
+          ]
+        ]
+      },
+      "format": "complete_duckdb",
+      "query": "grf",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.029115513083525002,
+      "query_s": 0.0026558879762887955,
+      "total_s": 0.0317714010598138,
+      "peak_rss_mib": 137.8984375,
+      "initial_rss_mib": 96.98046875,
+      "incremental_peak_rss_mib": 40.91796875,
+      "dependency_setup_s": 0.04016278393100947,
+      "warm_query_s": [
+        0.0021295020123943686,
+        0.0015998180024325848
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.3798828125,
+        16.8408203125,
+        24.7666015625
+      ],
+      "signature": {
+        "sha256": "daf1862406f598e0bc783bff5308e069a7f41a7420882f196d23257a6daf9c7f",
+        "shapes": [
+          [
+            5015,
+            4
+          ]
+        ]
+      },
+      "format": "complete_duckdb",
+      "query": "grf",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.03187500010244548,
+      "query_s": 0.0027673629811033607,
+      "total_s": 0.034642363083548844,
+      "peak_rss_mib": 138.19921875,
+      "initial_rss_mib": 97.09765625,
+      "incremental_peak_rss_mib": 41.1015625,
+      "dependency_setup_s": 0.03993271104991436,
+      "warm_query_s": [
+        0.0020661569433286786,
+        0.0023500199895352125
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.3798828125,
+        16.8408203125,
+        24.7666015625
+      ],
+      "signature": {
+        "sha256": "daf1862406f598e0bc783bff5308e069a7f41a7420882f196d23257a6daf9c7f",
+        "shapes": [
+          [
+            5015,
+            4
+          ]
+        ]
+      },
+      "format": "complete_duckdb",
+      "query": "grf",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.029311812948435545,
+      "query_s": 0.0027747839922085404,
+      "total_s": 0.032086596940644085,
+      "peak_rss_mib": 137.859375,
+      "initial_rss_mib": 96.99609375,
+      "incremental_peak_rss_mib": 40.86328125,
+      "dependency_setup_s": 0.039385623997077346,
+      "warm_query_s": [
+        0.001971725025214255,
+        0.002092322916723788
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.3798828125,
+        16.8408203125,
+        24.7666015625
+      ],
+      "signature": {
+        "sha256": "daf1862406f598e0bc783bff5308e069a7f41a7420882f196d23257a6daf9c7f",
+        "shapes": [
+          [
+            5015,
+            4
+          ]
+        ]
+      },
+      "format": "complete_duckdb",
+      "query": "grf",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.02990392700303346,
+      "query_s": 0.002601642976514995,
+      "total_s": 0.032505569979548454,
+      "peak_rss_mib": 138.30859375,
+      "initial_rss_mib": 97.1328125,
+      "incremental_peak_rss_mib": 41.17578125,
+      "dependency_setup_s": 0.03959433699492365,
+      "warm_query_s": [
+        0.0019427279476076365,
+        0.0016824830090627074
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.3798828125,
+        16.8408203125,
+        24.7666015625
+      ],
+      "signature": {
+        "sha256": "daf1862406f598e0bc783bff5308e069a7f41a7420882f196d23257a6daf9c7f",
+        "shapes": [
+          [
+            5015,
+            4
+          ]
+        ]
+      },
+      "format": "complete_duckdb",
+      "query": "grf",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08508805092424154,
+      "query_s": 0.00787588709499687,
+      "total_s": 0.09296393801923841,
+      "peak_rss_mib": 172.984375,
+      "initial_rss_mib": 96.96484375,
+      "incremental_peak_rss_mib": 76.01953125,
+      "dependency_setup_s": 0.039481497020460665,
+      "warm_query_s": [
+        0.007499129977077246,
+        0.006977929966524243
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.3798828125,
+        16.8408203125,
+        24.7666015625
+      ],
+      "signature": {
+        "sha256": "5927fcf39297e6a65f1f2cf695dcc7d25f5bcc7d460c0aa7bbed1f466a442ac3",
+        "bytes": 2146884
+      },
+      "format": "complete_parquet",
+      "query": "scan",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08619636599905789,
+      "query_s": 0.0065110629657283425,
+      "total_s": 0.09270742896478623,
+      "peak_rss_mib": 170.75,
+      "initial_rss_mib": 96.96875,
+      "incremental_peak_rss_mib": 73.78125,
+      "dependency_setup_s": 0.040866573923267424,
+      "warm_query_s": [
+        0.006864832015708089,
+        0.0071915630251169205
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.3798828125,
+        16.8408203125,
+        24.7666015625
+      ],
+      "signature": {
+        "sha256": "5927fcf39297e6a65f1f2cf695dcc7d25f5bcc7d460c0aa7bbed1f466a442ac3",
+        "bytes": 2146884
+      },
+      "format": "complete_parquet",
+      "query": "scan",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.0935473539866507,
+      "query_s": 0.008316530962474644,
+      "total_s": 0.10186388494912535,
+      "peak_rss_mib": 172.69921875,
+      "initial_rss_mib": 97.0546875,
+      "incremental_peak_rss_mib": 75.64453125,
+      "dependency_setup_s": 0.04051357798743993,
+      "warm_query_s": [
+        0.008783171069808304,
+        0.006919565028510988
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.3798828125,
+        16.8408203125,
+        24.7666015625
+      ],
+      "signature": {
+        "sha256": "5927fcf39297e6a65f1f2cf695dcc7d25f5bcc7d460c0aa7bbed1f466a442ac3",
+        "bytes": 2146884
+      },
+      "format": "complete_parquet",
+      "query": "scan",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08687753300182521,
+      "query_s": 0.0070576469879597425,
+      "total_s": 0.09393517998978496,
+      "peak_rss_mib": 171.375,
+      "initial_rss_mib": 97.05078125,
+      "incremental_peak_rss_mib": 74.32421875,
+      "dependency_setup_s": 0.04187155107501894,
+      "warm_query_s": [
+        0.006360662984661758,
+        0.009071537991985679
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.3798828125,
+        16.8408203125,
+        24.7666015625
+      ],
+      "signature": {
+        "sha256": "5927fcf39297e6a65f1f2cf695dcc7d25f5bcc7d460c0aa7bbed1f466a442ac3",
+        "bytes": 2146884
+      },
+      "format": "complete_parquet",
+      "query": "scan",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.08908579603303224,
+      "query_s": 0.007170233991928399,
+      "total_s": 0.09625603002496064,
+      "peak_rss_mib": 172.71875,
+      "initial_rss_mib": 96.9375,
+      "incremental_peak_rss_mib": 75.78125,
+      "dependency_setup_s": 0.04409136401955038,
+      "warm_query_s": [
+        0.0070497129345312715,
+        0.007321182987652719
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.3798828125,
+        16.8408203125,
+        24.7666015625
+      ],
+      "signature": {
+        "sha256": "5927fcf39297e6a65f1f2cf695dcc7d25f5bcc7d460c0aa7bbed1f466a442ac3",
+        "bytes": 2146884
+      },
+      "format": "complete_parquet",
+      "query": "scan",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.030023427912965417,
+      "query_s": 0.7641305309953168,
+      "total_s": 0.7941539589082822,
+      "peak_rss_mib": 841.9921875,
+      "initial_rss_mib": 97.14453125,
+      "incremental_peak_rss_mib": 744.84765625,
+      "dependency_setup_s": 0.04015343601349741,
+      "warm_query_s": [
+        0.6454436669591814,
+        0.6438279919093475
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.02880859375,
+        16.64404296875,
+        24.66015625
+      ],
+      "signature": {
+        "sha256": "5927fcf39297e6a65f1f2cf695dcc7d25f5bcc7d460c0aa7bbed1f466a442ac3",
+        "bytes": 2146884
+      },
+      "format": "complete_duckdb",
+      "query": "scan",
+      "repetition": 0,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.030924401944503188,
+      "query_s": 0.7678768989862874,
+      "total_s": 0.7988013009307906,
+      "peak_rss_mib": 842.29296875,
+      "initial_rss_mib": 97.0546875,
+      "incremental_peak_rss_mib": 745.23828125,
+      "dependency_setup_s": 0.03942339203786105,
+      "warm_query_s": [
+        0.6519227640237659,
+        0.6592441980028525
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        9.02880859375,
+        16.64404296875,
+        24.66015625
+      ],
+      "signature": {
+        "sha256": "5927fcf39297e6a65f1f2cf695dcc7d25f5bcc7d460c0aa7bbed1f466a442ac3",
+        "bytes": 2146884
+      },
+      "format": "complete_duckdb",
+      "query": "scan",
+      "repetition": 1,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.03267925791442394,
+      "query_s": 0.7666950700804591,
+      "total_s": 0.7993743279948831,
+      "peak_rss_mib": 842.40234375,
+      "initial_rss_mib": 97.140625,
+      "incremental_peak_rss_mib": 745.26171875,
+      "dependency_setup_s": 0.049984173965640366,
+      "warm_query_s": [
+        0.6220308219781145,
+        0.6169586399337277
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        8.6259765625,
+        16.43408203125,
+        24.548828125
+      ],
+      "signature": {
+        "sha256": "5927fcf39297e6a65f1f2cf695dcc7d25f5bcc7d460c0aa7bbed1f466a442ac3",
+        "bytes": 2146884
+      },
+      "format": "complete_duckdb",
+      "query": "scan",
+      "repetition": 2,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.03565061604604125,
+      "query_s": 0.7735379859805107,
+      "total_s": 0.809188602026552,
+      "peak_rss_mib": 841.59375,
+      "initial_rss_mib": 96.96875,
+      "incremental_peak_rss_mib": 744.625,
+      "dependency_setup_s": 0.03999478800687939,
+      "warm_query_s": [
+        0.6255678639281541,
+        0.6552990099880844
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        8.6259765625,
+        16.43408203125,
+        24.548828125
+      ],
+      "signature": {
+        "sha256": "5927fcf39297e6a65f1f2cf695dcc7d25f5bcc7d460c0aa7bbed1f466a442ac3",
+        "bytes": 2146884
+      },
+      "format": "complete_duckdb",
+      "query": "scan",
+      "repetition": 3,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    },
+    {
+      "open_s": 0.032662280020304024,
+      "query_s": 0.7402990219416097,
+      "total_s": 0.7729613019619137,
+      "peak_rss_mib": 841.99609375,
+      "initial_rss_mib": 97.078125,
+      "incremental_peak_rss_mib": 744.91796875,
+      "dependency_setup_s": 0.04358921304810792,
+      "warm_query_s": [
+        0.6406477519776672,
+        0.6423361080233008
+      ],
+      "first_http": null,
+      "warm_http": null,
+      "load_average": [
+        8.25537109375,
+        16.2275390625,
+        24.43798828125
+      ],
+      "signature": {
+        "sha256": "5927fcf39297e6a65f1f2cf695dcc7d25f5bcc7d460c0aa7bbed1f466a442ac3",
+        "bytes": 2146884
+      },
+      "format": "complete_duckdb",
+      "query": "scan",
+      "repetition": 4,
+      "transport": "local",
+      "latency_ms": null,
+      "total_http": {
+        "requests": 0,
+        "bytes": 0,
+        "range_requests": 0
+      },
+      "requests": 0,
+      "bytes": 0,
+      "range_requests": 0
+    }
+  ],
+  "failures": [],
+  "cache_conditions": "Fresh process/reader; OS page cache uncontrolled and usually warm; verification hashing excluded from timings; RSS includes imports and verification."
+}

@@ -1,0 +1,1287 @@
+{
+  "started_utc": "2026-11-22T14:26:46.370517+00:00",
+  "files": {
+    "subjects.parquet": {
+      "bytes": 22349,
+      "sha256": "7951e60108f281f389ce6f547eafbd6ff4b7afed0f35248ed0d9f56bca83f907"
+    },
+    "trials.parquet": {
+      "bytes": 28745,
+      "sha256": "537f329ae5b738967ae917028d68d679d7204bb241cd399e4f9cb620d2dac6fd"
+    },
+    "grf.parquet": {
+      "bytes": 6455696,
+      "sha256": "3dd302eff7ca10636d5cdeee676fe080a16543f3e9c405ea51abb77b565efb87"
+    },
+    "pressure.parquet": {
+      "bytes": 124162610,
+      "sha256": "07b7f6a218ede17b88e1e94467cfe71183b50cffe94b59eb399d61f533fbf18c"
+    },
+    "scans.parquet": {
+      "bytes": 217951896,
+      "sha256": "50395b682bf62083aec0cb68771e798d6388bd5a29a3854b3e3d34211f625867"
+    },
+    "ppds.duckdb": {
+      "bytes": 599011328,
+      "sha256": "683d4143c8bbcfc37eacee621b66ff49130332d157fc55fe85e45e6a96caa272"
+    }
+  },
+  "reference": {
+    "trial": {
+      "rows": 138035,
+      "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+    },
+    "cohort_force": {
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+    },
+    "mesh": {
+      "rows": 1,
+      "stl_bytes": 1153984,
+      "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+    },
+    "all_pressure": {
+      "rows": 3312,
+      "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+    }
+  },
+  "repetitions": 5,
+  "shuffle_seed": 217,
+  "page_bytes": 4096,
+  "worker_threads_requested": 4,
+  "python": "3.14.9",
+  "os": "Linux-7.0.0-43-generic-x86_64-with-glibc2.43",
+  "cpu": "Intel(R) Xeon(R) W-2245 CPU @ 3.90GHz",
+  "filesystem": "ext4",
+  "packages": {
+    "duckdb": "2.0.1",
+    "polars": "2.1.0",
+    "vortex-data": "0.93.0",
+    "marimo": "0.25.2",
+    "pyarrow": "26.0.1",
+    "pandas": "3.1.1"
+  },
+  "rows": [
+    {
+      "repetition": 1,
+      "engine": "pandas_parquet",
+      "task": "all_pressure",
+      "file_cache": "resident",
+      "resident_pages_before": 30314,
+      "setup_s": 6.645917892456055e-06,
+      "first_s": 1.012354573002085,
+      "repeat_s": 1.011275739991106,
+      "process_peak_MiB": 2448.5390625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "sql_duckdb",
+      "task": "trial",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.04661615192890167,
+      "first_s": 0.05836104787886143,
+      "repeat_s": 0.0032152950298041105,
+      "process_peak_MiB": 225.05078125,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "pandas_parquet",
+      "task": "mesh",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 6.970949470996857e-06,
+      "first_s": 0.013018738944083452,
+      "repeat_s": 0.007173478952609003,
+      "process_peak_MiB": 190.24609375,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "pandas_parquet",
+      "task": "cohort_force",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 7.430906407535076e-06,
+      "first_s": 0.08778107888065279,
+      "repeat_s": 0.07710005098488182,
+      "process_peak_MiB": 338.2890625,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "sql_duckdb",
+      "task": "all_pressure",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.025263307034038007,
+      "first_s": 0.2813424760242924,
+      "repeat_s": 0.07774748397059739,
+      "process_peak_MiB": 445.39453125,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "pandas_parquet",
+      "task": "trial",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 7.46001023799181e-06,
+      "first_s": 0.03687072801403701,
+      "repeat_s": 0.03048877406399697,
+      "process_peak_MiB": 237.2734375,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "sql_duckdb",
+      "task": "all_pressure",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.020066441036760807,
+      "first_s": 0.1491955880774185,
+      "repeat_s": 0.0750990129308775,
+      "process_peak_MiB": 447.80078125,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "pandas_parquet",
+      "task": "mesh",
+      "file_cache": "resident",
+      "resident_pages_before": 53211,
+      "setup_s": 6.705988198518753e-06,
+      "first_s": 0.00795184401795268,
+      "repeat_s": 0.005738222971558571,
+      "process_peak_MiB": 190.19921875,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "sql_duckdb",
+      "task": "mesh",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.021168573992326856,
+      "first_s": 0.8242561569204554,
+      "repeat_s": 0.6746564289787784,
+      "process_peak_MiB": 916.9296875,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "sql_duckdb",
+      "task": "trial",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.020047344034537673,
+      "first_s": 0.0280746310018003,
+      "repeat_s": 0.0032457240158692002,
+      "process_peak_MiB": 225.21875,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "pandas_parquet",
+      "task": "all_pressure",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 7.754075340926647e-06,
+      "first_s": 1.0533977111335844,
+      "repeat_s": 0.9927759870188311,
+      "process_peak_MiB": 2448.4140625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "pandas_parquet",
+      "task": "cohort_force",
+      "file_cache": "resident",
+      "resident_pages_before": 1591,
+      "setup_s": 7.241964340209961e-06,
+      "first_s": 0.08503577893134207,
+      "repeat_s": 0.07985837198793888,
+      "process_peak_MiB": 342.171875,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "sql_duckdb",
+      "task": "mesh",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.02618825901299715,
+      "first_s": 0.936812867061235,
+      "repeat_s": 0.6535986319649965,
+      "process_peak_MiB": 915.82421875,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "sql_duckdb",
+      "task": "cohort_force",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.025228047976270318,
+      "first_s": 0.047231661970727146,
+      "repeat_s": 0.01307436206843704,
+      "process_peak_MiB": 238.07421875,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "sql_duckdb",
+      "task": "cohort_force",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.021695472998544574,
+      "first_s": 0.03780052496585995,
+      "repeat_s": 0.011859723017551005,
+      "process_peak_MiB": 238.578125,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 1,
+      "engine": "pandas_parquet",
+      "task": "trial",
+      "file_cache": "resident",
+      "resident_pages_before": 30322,
+      "setup_s": 1.0309042409062386e-05,
+      "first_s": 0.033728941110894084,
+      "repeat_s": 0.027318279957398772,
+      "process_peak_MiB": 233.6875,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "sql_duckdb",
+      "task": "all_pressure",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.02005100401584059,
+      "first_s": 0.14741220604628325,
+      "repeat_s": 0.07491771399509162,
+      "process_peak_MiB": 447.42578125,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "sql_duckdb",
+      "task": "cohort_force",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.023263246985152364,
+      "first_s": 0.03942420892417431,
+      "repeat_s": 0.011490328935906291,
+      "process_peak_MiB": 239.265625,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "pandas_parquet",
+      "task": "cohort_force",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 7.68899917602539e-06,
+      "first_s": 0.0904939949978143,
+      "repeat_s": 0.080470648012124,
+      "process_peak_MiB": 346.421875,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "pandas_parquet",
+      "task": "cohort_force",
+      "file_cache": "resident",
+      "resident_pages_before": 1591,
+      "setup_s": 6.983987987041473e-06,
+      "first_s": 0.08851168490946293,
+      "repeat_s": 0.08508127392269671,
+      "process_peak_MiB": 340.31640625,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "pandas_parquet",
+      "task": "all_pressure",
+      "file_cache": "resident",
+      "resident_pages_before": 30314,
+      "setup_s": 7.634982466697693e-06,
+      "first_s": 1.0010482489597052,
+      "repeat_s": 0.9875429109670222,
+      "process_peak_MiB": 2446.48828125,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "pandas_parquet",
+      "task": "trial",
+      "file_cache": "resident",
+      "resident_pages_before": 30322,
+      "setup_s": 7.578055374324322e-06,
+      "first_s": 0.03084774303715676,
+      "repeat_s": 0.029723937972448766,
+      "process_peak_MiB": 231.76171875,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "sql_duckdb",
+      "task": "all_pressure",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.02587560995016247,
+      "first_s": 0.27092917391564697,
+      "repeat_s": 0.07399612094741315,
+      "process_peak_MiB": 444.96875,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "sql_duckdb",
+      "task": "mesh",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.02171229396481067,
+      "first_s": 0.8088699199724942,
+      "repeat_s": 0.6537105110473931,
+      "process_peak_MiB": 918.26953125,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "pandas_parquet",
+      "task": "trial",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 7.822993211448193e-06,
+      "first_s": 0.033935434999875724,
+      "repeat_s": 0.029136625002138317,
+      "process_peak_MiB": 230.55859375,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "sql_duckdb",
+      "task": "trial",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.027610164019279182,
+      "first_s": 0.03961704799439758,
+      "repeat_s": 0.003729293937794864,
+      "process_peak_MiB": 226.1015625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "pandas_parquet",
+      "task": "all_pressure",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 9.958981536328793e-06,
+      "first_s": 1.0400833920575678,
+      "repeat_s": 1.011599088087678,
+      "process_peak_MiB": 2444.37890625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "sql_duckdb",
+      "task": "mesh",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.04538635001517832,
+      "first_s": 0.9590178090147674,
+      "repeat_s": 0.7211111019132659,
+      "process_peak_MiB": 916.12890625,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "pandas_parquet",
+      "task": "mesh",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 6.9140223786234856e-06,
+      "first_s": 0.013294980046339333,
+      "repeat_s": 0.006240537972189486,
+      "process_peak_MiB": 190.30859375,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "pandas_parquet",
+      "task": "mesh",
+      "file_cache": "resident",
+      "resident_pages_before": 53211,
+      "setup_s": 7.436028681695461e-06,
+      "first_s": 0.0075910380110144615,
+      "repeat_s": 0.00582104898057878,
+      "process_peak_MiB": 191.02734375,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "sql_duckdb",
+      "task": "trial",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.022147101000882685,
+      "first_s": 0.03137986198998988,
+      "repeat_s": 0.003053577966056764,
+      "process_peak_MiB": 226.62890625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 2,
+      "engine": "sql_duckdb",
+      "task": "cohort_force",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.025850704056210816,
+      "first_s": 0.04637295403517783,
+      "repeat_s": 0.013611492933705449,
+      "process_peak_MiB": 238.1171875,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "sql_duckdb",
+      "task": "trial",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.02053156995680183,
+      "first_s": 0.032306256936863065,
+      "repeat_s": 0.0035935790510848165,
+      "process_peak_MiB": 226.85546875,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "pandas_parquet",
+      "task": "all_pressure",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 6.846035830676556e-06,
+      "first_s": 1.0191841810010374,
+      "repeat_s": 0.9930010749958456,
+      "process_peak_MiB": 2444.53515625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "pandas_parquet",
+      "task": "cohort_force",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 6.985967047512531e-06,
+      "first_s": 0.08820210490375757,
+      "repeat_s": 0.07812424201983958,
+      "process_peak_MiB": 346.10546875,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "pandas_parquet",
+      "task": "cohort_force",
+      "file_cache": "resident",
+      "resident_pages_before": 1591,
+      "setup_s": 7.921946235001087e-06,
+      "first_s": 0.08955704304389656,
+      "repeat_s": 0.07840346801094711,
+      "process_peak_MiB": 331.82421875,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "sql_duckdb",
+      "task": "trial",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.027689560898579657,
+      "first_s": 0.03770129394251853,
+      "repeat_s": 0.0030297079356387258,
+      "process_peak_MiB": 226.1328125,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "pandas_parquet",
+      "task": "mesh",
+      "file_cache": "resident",
+      "resident_pages_before": 53211,
+      "setup_s": 1.1038966476917267e-05,
+      "first_s": 0.008506338926963508,
+      "repeat_s": 0.005646836943924427,
+      "process_peak_MiB": 189.95703125,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "sql_duckdb",
+      "task": "cohort_force",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.020343696931377053,
+      "first_s": 0.037586322985589504,
+      "repeat_s": 0.01126800908241421,
+      "process_peak_MiB": 238.3046875,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "pandas_parquet",
+      "task": "mesh",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 7.681897841393948e-06,
+      "first_s": 0.015925568877719343,
+      "repeat_s": 0.00629558099899441,
+      "process_peak_MiB": 190.51953125,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "sql_duckdb",
+      "task": "mesh",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.023109960951842368,
+      "first_s": 0.953078651917167,
+      "repeat_s": 0.6728244450641796,
+      "process_peak_MiB": 916.75390625,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "pandas_parquet",
+      "task": "trial",
+      "file_cache": "resident",
+      "resident_pages_before": 30322,
+      "setup_s": 6.178976036608219e-06,
+      "first_s": 0.03222817892674357,
+      "repeat_s": 0.029467292013578117,
+      "process_peak_MiB": 233.4140625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "sql_duckdb",
+      "task": "cohort_force",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.02438040403649211,
+      "first_s": 0.0455028930446133,
+      "repeat_s": 0.011428104946389794,
+      "process_peak_MiB": 238.625,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "sql_duckdb",
+      "task": "all_pressure",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.025337920989841223,
+      "first_s": 0.2683469500625506,
+      "repeat_s": 0.07495309400837868,
+      "process_peak_MiB": 445.30859375,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "pandas_parquet",
+      "task": "trial",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 6.821006536483765e-06,
+      "first_s": 0.03812676097732037,
+      "repeat_s": 0.027963943080976605,
+      "process_peak_MiB": 236.73828125,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "sql_duckdb",
+      "task": "all_pressure",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.020995620056055486,
+      "first_s": 0.15469708607997745,
+      "repeat_s": 0.07467199093662202,
+      "process_peak_MiB": 445.3671875,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "pandas_parquet",
+      "task": "all_pressure",
+      "file_cache": "resident",
+      "resident_pages_before": 30314,
+      "setup_s": 7.035094313323498e-06,
+      "first_s": 1.068700032075867,
+      "repeat_s": 0.989731702953577,
+      "process_peak_MiB": 2444.5078125,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 3,
+      "engine": "sql_duckdb",
+      "task": "mesh",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.020706702023744583,
+      "first_s": 0.8245904960203916,
+      "repeat_s": 0.6541380470152944,
+      "process_peak_MiB": 916.94140625,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "pandas_parquet",
+      "task": "all_pressure",
+      "file_cache": "resident",
+      "resident_pages_before": 30314,
+      "setup_s": 7.470953278243542e-06,
+      "first_s": 1.0221960619091988,
+      "repeat_s": 0.98796695494093,
+      "process_peak_MiB": 2445.07421875,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "sql_duckdb",
+      "task": "trial",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.022380255977623165,
+      "first_s": 0.03076444996986538,
+      "repeat_s": 0.003682789974845946,
+      "process_peak_MiB": 227.21484375,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "pandas_parquet",
+      "task": "trial",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 7.334980182349682e-06,
+      "first_s": 0.04968895798083395,
+      "repeat_s": 0.029080161941237748,
+      "process_peak_MiB": 224.30078125,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "sql_duckdb",
+      "task": "mesh",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.0250336880562827,
+      "first_s": 1.0304931571008638,
+      "repeat_s": 0.6763589290203527,
+      "process_peak_MiB": 916.875,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "pandas_parquet",
+      "task": "mesh",
+      "file_cache": "resident",
+      "resident_pages_before": 53211,
+      "setup_s": 8.598901331424713e-06,
+      "first_s": 0.0076817088993266225,
+      "repeat_s": 0.0060559159610420465,
+      "process_peak_MiB": 189.9453125,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "pandas_parquet",
+      "task": "all_pressure",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 7.5339339673519135e-06,
+      "first_s": 1.143782148952596,
+      "repeat_s": 1.014398762024939,
+      "process_peak_MiB": 2446.0390625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "sql_duckdb",
+      "task": "cohort_force",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.020746237016282976,
+      "first_s": 0.036608265014365315,
+      "repeat_s": 0.011800901964306831,
+      "process_peak_MiB": 237.2734375,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "sql_duckdb",
+      "task": "all_pressure",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.024867928004823625,
+      "first_s": 0.2659491050289944,
+      "repeat_s": 0.07598574401345104,
+      "process_peak_MiB": 444.96484375,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "sql_duckdb",
+      "task": "mesh",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.02014796808362007,
+      "first_s": 0.818737548077479,
+      "repeat_s": 0.6972365609835833,
+      "process_peak_MiB": 917.546875,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "pandas_parquet",
+      "task": "trial",
+      "file_cache": "resident",
+      "resident_pages_before": 30322,
+      "setup_s": 7.705995813012123e-06,
+      "first_s": 0.03302929608616978,
+      "repeat_s": 0.028525180998258293,
+      "process_peak_MiB": 228.61328125,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "sql_duckdb",
+      "task": "trial",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.02473504899535328,
+      "first_s": 0.03626978397369385,
+      "repeat_s": 0.0030602620681747794,
+      "process_peak_MiB": 224.2265625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "pandas_parquet",
+      "task": "cohort_force",
+      "file_cache": "resident",
+      "resident_pages_before": 1591,
+      "setup_s": 7.304013706743717e-06,
+      "first_s": 0.08505634404718876,
+      "repeat_s": 0.07816989498678595,
+      "process_peak_MiB": 338.29296875,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "sql_duckdb",
+      "task": "cohort_force",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.02550172107294202,
+      "first_s": 0.04950751503929496,
+      "repeat_s": 0.011260094004683197,
+      "process_peak_MiB": 237.6875,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "sql_duckdb",
+      "task": "all_pressure",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.0204550459748134,
+      "first_s": 0.14872480498161167,
+      "repeat_s": 0.07445821596775204,
+      "process_peak_MiB": 445.5625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "pandas_parquet",
+      "task": "mesh",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 1.0253977961838245e-05,
+      "first_s": 0.008676504017785192,
+      "repeat_s": 0.006242742063477635,
+      "process_peak_MiB": 190.6328125,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 4,
+      "engine": "pandas_parquet",
+      "task": "cohort_force",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 6.758025847375393e-06,
+      "first_s": 0.10356538707856089,
+      "repeat_s": 0.09373495797626674,
+      "process_peak_MiB": 327.68359375,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "pandas_parquet",
+      "task": "trial",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 7.2660623118281364e-06,
+      "first_s": 0.03306350205093622,
+      "repeat_s": 0.027795669971965253,
+      "process_peak_MiB": 235.17578125,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "sql_duckdb",
+      "task": "all_pressure",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.027265200042165816,
+      "first_s": 0.26711844105739146,
+      "repeat_s": 0.0768713200232014,
+      "process_peak_MiB": 447.1484375,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "pandas_parquet",
+      "task": "all_pressure",
+      "file_cache": "resident",
+      "resident_pages_before": 30314,
+      "setup_s": 1.1335010640323162e-05,
+      "first_s": 1.0042100549908355,
+      "repeat_s": 0.9954268500441685,
+      "process_peak_MiB": 2446.26171875,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "pandas_parquet",
+      "task": "cohort_force",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 8.266069926321507e-06,
+      "first_s": 0.09526595706120133,
+      "repeat_s": 0.08853671699762344,
+      "process_peak_MiB": 340.07421875,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "pandas_parquet",
+      "task": "all_pressure",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 7.013091817498207e-06,
+      "first_s": 1.0173360430635512,
+      "repeat_s": 0.9995604259893298,
+      "process_peak_MiB": 2446.609375,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "sql_duckdb",
+      "task": "all_pressure",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.021191169042140245,
+      "first_s": 0.15183601004537195,
+      "repeat_s": 0.07531195902265608,
+      "process_peak_MiB": 445.421875,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "sql_duckdb",
+      "task": "trial",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.02554748102556914,
+      "first_s": 0.03585804800968617,
+      "repeat_s": 0.003527323016896844,
+      "process_peak_MiB": 225.34765625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "sql_duckdb",
+      "task": "cohort_force",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.02572350506670773,
+      "first_s": 0.04925980407278985,
+      "repeat_s": 0.012025099946185946,
+      "process_peak_MiB": 238.703125,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "sql_duckdb",
+      "task": "mesh",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.020480506005696952,
+      "first_s": 0.8011576840654016,
+      "repeat_s": 0.6683544469997287,
+      "process_peak_MiB": 917.234375,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "pandas_parquet",
+      "task": "trial",
+      "file_cache": "resident",
+      "resident_pages_before": 30322,
+      "setup_s": 7.372000254690647e-06,
+      "first_s": 0.03167751501314342,
+      "repeat_s": 0.028696971014142036,
+      "process_peak_MiB": 231.71484375,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "sql_duckdb",
+      "task": "mesh",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 0.025361887994222343,
+      "first_s": 0.9399530169321224,
+      "repeat_s": 0.6768068129895255,
+      "process_peak_MiB": 917.453125,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "pandas_parquet",
+      "task": "mesh",
+      "file_cache": "resident",
+      "resident_pages_before": 53211,
+      "setup_s": 6.610993295907974e-06,
+      "first_s": 0.00973814690951258,
+      "repeat_s": 0.006099625024944544,
+      "process_peak_MiB": 190.37890625,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "pandas_parquet",
+      "task": "cohort_force",
+      "file_cache": "resident",
+      "resident_pages_before": 1591,
+      "setup_s": 1.8747057765722275e-05,
+      "first_s": 0.0890311379916966,
+      "repeat_s": 0.07572436705231667,
+      "process_peak_MiB": 352.16015625,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "pandas_parquet",
+      "task": "mesh",
+      "file_cache": "evicted",
+      "resident_pages_before": 0,
+      "setup_s": 6.6889915615320206e-06,
+      "first_s": 0.012155384989455342,
+      "repeat_s": 0.008199664996936917,
+      "process_peak_MiB": 190.08203125,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "sql_duckdb",
+      "task": "cohort_force",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.021763030090369284,
+      "first_s": 0.0398326541762799,
+      "repeat_s": 0.013934382004663348,
+      "process_peak_MiB": 239.12109375,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      }
+    },
+    {
+      "repetition": 5,
+      "engine": "sql_duckdb",
+      "task": "trial",
+      "file_cache": "resident",
+      "resident_pages_before": 146243,
+      "setup_s": 0.021396422991529107,
+      "first_s": 0.02972049592062831,
+      "repeat_s": 0.004041889915242791,
+      "process_peak_MiB": 227.3203125,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      }
+    }
+  ],
+  "finished_utc": "2026-11-22T14:28:29.368265+00:00"
+}

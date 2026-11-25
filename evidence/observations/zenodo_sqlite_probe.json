@@ -1,0 +1,77 @@
+{
+  "scope": "Underlying SQLite query/hosting feasibility; sqlite-vec vector search is not this workload",
+  "conclusion": {
+    "remote_sqlite_query_succeeded": false,
+    "partial_transfer_confirmed": false,
+    "whole_file_local_query_succeeded": true,
+    "status": "remote_adapter_endpoint_blocked",
+    "scope": "This adapter/build/Zenodo endpoint combination; not proof that SQLite HTTPS hosting is generally unsupported"
+  },
+  "adapter": "GenomicSQLite 0.10.0 bundled sqlite_web_vfs; sqlite3.connect(file:/__web__?mode=ro&immutable=1&vfs=web&web_url=encoded_url)",
+  "python_http_range_control": {
+    "method": "GET",
+    "url": "https://zenodo.org/api/records/13328867/files/RM009_axons_2.db/content",
+    "final_url": "https://zenodo.org/api/records/13328867/files/RM009_axons_2.db/content",
+    "request_range": "bytes=0-99",
+    "status": 206,
+    "response_headers": {
+      "content-type": "application/octet-stream",
+      "content-length": "100",
+      "content-range": "bytes 0-99/1888256"
+    },
+    "body_bytes_received": 100,
+    "matches_verified_reference_header": true
+  },
+  "stdlib_sqlite_before_extension_import": {
+    "web_vfs_present": false,
+    "error": "no such vfs: web"
+  },
+  "native_attempts": [
+    {
+      "status": "reader_failed",
+      "sqlite_version": "3.53.1",
+      "genomicsqlite_version": "0.10.0",
+      "error": {
+        "class": "OperationalError",
+        "message": "unable to open database file"
+      },
+      "elapsed_seconds": 0.6809928179718554,
+      "url": "https://zenodo.org/api/records/13328867/files/RM009_axons_2.db/content",
+      "endpoint": "record_api_content",
+      "matches_verified_local_reference": false,
+      "traffic": {
+        "attempted_ranges": [
+          "bytes=0-99"
+        ],
+        "logged_http_error_statuses": [
+          403
+        ],
+        "body_bytes_received": null,
+        "body_bytes_measured": false
+      }
+    },
+    {
+      "status": "reader_failed",
+      "sqlite_version": "3.53.1",
+      "genomicsqlite_version": "0.10.0",
+      "error": {
+        "class": "OperationalError",
+        "message": "unable to open database file"
+      },
+      "elapsed_seconds": 0.6840710960095748,
+      "url": "https://zenodo.org/records/13328867/files/RM009_axons_2.db?download=1",
+      "endpoint": "record_download",
+      "matches_verified_local_reference": false,
+      "traffic": {
+        "attempted_ranges": [
+          "bytes=0-99"
+        ],
+        "logged_http_error_statuses": [
+          403
+        ],
+        "body_bytes_received": null,
+        "body_bytes_measured": false
+      }
+    }
+  ]
+}

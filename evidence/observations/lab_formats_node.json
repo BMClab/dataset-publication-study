@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-21T22:46:46.164Z",
+  "node": "v22.22.0",
+  "duckdb": "v2.0.1",
+  "node_api": "2.0.1-r.1",
+  "results": [
+    {
+      "format": "parquet",
+      "task": "PPDS cohort force",
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93",
+      "matches": true
+    },
+    {
+      "format": "duckdb",
+      "task": "PPDS cohort force",
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93",
+      "matches": true
+    },
+    {
+      "format": "vortex",
+      "task": "PPDS cohort force",
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93",
+      "matches": true
+    },
+    {
+      "format": "parquet",
+      "task": "public Zenodo single row",
+      "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+      "result": [
+        [
+          1100015,
+          0.13
+        ]
+      ],
+      "matches": true
+    }
+  ]
+}

@@ -1,0 +1,1396 @@
+{
+  "scope": "Real public Zenodo scalar Parquet feasibility, not PPDS or a fair cross-format timing comparison",
+  "packages": {
+    "pyarrow": "26.0.1",
+    "duckdb": "2.0.0",
+    "polars": "2.1.0",
+    "pandas": "3.1.1",
+    "fsspec": "2026.9.0",
+    "aiohttp": "3.14.5"
+  },
+  "summary": {
+    "accesses": 18,
+    "all_completed_and_reference_matched": true,
+    "partial_transfer_demonstrated": [
+      "pyarrow_fsspec_known_size/single",
+      "duckdb_native_http/single",
+      "pandas_fsspec_known_size/single",
+      "pyarrow_fsspec_known_size/subset",
+      "duckdb_native_http/subset",
+      "pandas_fsspec_known_size/subset"
+    ],
+    "limitations": [
+      "Two scalar selections on one public file; not the complete PPDS multimodal dataset",
+      "One measured run per selection; network times do not establish a performance ranking",
+      "Native Polars result verified, but its wire transfer is not measured",
+      "URL+filesystem discovery GET200 bodies may be buffered without explicit read(); only known-size range-only adapters establish bounded partial response bodies",
+      "Whole-file local-reference download is separate from every measured remote reader"
+    ]
+  },
+  "readers": [
+    {
+      "reader": "pyarrow_fsspec",
+      "selection": "single",
+      "rows": 1,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "partial_transfer_demonstrated": false,
+      "whole_file_transfer_observed": false,
+      "traffic": {
+        "requests": 7,
+        "body_bytes_received": 364240,
+        "range_206_responses": 2,
+        "events": [
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "retry-after": "49"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "49"
+            }
+          },
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "retry-after": "48"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3265315-3330850",
+            "body_bytes_received": 65536,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "65536",
+              "content-range": "bytes 3265315-3330850/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "48"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "47"
+            }
+          },
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "retry-after": "47"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=4-298707",
+            "body_bytes_received": 298704,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "298704",
+              "content-range": "bytes 4-298707/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "46"
+            }
+          }
+        ],
+        "measurement": "Response bodies delivered to explicit aiohttp read() callbacks; unconsumed discovery-response bodies are not counted"
+      }
+    },
+    {
+      "reader": "pyarrow_fsspec_known_size",
+      "selection": "single",
+      "rows": 1,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "partial_transfer_demonstrated": true,
+      "whole_file_transfer_observed": false,
+      "traffic": {
+        "requests": 2,
+        "body_bytes_received": 364240,
+        "range_206_responses": 2,
+        "events": [
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3265315-3330850",
+            "body_bytes_received": 65536,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "65536",
+              "content-range": "bytes 3265315-3330850/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "44"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=4-298707",
+            "body_bytes_received": 298704,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "298704",
+              "content-range": "bytes 4-298707/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "43"
+            }
+          }
+        ],
+        "measurement": "Response bodies delivered to explicit aiohttp read() callbacks; unconsumed discovery-response bodies are not counted"
+      }
+    },
+    {
+      "reader": "duckdb_native_http",
+      "selection": "single",
+      "rows": 1,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "partial_transfer_demonstrated": true,
+      "whole_file_transfer_observed": false,
+      "traffic": {
+        "measurement": "DuckDB HTTP logs; declared GET Content-Length, not observed body bytes",
+        "requests": 17,
+        "range_206_responses": 14,
+        "declared_get_body_bytes": 405434,
+        "events": [
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "status": "OK_200",
+            "status_code": 200,
+            "response_headers": {
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "content-type": "application/octet-stream",
+              "retry-after": "60"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3314467-3330850",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3314467-3330850/3330851",
+              "retry-after": "60",
+              "content-type": "application/octet-stream",
+              "content-length": "16384"
+            }
+          },
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "status": "OK_200",
+            "status_code": 200,
+            "response_headers": {
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "content-type": "application/octet-stream",
+              "retry-after": "59"
+            }
+          },
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "status": "OK_200",
+            "status_code": 200,
+            "response_headers": {
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "content-type": "application/octet-stream",
+              "retry-after": "59"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3235930-3244138",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3235930-3244138/3330851",
+              "retry-after": "59",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3244139-3244185",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3244139-3244185/3330851",
+              "retry-after": "58",
+              "content-type": "application/octet-stream",
+              "content-length": "47"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3244233-3252441",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3244233-3252441/3330851",
+              "retry-after": "58",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3252536-3260744",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3252536-3260744/3330851",
+              "retry-after": "58",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3260839-3269047",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3260839-3269047/3330851",
+              "retry-after": "57",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=4-298707",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 4-298707/3330851",
+              "retry-after": "58",
+              "content-type": "application/octet-stream",
+              "content-length": "298704"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3269142-3277350",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3269142-3277350/3330851",
+              "retry-after": "56",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3277445-3285653",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3277445-3285653/3330851",
+              "retry-after": "56",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3285781-3293989",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3285781-3293989/3330851",
+              "retry-after": "55",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3294117-3302325",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3294117-3302325/3330851",
+              "retry-after": "55",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3302453-3310661",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3302453-3310661/3330851",
+              "retry-after": "55",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3310789-3318997",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3310789-3318997/3330851",
+              "retry-after": "55",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3319125-3327333",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3319125-3327333/3330851",
+              "retry-after": "54",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "reader": "polars_native_http",
+      "selection": "single",
+      "rows": 1,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "partial_transfer_demonstrated": false,
+      "whole_file_transfer_observed": false,
+      "traffic": {
+        "wire_bytes_measured": false,
+        "note": "Native Polars HTTPS transport is not instrumented"
+      }
+    },
+    {
+      "reader": "polars_sql_native_http",
+      "selection": "single",
+      "rows": 1,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "partial_transfer_demonstrated": false,
+      "whole_file_transfer_observed": false,
+      "traffic": {
+        "wire_bytes_measured": false,
+        "note": "Native Polars HTTPS transport is not instrumented"
+      }
+    },
+    {
+      "reader": "polars_fsspec_filelike",
+      "selection": "single",
+      "rows": 1,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "partial_transfer_demonstrated": false,
+      "whole_file_transfer_observed": true,
+      "traffic": {
+        "requests": 2,
+        "body_bytes_received": 3330851,
+        "range_206_responses": 0,
+        "events": [
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "retry-after": "25"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 3330851,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "25"
+            }
+          }
+        ],
+        "measurement": "Response bodies delivered to explicit aiohttp read() callbacks; unconsumed discovery-response bodies are not counted"
+      }
+    },
+    {
+      "reader": "pandas_fsspec",
+      "selection": "single",
+      "rows": 1,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "partial_transfer_demonstrated": false,
+      "whole_file_transfer_observed": false,
+      "traffic": {
+        "requests": 7,
+        "body_bytes_received": 364240,
+        "range_206_responses": 2,
+        "events": [
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "retry-after": "16"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "16"
+            }
+          },
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "retry-after": "15"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3265315-3330850",
+            "body_bytes_received": 65536,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "65536",
+              "content-range": "bytes 3265315-3330850/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "15"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "14"
+            }
+          },
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "retry-after": "13"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=4-298707",
+            "body_bytes_received": 298704,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "298704",
+              "content-range": "bytes 4-298707/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "13"
+            }
+          }
+        ],
+        "measurement": "Response bodies delivered to explicit aiohttp read() callbacks; unconsumed discovery-response bodies are not counted"
+      }
+    },
+    {
+      "reader": "pandas_fsspec_known_size",
+      "selection": "single",
+      "rows": 1,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "partial_transfer_demonstrated": true,
+      "whole_file_transfer_observed": false,
+      "traffic": {
+        "requests": 2,
+        "body_bytes_received": 364240,
+        "range_206_responses": 2,
+        "events": [
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3265315-3330850",
+            "body_bytes_received": 65536,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "65536",
+              "content-range": "bytes 3265315-3330850/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "10"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=4-298707",
+            "body_bytes_received": 298704,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "298704",
+              "content-range": "bytes 4-298707/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "10"
+            }
+          }
+        ],
+        "measurement": "Response bodies delivered to explicit aiohttp read() callbacks; unconsumed discovery-response bodies are not counted"
+      }
+    },
+    {
+      "reader": "pandas_url_default",
+      "selection": "single",
+      "rows": 1,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "partial_transfer_demonstrated": false,
+      "whole_file_transfer_observed": true,
+      "traffic": {
+        "requests": 1,
+        "body_bytes_received": 3330851,
+        "range_206_responses": 0,
+        "events": [
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "status": 200,
+            "request_range": null,
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "1"
+            },
+            "body_bytes_received": 3330851
+          }
+        ]
+      }
+    },
+    {
+      "reader": "pyarrow_fsspec",
+      "selection": "subset",
+      "rows": 20,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "partial_transfer_demonstrated": false,
+      "whole_file_transfer_observed": false,
+      "traffic": {
+        "requests": 7,
+        "body_bytes_received": 364240,
+        "range_206_responses": 2,
+        "events": [
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "retry-after": "1"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "1"
+            }
+          },
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "retry-after": "9"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3265315-3330850",
+            "body_bytes_received": 65536,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "65536",
+              "content-range": "bytes 3265315-3330850/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "9"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "8"
+            }
+          },
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "retry-after": "7"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=4-298707",
+            "body_bytes_received": 298704,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "298704",
+              "content-range": "bytes 4-298707/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "7"
+            }
+          }
+        ],
+        "measurement": "Response bodies delivered to explicit aiohttp read() callbacks; unconsumed discovery-response bodies are not counted"
+      }
+    },
+    {
+      "reader": "pyarrow_fsspec_known_size",
+      "selection": "subset",
+      "rows": 20,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "partial_transfer_demonstrated": true,
+      "whole_file_transfer_observed": false,
+      "traffic": {
+        "requests": 2,
+        "body_bytes_received": 364240,
+        "range_206_responses": 2,
+        "events": [
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3265315-3330850",
+            "body_bytes_received": 65536,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "65536",
+              "content-range": "bytes 3265315-3330850/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "4"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=4-298707",
+            "body_bytes_received": 298704,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "298704",
+              "content-range": "bytes 4-298707/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "3"
+            }
+          }
+        ],
+        "measurement": "Response bodies delivered to explicit aiohttp read() callbacks; unconsumed discovery-response bodies are not counted"
+      }
+    },
+    {
+      "reader": "duckdb_native_http",
+      "selection": "subset",
+      "rows": 20,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "partial_transfer_demonstrated": true,
+      "whole_file_transfer_observed": false,
+      "traffic": {
+        "measurement": "DuckDB HTTP logs; declared GET Content-Length, not observed body bytes",
+        "requests": 16,
+        "range_206_responses": 13,
+        "declared_get_body_bytes": 405387,
+        "events": [
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "status": "OK_200",
+            "status_code": 200,
+            "response_headers": {
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "content-type": "application/octet-stream",
+              "retry-after": "9"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3314467-3330850",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3314467-3330850/3330851",
+              "retry-after": "9",
+              "content-type": "application/octet-stream",
+              "content-length": "16384"
+            }
+          },
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "status": "OK_200",
+            "status_code": 200,
+            "response_headers": {
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "content-type": "application/octet-stream",
+              "retry-after": "8"
+            }
+          },
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "status": "OK_200",
+            "status_code": 200,
+            "response_headers": {
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "content-type": "application/octet-stream",
+              "retry-after": "8"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3235930-3244138",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3235930-3244138/3330851",
+              "retry-after": "8",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3244233-3252441",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3244233-3252441/3330851",
+              "retry-after": "7",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3252536-3260744",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3252536-3260744/3330851",
+              "retry-after": "7",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3260839-3269047",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3260839-3269047/3330851",
+              "retry-after": "6",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=4-298707",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 4-298707/3330851",
+              "retry-after": "8",
+              "content-type": "application/octet-stream",
+              "content-length": "298704"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3269142-3277350",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3269142-3277350/3330851",
+              "retry-after": "6",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3277445-3285653",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3277445-3285653/3330851",
+              "retry-after": "6",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3285781-3293989",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3285781-3293989/3330851",
+              "retry-after": "6",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3294117-3302325",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3294117-3302325/3330851",
+              "retry-after": "5",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3302453-3310661",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3302453-3310661/3330851",
+              "retry-after": "5",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3310789-3318997",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3310789-3318997/3330851",
+              "retry-after": "5",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3319125-3327333",
+            "status": "PartialContent_206",
+            "status_code": 206,
+            "response_headers": {
+              "accept-ranges": "bytes",
+              "content-range": "bytes 3319125-3327333/3330851",
+              "retry-after": "4",
+              "content-type": "application/octet-stream",
+              "content-length": "8209"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "reader": "polars_native_http",
+      "selection": "subset",
+      "rows": 20,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "partial_transfer_demonstrated": false,
+      "whole_file_transfer_observed": false,
+      "traffic": {
+        "wire_bytes_measured": false,
+        "note": "Native Polars HTTPS transport is not instrumented"
+      }
+    },
+    {
+      "reader": "polars_sql_native_http",
+      "selection": "subset",
+      "rows": 20,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "partial_transfer_demonstrated": false,
+      "whole_file_transfer_observed": false,
+      "traffic": {
+        "wire_bytes_measured": false,
+        "note": "Native Polars HTTPS transport is not instrumented"
+      }
+    },
+    {
+      "reader": "polars_fsspec_filelike",
+      "selection": "subset",
+      "rows": 20,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "partial_transfer_demonstrated": false,
+      "whole_file_transfer_observed": true,
+      "traffic": {
+        "requests": 2,
+        "body_bytes_received": 3330851,
+        "range_206_responses": 0,
+        "events": [
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "retry-after": "10"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 3330851,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "10"
+            }
+          }
+        ],
+        "measurement": "Response bodies delivered to explicit aiohttp read() callbacks; unconsumed discovery-response bodies are not counted"
+      }
+    },
+    {
+      "reader": "pandas_fsspec",
+      "selection": "subset",
+      "rows": 20,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "partial_transfer_demonstrated": false,
+      "whole_file_transfer_observed": false,
+      "traffic": {
+        "requests": 7,
+        "body_bytes_received": 364240,
+        "range_206_responses": 2,
+        "events": [
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "retry-after": "2"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "1"
+            }
+          },
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "retry-after": "1"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3265315-3330850",
+            "body_bytes_received": 65536,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "65536",
+              "content-range": "bytes 3265315-3330850/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "0"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "9"
+            }
+          },
+          {
+            "method": "HEAD",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": null,
+            "body_bytes_received": 0,
+            "status": 200,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "last-modified": "Thu, 19 Mar 2026 22:00:41 GMT",
+              "retry-after": "8"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=4-298707",
+            "body_bytes_received": 298704,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "298704",
+              "content-range": "bytes 4-298707/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "7"
+            }
+          }
+        ],
+        "measurement": "Response bodies delivered to explicit aiohttp read() callbacks; unconsumed discovery-response bodies are not counted"
+      }
+    },
+    {
+      "reader": "pandas_fsspec_known_size",
+      "selection": "subset",
+      "rows": 20,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "partial_transfer_demonstrated": true,
+      "whole_file_transfer_observed": false,
+      "traffic": {
+        "requests": 2,
+        "body_bytes_received": 364240,
+        "range_206_responses": 2,
+        "events": [
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=3265315-3330850",
+            "body_bytes_received": 65536,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "65536",
+              "content-range": "bytes 3265315-3330850/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "5"
+            }
+          },
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "request_range": "bytes=4-298707",
+            "body_bytes_received": 298704,
+            "status": 206,
+            "final_url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "298704",
+              "content-range": "bytes 4-298707/3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "4"
+            }
+          }
+        ],
+        "measurement": "Response bodies delivered to explicit aiohttp read() callbacks; unconsumed discovery-response bodies are not counted"
+      }
+    },
+    {
+      "reader": "pandas_url_default",
+      "selection": "subset",
+      "rows": 20,
+      "completed": true,
+      "matches_checked_local_reference": true,
+      "projection_sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "partial_transfer_demonstrated": false,
+      "whole_file_transfer_observed": true,
+      "traffic": {
+        "requests": 1,
+        "body_bytes_received": 3330851,
+        "range_206_responses": 0,
+        "events": [
+          {
+            "method": "GET",
+            "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+            "status": 200,
+            "request_range": null,
+            "response_headers": {
+              "content-type": "application/octet-stream",
+              "content-length": "3330851",
+              "accept-ranges": "bytes",
+              "retry-after": "10"
+            },
+            "body_bytes_received": 3330851
+          }
+        ]
+      }
+    }
+  ]
+}

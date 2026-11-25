@@ -1,0 +1,273 @@
+{
+  "date": "2026-11-21T22:53:56.662292+00:00",
+  "versions": {
+    "duckdb": "2.0.1",
+    "polars": "2.1.0",
+    "vortex-data": "0.93.0",
+    "pandas": "3.1.1",
+    "marimo": "0.25.2"
+  },
+  "rows": [
+    {
+      "host": "Zenodo",
+      "reader": "duckdb_native_http",
+      "task": "single",
+      "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+      "rows": 1,
+      "file_bytes": 3330851,
+      "traffic": {
+        "measurement": "DuckDB HTTP logs; declared GET Content-Length, not observed body bytes",
+        "requests": 7,
+        "range_206_responses": 4,
+        "declared_get_body_bytes": 323344
+      },
+      "sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "reference_sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "matches": true,
+      "elapsed_s": 5.07700626400765
+    },
+    {
+      "host": "Zenodo",
+      "reader": "polars_native_http",
+      "task": "single",
+      "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+      "rows": 1,
+      "file_bytes": 3330851,
+      "traffic": {
+        "wire_bytes_measured": false,
+        "note": "Native Polars HTTPS transport is not instrumented"
+      },
+      "sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "reference_sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "matches": true,
+      "elapsed_s": 3.7056431979872286
+    },
+    {
+      "host": "Zenodo",
+      "reader": "pandas_url_default",
+      "task": "single",
+      "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+      "rows": 1,
+      "file_bytes": 3330851,
+      "traffic": {
+        "requests": 1,
+        "body_bytes_received": 3330851,
+        "range_206_responses": 0
+      },
+      "sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "reference_sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "matches": true,
+      "elapsed_s": 7.5001255590468645
+    },
+    {
+      "host": "Zenodo",
+      "reader": "pandas_fsspec_known_size",
+      "task": "single",
+      "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+      "rows": 1,
+      "file_bytes": 3330851,
+      "traffic": {
+        "requests": 2,
+        "body_bytes_received": 364240,
+        "range_206_responses": 2,
+        "measurement": "Response bodies delivered to explicit aiohttp read() callbacks; unconsumed discovery-response bodies are not counted"
+      },
+      "sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "reference_sha256": "9848ccebb512bb4a50759c44d412436a0924d9560768f60d45d8c83f4cce7e0a",
+      "matches": true,
+      "elapsed_s": 1.863210775074549
+    },
+    {
+      "host": "Zenodo",
+      "reader": "duckdb_native_http",
+      "task": "subset",
+      "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+      "rows": 20,
+      "file_bytes": 3330851,
+      "traffic": {
+        "measurement": "DuckDB HTTP logs; declared GET Content-Length, not observed body bytes",
+        "requests": 6,
+        "range_206_responses": 3,
+        "declared_get_body_bytes": 323297
+      },
+      "sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "reference_sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "matches": true,
+      "elapsed_s": 3.256266230950132
+    },
+    {
+      "host": "Zenodo",
+      "reader": "polars_native_http",
+      "task": "subset",
+      "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+      "rows": 20,
+      "file_bytes": 3330851,
+      "traffic": {
+        "wire_bytes_measured": false,
+        "note": "Native Polars HTTPS transport is not instrumented"
+      },
+      "sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "reference_sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "matches": true,
+      "elapsed_s": 2.6093274030135944
+    },
+    {
+      "host": "Zenodo",
+      "reader": "pandas_url_default",
+      "task": "subset",
+      "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+      "rows": 20,
+      "file_bytes": 3330851,
+      "traffic": {
+        "requests": 1,
+        "body_bytes_received": 3330851,
+        "range_206_responses": 0
+      },
+      "sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "reference_sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "matches": true,
+      "elapsed_s": 7.533379219006747
+    },
+    {
+      "host": "Zenodo",
+      "reader": "pandas_fsspec_known_size",
+      "task": "subset",
+      "url": "https://zenodo.org/api/records/19115351/files/co_min_mean.parquet/content",
+      "rows": 20,
+      "file_bytes": 3330851,
+      "traffic": {
+        "requests": 2,
+        "body_bytes_received": 364240,
+        "range_206_responses": 2,
+        "measurement": "Response bodies delivered to explicit aiohttp read() callbacks; unconsumed discovery-response bodies are not counted"
+      },
+      "sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "reference_sha256": "1fe250b7eed5fba30478f124e2d6ce197a294cd5dd1e0b18b26c34c513c165da",
+      "matches": true,
+      "elapsed_s": 2.0531684139277786
+    },
+    {
+      "host": "Zenodo",
+      "reader": "sql_duckdb",
+      "task": "five_rows",
+      "url": "https://zenodo.org/api/records/24119965/files/ferc60_xbrl.duckdb/content",
+      "rows": 5,
+      "file_bytes": 20983808,
+      "traffic": {
+        "source": "DuckDB HTTP logs; Content-Length is declared response size, not packet capture",
+        "requests": 8,
+        "head_requests": 2,
+        "get_requests": 6,
+        "range_206_responses": 6,
+        "declared_get_body_bytes": 1585152
+      },
+      "sha256": "f8b2330a022448cc828a3f84259b40c99bcf62132b6fcaf2537702157a0d51c4",
+      "reference_sha256": "f8b2330a022448cc828a3f84259b40c99bcf62132b6fcaf2537702157a0d51c4",
+      "matches": true,
+      "elapsed_s": 6.365353771019727
+    },
+    {
+      "host": "GitHub raw HTTPS",
+      "reader": "sql_vortex",
+      "task": "three_ids_with_null",
+      "url": "https://raw.githubusercontent.com/dfa1/vortex-java/439d22c44a21d608646a7f65dffb3a2ed27bb0b3/reader/src/test/resources/fixtures/chunked.vortex",
+      "rows": 3,
+      "file_bytes": 24500,
+      "sha256": "188ba2d500b803d7272b08d2b40b21b4db454d16c83461b79386071b700f5b90",
+      "reference_sha256": "188ba2d500b803d7272b08d2b40b21b4db454d16c83461b79386071b700f5b90",
+      "reference_file_sha256": "12aff6d225c1da697f409e6a02dd95bd0317f0ad03f6a39cf60ad735cfed89ad",
+      "result": [
+        [
+          0,
+          null
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1749,
+          5247
+        ]
+      ],
+      "matches": true,
+      "elapsed_s": 0.3886943099787459
+    },
+    {
+      "host": "GitHub raw HTTPS",
+      "reader": "polars_vortex",
+      "task": "three_ids_with_null",
+      "url": "https://raw.githubusercontent.com/dfa1/vortex-java/439d22c44a21d608646a7f65dffb3a2ed27bb0b3/reader/src/test/resources/fixtures/chunked.vortex",
+      "rows": 3,
+      "file_bytes": 24500,
+      "sha256": "188ba2d500b803d7272b08d2b40b21b4db454d16c83461b79386071b700f5b90",
+      "reference_sha256": "188ba2d500b803d7272b08d2b40b21b4db454d16c83461b79386071b700f5b90",
+      "reference_file_sha256": "12aff6d225c1da697f409e6a02dd95bd0317f0ad03f6a39cf60ad735cfed89ad",
+      "result": [
+        [
+          0,
+          null
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1749,
+          5247
+        ]
+      ],
+      "matches": true,
+      "elapsed_s": 0.16292188107036054
+    }
+  ],
+  "zenodo_vortex": "no verified standalone fixture discovered",
+  "execution": "marimo export html with Python kernel",
+  "ppds_cohort_force": {
+    "polars_parquet": {
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93",
+      "matches": true
+    },
+    "sql_parquet": {
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93",
+      "matches": true
+    },
+    "sql_duckdb": {
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93",
+      "matches": true
+    },
+    "sql_vortex": {
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93",
+      "matches": true
+    },
+    "polars_vortex": {
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93",
+      "matches": true
+    },
+    "pandas_parquet": {
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93",
+      "matches": true
+    },
+    "sql_compact_vortex": {
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93",
+      "matches": true
+    },
+    "polars_compact_vortex": {
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93",
+      "matches": true
+    },
+    "marimo_sql_parquet": {
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93",
+      "matches": true
+    }
+  }
+}

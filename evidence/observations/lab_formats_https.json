@@ -1,0 +1,1803 @@
+{
+  "date": "2026-11-21T22:51:44.785073+00:00",
+  "transport": "https",
+  "engines": [
+    "polars_parquet",
+    "sql_parquet",
+    "sql_duckdb",
+    "sql_vortex",
+    "polars_vortex",
+    "pandas_parquet",
+    "pandas_range",
+    "sql_compact_vortex",
+    "polars_compact_vortex"
+  ],
+  "tasks": [
+    "trial",
+    "cohort_force",
+    "mesh",
+    "all_pressure"
+  ],
+  "repetitions": 2,
+  "shuffle_seed": 217,
+  "cpu_threads_requested": 4,
+  "python": "3.14.9 (main, Oct 21 2026, 17:48:02) [Clang 23.1.3 ]",
+  "platform": "Linux-7.0.0-43-generic-x86_64-with-glibc2.43",
+  "machine": "x86_64",
+  "packages": {
+    "duckdb": "2.0.1",
+    "vortex-data": "0.93.0",
+    "polars": "2.1.0",
+    "pandas": "3.1.1",
+    "pyarrow": "26.0.1",
+    "fsspec": "2026.9.0",
+    "marimo": "0.25.2"
+  },
+  "reference": {
+    "trial": {
+      "rows": 138035,
+      "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+    },
+    "mesh": {
+      "rows": 1,
+      "stl_bytes": 1153984,
+      "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+    },
+    "all_pressure": {
+      "rows": 3312,
+      "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+    },
+    "cohort_force": {
+      "rows": 34,
+      "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+    }
+  },
+  "rows": [
+    {
+      "engine": "pandas_parquet",
+      "task": "all_pressure",
+      "repetition": 2,
+      "open_s": 7.409020327031612e-06,
+      "first_s": 1.1928777960129082,
+      "repeat_s": 1.1617959920549765,
+      "first_http": {
+        "requests": 1,
+        "bytes": 124162610,
+        "range_requests": 0
+      },
+      "process_peak_MiB": 2437.73828125,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 2,
+        "bytes": 248325220,
+        "range_requests": 0
+      }
+    },
+    {
+      "engine": "polars_compact_vortex",
+      "task": "trial",
+      "repetition": 1,
+      "open_s": 6.975024007260799e-06,
+      "first_s": 0.09863923012744635,
+      "repeat_s": 0.07125431904569268,
+      "first_http": {
+        "requests": 6,
+        "bytes": 33435907,
+        "range_requests": 4
+      },
+      "process_peak_MiB": 269.6953125,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 12,
+        "bytes": 51633862,
+        "range_requests": 8
+      }
+    },
+    {
+      "engine": "pandas_parquet",
+      "task": "cohort_force",
+      "repetition": 1,
+      "open_s": 8.45699105411768e-06,
+      "first_s": 0.10134157596621662,
+      "repeat_s": 0.09176421794109046,
+      "first_http": {
+        "requests": 3,
+        "bytes": 6506790,
+        "range_requests": 0
+      },
+      "process_peak_MiB": 332.21875,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 6,
+        "bytes": 13013580,
+        "range_requests": 0
+      }
+    },
+    {
+      "engine": "polars_compact_vortex",
+      "task": "cohort_force",
+      "repetition": 1,
+      "open_s": 7.624039426445961e-06,
+      "first_s": 0.04712044098414481,
+      "repeat_s": 0.03456840803846717,
+      "first_http": {
+        "requests": 7,
+        "bytes": 1886171,
+        "range_requests": 4
+      },
+      "process_peak_MiB": 338.88671875,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 14,
+        "bytes": 3772342,
+        "range_requests": 8
+      }
+    },
+    {
+      "engine": "sql_duckdb",
+      "task": "trial",
+      "repetition": 1,
+      "open_s": 0.05107620207127184,
+      "first_s": 0.06549966905731708,
+      "repeat_s": 0.003191172960214317,
+      "first_http": {
+        "requests": 13,
+        "bytes": 3944448,
+        "range_requests": 11
+      },
+      "process_peak_MiB": 256.984375,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 13,
+        "bytes": 3944448,
+        "range_requests": 11
+      }
+    },
+    {
+      "engine": "sql_vortex",
+      "task": "cohort_force",
+      "repetition": 2,
+      "open_s": 0.1004067420726642,
+      "first_s": 0.12514446210116148,
+      "repeat_s": 0.018092915997840464,
+      "first_http": {
+        "requests": 11,
+        "bytes": 3038003,
+        "range_requests": 8
+      },
+      "process_peak_MiB": 289.5078125,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 16,
+        "bytes": 5935363,
+        "range_requests": 13
+      }
+    },
+    {
+      "engine": "sql_vortex",
+      "task": "cohort_force",
+      "repetition": 1,
+      "open_s": 0.12058084807358682,
+      "first_s": 0.14693440904375166,
+      "repeat_s": 0.017110722954384983,
+      "first_http": {
+        "requests": 11,
+        "bytes": 3038003,
+        "range_requests": 8
+      },
+      "process_peak_MiB": 290.37109375,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 16,
+        "bytes": 5935363,
+        "range_requests": 13
+      }
+    },
+    {
+      "engine": "polars_compact_vortex",
+      "task": "mesh",
+      "repetition": 2,
+      "open_s": 7.853028364479542e-06,
+      "first_s": 0.800173606025055,
+      "repeat_s": 0.8215218540281057,
+      "first_http": {
+        "requests": 4,
+        "bytes": 233438307,
+        "range_requests": 3
+      },
+      "process_peak_MiB": 924.484375,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 8,
+        "bytes": 466876614,
+        "range_requests": 6
+      }
+    },
+    {
+      "engine": "pandas_range",
+      "task": "all_pressure",
+      "repetition": 2,
+      "open_s": 0.06473430502228439,
+      "first_s": 1.541342778946273,
+      "repeat_s": 1.4406012860126793,
+      "first_http": {
+        "requests": 865,
+        "bytes": 82435655,
+        "range_requests": 865
+      },
+      "process_peak_MiB": 2446.828125,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 1730,
+        "bytes": 164871310,
+        "range_requests": 1730
+      }
+    },
+    {
+      "engine": "pandas_range",
+      "task": "mesh",
+      "repetition": 2,
+      "open_s": 0.04916331695858389,
+      "first_s": 0.06621260195970535,
+      "repeat_s": 0.0074997099582105875,
+      "first_http": {
+        "requests": 2,
+        "bytes": 574513,
+        "range_requests": 2
+      },
+      "process_peak_MiB": 204.5390625,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 4,
+        "bytes": 1149026,
+        "range_requests": 4
+      }
+    },
+    {
+      "engine": "polars_parquet",
+      "task": "cohort_force",
+      "repetition": 1,
+      "open_s": 7.847906090319157e-06,
+      "first_s": 0.0625053069088608,
+      "repeat_s": 0.023404975072480738,
+      "first_http": {
+        "requests": 11,
+        "bytes": 2755945,
+        "range_requests": 11
+      },
+      "process_peak_MiB": 282.42578125,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 22,
+        "bytes": 5511890,
+        "range_requests": 22
+      }
+    },
+    {
+      "engine": "sql_duckdb",
+      "task": "all_pressure",
+      "repetition": 1,
+      "open_s": 0.055996184004470706,
+      "first_s": 0.5552991069853306,
+      "repeat_s": 0.07667515007779002,
+      "first_http": {
+        "requests": 1700,
+        "bytes": 445132800,
+        "range_requests": 1698
+      },
+      "process_peak_MiB": 493.28515625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 1700,
+        "bytes": 445132800,
+        "range_requests": 1698
+      }
+    },
+    {
+      "engine": "pandas_range",
+      "task": "trial",
+      "repetition": 1,
+      "open_s": 0.049329511006362736,
+      "first_s": 0.09247298294212669,
+      "repeat_s": 0.031564143020659685,
+      "first_http": {
+        "requests": 5,
+        "bytes": 725723,
+        "range_requests": 5
+      },
+      "process_peak_MiB": 250.48046875,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 10,
+        "bytes": 1451446,
+        "range_requests": 10
+      }
+    },
+    {
+      "engine": "sql_duckdb",
+      "task": "all_pressure",
+      "repetition": 2,
+      "open_s": 0.0556415100581944,
+      "first_s": 0.562294849078171,
+      "repeat_s": 0.07824533607345074,
+      "first_http": {
+        "requests": 1725,
+        "bytes": 451686400,
+        "range_requests": 1723
+      },
+      "process_peak_MiB": 496.56640625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 1725,
+        "bytes": 451686400,
+        "range_requests": 1723
+      }
+    },
+    {
+      "engine": "sql_compact_vortex",
+      "task": "trial",
+      "repetition": 1,
+      "open_s": 0.1230999359395355,
+      "first_s": 0.17297619895543903,
+      "repeat_s": 0.043826663051731884,
+      "first_http": {
+        "requests": 7,
+        "bytes": 18198311,
+        "range_requests": 5
+      },
+      "process_peak_MiB": 299.98828125,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 14,
+        "bytes": 36327899,
+        "range_requests": 12
+      }
+    },
+    {
+      "engine": "sql_duckdb",
+      "task": "cohort_force",
+      "repetition": 1,
+      "open_s": 0.05008698196616024,
+      "first_s": 0.0893001159420237,
+      "repeat_s": 0.011299644014798105,
+      "first_http": {
+        "requests": 52,
+        "bytes": 17838080,
+        "range_requests": 50
+      },
+      "process_peak_MiB": 289.953125,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 52,
+        "bytes": 17838080,
+        "range_requests": 50
+      }
+    },
+    {
+      "engine": "polars_vortex",
+      "task": "all_pressure",
+      "repetition": 2,
+      "open_s": 8.178059943020344e-06,
+      "first_s": 0.3168451739475131,
+      "repeat_s": 0.29967478197067976,
+      "first_http": {
+        "requests": 38,
+        "bytes": 90165943,
+        "range_requests": 37
+      },
+      "process_peak_MiB": 407.2890625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 76,
+        "bytes": 180331886,
+        "range_requests": 74
+      }
+    },
+    {
+      "engine": "polars_compact_vortex",
+      "task": "mesh",
+      "repetition": 1,
+      "open_s": 7.697963155806065e-06,
+      "first_s": 0.8307290158700198,
+      "repeat_s": 0.7965092669473961,
+      "first_http": {
+        "requests": 4,
+        "bytes": 233438307,
+        "range_requests": 3
+      },
+      "process_peak_MiB": 923.234375,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 8,
+        "bytes": 466876614,
+        "range_requests": 6
+      }
+    },
+    {
+      "engine": "sql_duckdb",
+      "task": "trial",
+      "repetition": 2,
+      "open_s": 0.0502556290011853,
+      "first_s": 0.06385923293419182,
+      "repeat_s": 0.003967391909100115,
+      "first_http": {
+        "requests": 13,
+        "bytes": 3944448,
+        "range_requests": 11
+      },
+      "process_peak_MiB": 257.546875,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 13,
+        "bytes": 3944448,
+        "range_requests": 11
+      }
+    },
+    {
+      "engine": "sql_parquet",
+      "task": "mesh",
+      "repetition": 2,
+      "open_s": 0.046008719014935195,
+      "first_s": 0.06272783607710153,
+      "repeat_s": 0.008861303911544383,
+      "first_http": {
+        "requests": 5,
+        "bytes": 1033265,
+        "range_requests": 4
+      },
+      "process_peak_MiB": 245.12890625,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 10,
+        "bytes": 2066530,
+        "range_requests": 8
+      }
+    },
+    {
+      "engine": "polars_compact_vortex",
+      "task": "trial",
+      "repetition": 2,
+      "open_s": 7.045920938253403e-06,
+      "first_s": 0.08294673287309706,
+      "repeat_s": 0.07247060793451965,
+      "first_http": {
+        "requests": 6,
+        "bytes": 18197955,
+        "range_requests": 4
+      },
+      "process_peak_MiB": 268.265625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 12,
+        "bytes": 36395910,
+        "range_requests": 8
+      }
+    },
+    {
+      "engine": "sql_vortex",
+      "task": "all_pressure",
+      "repetition": 2,
+      "open_s": 0.11357925203628838,
+      "first_s": 0.32751233607996255,
+      "repeat_s": 0.20451742305886,
+      "first_http": {
+        "requests": 38,
+        "bytes": 90165943,
+        "range_requests": 37
+      },
+      "process_peak_MiB": 299.96484375,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 74,
+        "bytes": 180266351,
+        "range_requests": 73
+      }
+    },
+    {
+      "engine": "polars_compact_vortex",
+      "task": "all_pressure",
+      "repetition": 2,
+      "open_s": 7.563969120383263e-06,
+      "first_s": 0.3632835670141503,
+      "repeat_s": 0.3637355410028249,
+      "first_http": {
+        "requests": 25,
+        "bytes": 72726931,
+        "range_requests": 24
+      },
+      "process_peak_MiB": 401.34765625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 50,
+        "bytes": 145453862,
+        "range_requests": 48
+      }
+    },
+    {
+      "engine": "polars_parquet",
+      "task": "trial",
+      "repetition": 1,
+      "open_s": 7.5160060077905655e-06,
+      "first_s": 0.04734142904635519,
+      "repeat_s": 0.007093757973052561,
+      "first_http": {
+        "requests": 6,
+        "bytes": 922339,
+        "range_requests": 6
+      },
+      "process_peak_MiB": 227.5390625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 12,
+        "bytes": 1844678,
+        "range_requests": 12
+      }
+    },
+    {
+      "engine": "polars_vortex",
+      "task": "trial",
+      "repetition": 2,
+      "open_s": 7.135909982025623e-06,
+      "first_s": 0.08288235985673964,
+      "repeat_s": 0.07860175892710686,
+      "first_http": {
+        "requests": 7,
+        "bytes": 21681503,
+        "range_requests": 5
+      },
+      "process_peak_MiB": 281.11328125,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 13,
+        "bytes": 55061122,
+        "range_requests": 9
+      }
+    },
+    {
+      "engine": "sql_parquet",
+      "task": "cohort_force",
+      "repetition": 2,
+      "open_s": 0.05225327401421964,
+      "first_s": 0.082784389029257,
+      "repeat_s": 0.022868746076710522,
+      "first_http": {
+        "requests": 27,
+        "bytes": 1056499,
+        "range_requests": 24
+      },
+      "process_peak_MiB": 264.234375,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 54,
+        "bytes": 2112998,
+        "range_requests": 48
+      }
+    },
+    {
+      "engine": "sql_compact_vortex",
+      "task": "cohort_force",
+      "repetition": 2,
+      "open_s": 0.1067566410638392,
+      "first_s": 0.14277340902481228,
+      "repeat_s": 0.030695672030560672,
+      "first_http": {
+        "requests": 10,
+        "bytes": 1955047,
+        "range_requests": 7
+      },
+      "process_peak_MiB": 295.75,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 14,
+        "bytes": 3788139,
+        "range_requests": 11
+      }
+    },
+    {
+      "engine": "sql_vortex",
+      "task": "mesh",
+      "repetition": 1,
+      "open_s": 0.12286876700818539,
+      "first_s": 0.5615162600297481,
+      "repeat_s": 0.43060488905757666,
+      "first_http": {
+        "requests": 6,
+        "bytes": 491978163,
+        "range_requests": 5
+      },
+      "process_peak_MiB": 730.51953125,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 10,
+        "bytes": 983890791,
+        "range_requests": 9
+      }
+    },
+    {
+      "engine": "sql_parquet",
+      "task": "trial",
+      "repetition": 1,
+      "open_s": 0.053034562966786325,
+      "first_s": 0.09333008888643235,
+      "repeat_s": 0.03621077002026141,
+      "first_http": {
+        "requests": 12,
+        "bytes": 1299675,
+        "range_requests": 10
+      },
+      "process_peak_MiB": 254.2265625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 24,
+        "bytes": 2599350,
+        "range_requests": 20
+      }
+    },
+    {
+      "engine": "pandas_range",
+      "task": "all_pressure",
+      "repetition": 1,
+      "open_s": 0.05227008601650596,
+      "first_s": 1.5088508280459791,
+      "repeat_s": 1.4032911710673943,
+      "first_http": {
+        "requests": 865,
+        "bytes": 82435655,
+        "range_requests": 865
+      },
+      "process_peak_MiB": 2446.76953125,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 1730,
+        "bytes": 164871310,
+        "range_requests": 1730
+      }
+    },
+    {
+      "engine": "sql_parquet",
+      "task": "all_pressure",
+      "repetition": 1,
+      "open_s": 0.05271555809304118,
+      "first_s": 0.3187827030196786,
+      "repeat_s": 0.259065723977983,
+      "first_http": {
+        "requests": 883,
+        "bytes": 124050721,
+        "range_requests": 882
+      },
+      "process_peak_MiB": 277.0625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 1767,
+        "bytes": 248032488,
+        "range_requests": 1765
+      }
+    },
+    {
+      "engine": "pandas_range",
+      "task": "mesh",
+      "repetition": 1,
+      "open_s": 0.051689040032215416,
+      "first_s": 0.06864901003427804,
+      "repeat_s": 0.007688743062317371,
+      "first_http": {
+        "requests": 2,
+        "bytes": 574513,
+        "range_requests": 2
+      },
+      "process_peak_MiB": 204.44921875,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 4,
+        "bytes": 1149026,
+        "range_requests": 4
+      }
+    },
+    {
+      "engine": "sql_parquet",
+      "task": "all_pressure",
+      "repetition": 2,
+      "open_s": 0.05075736390426755,
+      "first_s": 0.3119966220110655,
+      "repeat_s": 0.25375207292381674,
+      "first_http": {
+        "requests": 883,
+        "bytes": 124050721,
+        "range_requests": 882
+      },
+      "process_peak_MiB": 274.96875,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 1766,
+        "bytes": 248101442,
+        "range_requests": 1764
+      }
+    },
+    {
+      "engine": "pandas_parquet",
+      "task": "trial",
+      "repetition": 2,
+      "open_s": 7.319031283259392e-06,
+      "first_s": 0.21343762602191418,
+      "repeat_s": 0.23486226703971624,
+      "first_http": {
+        "requests": 2,
+        "bytes": 124191355,
+        "range_requests": 0
+      },
+      "process_peak_MiB": 407.37890625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 4,
+        "bytes": 248382710,
+        "range_requests": 0
+      }
+    },
+    {
+      "engine": "sql_vortex",
+      "task": "trial",
+      "repetition": 2,
+      "open_s": 0.10616048099473119,
+      "first_s": 0.15791717101819813,
+      "repeat_s": 0.04321282694581896,
+      "first_http": {
+        "requests": 8,
+        "bytes": 18870323,
+        "range_requests": 6
+      },
+      "process_peak_MiB": 295.62109375,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 16,
+        "bytes": 37675795,
+        "range_requests": 14
+      }
+    },
+    {
+      "engine": "sql_compact_vortex",
+      "task": "mesh",
+      "repetition": 1,
+      "open_s": 0.10144243598915637,
+      "first_s": 0.899505466921255,
+      "repeat_s": 0.7969877329887822,
+      "first_http": {
+        "requests": 6,
+        "bytes": 233439107,
+        "range_requests": 5
+      },
+      "process_peak_MiB": 952.5234375,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 10,
+        "bytes": 466812679,
+        "range_requests": 9
+      }
+    },
+    {
+      "engine": "polars_parquet",
+      "task": "all_pressure",
+      "repetition": 2,
+      "open_s": 8.170027285814285e-06,
+      "first_s": 0.4184925500303507,
+      "repeat_s": 0.42152548604644835,
+      "first_http": {
+        "requests": 864,
+        "bytes": 124424750,
+        "range_requests": 864
+      },
+      "process_peak_MiB": 341.4609375,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 1728,
+        "bytes": 248849500,
+        "range_requests": 1728
+      }
+    },
+    {
+      "engine": "sql_compact_vortex",
+      "task": "all_pressure",
+      "repetition": 2,
+      "open_s": 0.12189261696767062,
+      "first_s": 0.43873229692690074,
+      "repeat_s": 0.30116782803088427,
+      "first_http": {
+        "requests": 25,
+        "bytes": 72726931,
+        "range_requests": 24
+      },
+      "process_peak_MiB": 312.01953125,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 48,
+        "bytes": 145388327,
+        "range_requests": 47
+      }
+    },
+    {
+      "engine": "polars_parquet",
+      "task": "mesh",
+      "repetition": 2,
+      "open_s": 8.282018825411797e-06,
+      "first_s": 0.04540613095741719,
+      "repeat_s": 0.005261535989120603,
+      "first_http": {
+        "requests": 2,
+        "bytes": 771121,
+        "range_requests": 2
+      },
+      "process_peak_MiB": 309.1015625,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 4,
+        "bytes": 1542242,
+        "range_requests": 4
+      }
+    },
+    {
+      "engine": "sql_parquet",
+      "task": "cohort_force",
+      "repetition": 1,
+      "open_s": 0.04632390895858407,
+      "first_s": 0.07743463397491723,
+      "repeat_s": 0.03079632599838078,
+      "first_http": {
+        "requests": 27,
+        "bytes": 1056499,
+        "range_requests": 24
+      },
+      "process_peak_MiB": 309.1015625,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 54,
+        "bytes": 2112998,
+        "range_requests": 48
+      }
+    },
+    {
+      "engine": "sql_vortex",
+      "task": "mesh",
+      "repetition": 2,
+      "open_s": 0.11358833301346749,
+      "first_s": 0.5838062870316207,
+      "repeat_s": 0.42184181592892855,
+      "first_http": {
+        "requests": 6,
+        "bytes": 491978163,
+        "range_requests": 5
+      },
+      "process_peak_MiB": 730.3125,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 10,
+        "bytes": 983890791,
+        "range_requests": 9
+      }
+    },
+    {
+      "engine": "pandas_parquet",
+      "task": "mesh",
+      "repetition": 2,
+      "open_s": 8.182949386537075e-06,
+      "first_s": 0.3215531329624355,
+      "repeat_s": 0.3448558460222557,
+      "first_http": {
+        "requests": 1,
+        "bytes": 217951896,
+        "range_requests": 0
+      },
+      "process_peak_MiB": 482.9296875,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 2,
+        "bytes": 435903792,
+        "range_requests": 0
+      }
+    },
+    {
+      "engine": "sql_compact_vortex",
+      "task": "mesh",
+      "repetition": 2,
+      "open_s": 0.1224118530517444,
+      "first_s": 0.9199032210744917,
+      "repeat_s": 0.8387522239936516,
+      "first_http": {
+        "requests": 6,
+        "bytes": 233439107,
+        "range_requests": 5
+      },
+      "process_peak_MiB": 952.40234375,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 10,
+        "bytes": 466812679,
+        "range_requests": 9
+      }
+    },
+    {
+      "engine": "sql_compact_vortex",
+      "task": "cohort_force",
+      "repetition": 1,
+      "open_s": 0.12363737006671727,
+      "first_s": 0.16183189605362713,
+      "repeat_s": 0.02748607296962291,
+      "first_http": {
+        "requests": 10,
+        "bytes": 1955047,
+        "range_requests": 7
+      },
+      "process_peak_MiB": 309.1015625,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 14,
+        "bytes": 3788139,
+        "range_requests": 11
+      }
+    },
+    {
+      "engine": "polars_vortex",
+      "task": "trial",
+      "repetition": 1,
+      "open_s": 1.4394056051969528e-05,
+      "first_s": 0.0962297300575301,
+      "repeat_s": 0.08094784407876432,
+      "first_http": {
+        "requests": 6,
+        "bytes": 33368659,
+        "range_requests": 4
+      },
+      "process_peak_MiB": 309.1015625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 12,
+        "bytes": 66732678,
+        "range_requests": 8
+      }
+    },
+    {
+      "engine": "polars_vortex",
+      "task": "mesh",
+      "repetition": 1,
+      "open_s": 7.109949365258217e-06,
+      "first_s": 0.3993678439874202,
+      "repeat_s": 0.393368782941252,
+      "first_http": {
+        "requests": 4,
+        "bytes": 491977367,
+        "range_requests": 3
+      },
+      "process_peak_MiB": 704.10546875,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 8,
+        "bytes": 983954734,
+        "range_requests": 6
+      }
+    },
+    {
+      "engine": "polars_compact_vortex",
+      "task": "cohort_force",
+      "repetition": 2,
+      "open_s": 7.2160037234425545e-06,
+      "first_s": 0.05804948497097939,
+      "repeat_s": 0.027180712902918458,
+      "first_http": {
+        "requests": 7,
+        "bytes": 1886171,
+        "range_requests": 4
+      },
+      "process_peak_MiB": 343.16015625,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 14,
+        "bytes": 3772342,
+        "range_requests": 8
+      }
+    },
+    {
+      "engine": "sql_vortex",
+      "task": "trial",
+      "repetition": 1,
+      "open_s": 0.12752173701301217,
+      "first_s": 0.17973923694808036,
+      "repeat_s": 0.045879421988502145,
+      "first_http": {
+        "requests": 8,
+        "bytes": 18870323,
+        "range_requests": 6
+      },
+      "process_peak_MiB": 309.1015625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 16,
+        "bytes": 37675795,
+        "range_requests": 14
+      }
+    },
+    {
+      "engine": "pandas_parquet",
+      "task": "cohort_force",
+      "repetition": 2,
+      "open_s": 7.560010999441147e-06,
+      "first_s": 0.10166412906255573,
+      "repeat_s": 0.09949931397568434,
+      "first_http": {
+        "requests": 3,
+        "bytes": 6506790,
+        "range_requests": 0
+      },
+      "process_peak_MiB": 338.72265625,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 6,
+        "bytes": 13013580,
+        "range_requests": 0
+      }
+    },
+    {
+      "engine": "polars_parquet",
+      "task": "mesh",
+      "repetition": 1,
+      "open_s": 7.242080755531788e-06,
+      "first_s": 0.04313954710960388,
+      "repeat_s": 0.005288459011353552,
+      "first_http": {
+        "requests": 2,
+        "bytes": 771121,
+        "range_requests": 2
+      },
+      "process_peak_MiB": 309.1015625,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 4,
+        "bytes": 1542242,
+        "range_requests": 4
+      }
+    },
+    {
+      "engine": "pandas_range",
+      "task": "cohort_force",
+      "repetition": 2,
+      "open_s": 0.05094940902199596,
+      "first_s": 0.14381375501397997,
+      "repeat_s": 0.08206540299579501,
+      "first_http": {
+        "requests": 15,
+        "bytes": 689342,
+        "range_requests": 15
+      },
+      "process_peak_MiB": 336.4375,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 30,
+        "bytes": 1378684,
+        "range_requests": 30
+      }
+    },
+    {
+      "engine": "pandas_parquet",
+      "task": "trial",
+      "repetition": 1,
+      "open_s": 8.38900450617075e-06,
+      "first_s": 0.22321151394862682,
+      "repeat_s": 0.21282179898116738,
+      "first_http": {
+        "requests": 2,
+        "bytes": 124191355,
+        "range_requests": 0
+      },
+      "process_peak_MiB": 403.04296875,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 4,
+        "bytes": 248382710,
+        "range_requests": 0
+      }
+    },
+    {
+      "engine": "polars_vortex",
+      "task": "cohort_force",
+      "repetition": 1,
+      "open_s": 7.019028998911381e-06,
+      "first_s": 0.03510803496465087,
+      "repeat_s": 0.02522616006899625,
+      "first_http": {
+        "requests": 7,
+        "bytes": 2969975,
+        "range_requests": 4
+      },
+      "process_peak_MiB": 327.44140625,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 14,
+        "bytes": 5939950,
+        "range_requests": 8
+      }
+    },
+    {
+      "engine": "polars_vortex",
+      "task": "mesh",
+      "repetition": 2,
+      "open_s": 7.814029231667519e-06,
+      "first_s": 0.3909080979647115,
+      "repeat_s": 0.3538405350409448,
+      "first_http": {
+        "requests": 4,
+        "bytes": 491977367,
+        "range_requests": 3
+      },
+      "process_peak_MiB": 704.328125,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 8,
+        "bytes": 983954734,
+        "range_requests": 6
+      }
+    },
+    {
+      "engine": "polars_parquet",
+      "task": "cohort_force",
+      "repetition": 2,
+      "open_s": 7.04603735357523e-06,
+      "first_s": 0.06466343603096902,
+      "repeat_s": 0.020979507942683995,
+      "first_http": {
+        "requests": 11,
+        "bytes": 2755945,
+        "range_requests": 11
+      },
+      "process_peak_MiB": 309.1015625,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 22,
+        "bytes": 5511890,
+        "range_requests": 22
+      }
+    },
+    {
+      "engine": "sql_parquet",
+      "task": "trial",
+      "repetition": 2,
+      "open_s": 0.04928955703508109,
+      "first_s": 0.09342374501284212,
+      "repeat_s": 0.04035071097314358,
+      "first_http": {
+        "requests": 12,
+        "bytes": 1299675,
+        "range_requests": 10
+      },
+      "process_peak_MiB": 309.1015625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 24,
+        "bytes": 2599350,
+        "range_requests": 20
+      }
+    },
+    {
+      "engine": "polars_compact_vortex",
+      "task": "all_pressure",
+      "repetition": 1,
+      "open_s": 7.363036274909973e-06,
+      "first_s": 0.3767243450274691,
+      "repeat_s": 0.3666273719863966,
+      "first_http": {
+        "requests": 25,
+        "bytes": 72726931,
+        "range_requests": 24
+      },
+      "process_peak_MiB": 406.53125,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 50,
+        "bytes": 145453862,
+        "range_requests": 48
+      }
+    },
+    {
+      "engine": "polars_parquet",
+      "task": "all_pressure",
+      "repetition": 1,
+      "open_s": 7.982016541063786e-06,
+      "first_s": 0.41182893910445273,
+      "repeat_s": 0.39414662506897,
+      "first_http": {
+        "requests": 864,
+        "bytes": 124424750,
+        "range_requests": 864
+      },
+      "process_peak_MiB": 345.6640625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 1728,
+        "bytes": 248849500,
+        "range_requests": 1728
+      }
+    },
+    {
+      "engine": "sql_duckdb",
+      "task": "mesh",
+      "repetition": 2,
+      "open_s": 0.05903749796561897,
+      "first_s": 1.3149645369267091,
+      "repeat_s": 0.6622738519217819,
+      "first_http": {
+        "requests": 898,
+        "bytes": 234893312,
+        "range_requests": 896
+      },
+      "process_peak_MiB": 942.53515625,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 898,
+        "bytes": 234893312,
+        "range_requests": 896
+      }
+    },
+    {
+      "engine": "polars_vortex",
+      "task": "cohort_force",
+      "repetition": 2,
+      "open_s": 7.387949153780937e-06,
+      "first_s": 0.03431578795425594,
+      "repeat_s": 0.027100867009721696,
+      "first_http": {
+        "requests": 7,
+        "bytes": 2969975,
+        "range_requests": 4
+      },
+      "process_peak_MiB": 330.625,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 14,
+        "bytes": 5939950,
+        "range_requests": 8
+      }
+    },
+    {
+      "engine": "pandas_range",
+      "task": "trial",
+      "repetition": 2,
+      "open_s": 0.053424972924403846,
+      "first_s": 0.09516926691867411,
+      "repeat_s": 0.03432539198547602,
+      "first_http": {
+        "requests": 5,
+        "bytes": 725723,
+        "range_requests": 5
+      },
+      "process_peak_MiB": 330.625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 10,
+        "bytes": 1451446,
+        "range_requests": 10
+      }
+    },
+    {
+      "engine": "sql_duckdb",
+      "task": "mesh",
+      "repetition": 1,
+      "open_s": 0.056214435026049614,
+      "first_s": 1.2616989969974384,
+      "repeat_s": 0.6434373069787398,
+      "first_http": {
+        "requests": 898,
+        "bytes": 234893312,
+        "range_requests": 896
+      },
+      "process_peak_MiB": 942.8125,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 898,
+        "bytes": 234893312,
+        "range_requests": 896
+      }
+    },
+    {
+      "engine": "sql_duckdb",
+      "task": "cohort_force",
+      "repetition": 2,
+      "open_s": 0.05970257695298642,
+      "first_s": 0.0981200069654733,
+      "repeat_s": 0.012581055983901024,
+      "first_http": {
+        "requests": 52,
+        "bytes": 17838080,
+        "range_requests": 50
+      },
+      "process_peak_MiB": 330.625,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 52,
+        "bytes": 17838080,
+        "range_requests": 50
+      }
+    },
+    {
+      "engine": "sql_compact_vortex",
+      "task": "all_pressure",
+      "repetition": 1,
+      "open_s": 0.12484232196584344,
+      "first_s": 0.45850068202707916,
+      "repeat_s": 0.31859408400487155,
+      "first_http": {
+        "requests": 25,
+        "bytes": 72726931,
+        "range_requests": 24
+      },
+      "process_peak_MiB": 330.625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 48,
+        "bytes": 145388327,
+        "range_requests": 47
+      }
+    },
+    {
+      "engine": "sql_parquet",
+      "task": "mesh",
+      "repetition": 1,
+      "open_s": 0.05412662401795387,
+      "first_s": 0.06756405904889107,
+      "repeat_s": 0.013345893006771803,
+      "first_http": {
+        "requests": 5,
+        "bytes": 1033265,
+        "range_requests": 4
+      },
+      "process_peak_MiB": 330.625,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 10,
+        "bytes": 2066530,
+        "range_requests": 8
+      }
+    },
+    {
+      "engine": "sql_compact_vortex",
+      "task": "trial",
+      "repetition": 2,
+      "open_s": 0.12556897499598563,
+      "first_s": 0.17764429899398237,
+      "repeat_s": 0.04591966001316905,
+      "first_http": {
+        "requests": 7,
+        "bytes": 18198311,
+        "range_requests": 5
+      },
+      "process_peak_MiB": 330.625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 14,
+        "bytes": 36327899,
+        "range_requests": 12
+      }
+    },
+    {
+      "engine": "pandas_range",
+      "task": "cohort_force",
+      "repetition": 1,
+      "open_s": 0.05058018199633807,
+      "first_s": 0.14379687292966992,
+      "repeat_s": 0.08747299702372402,
+      "first_http": {
+        "requests": 15,
+        "bytes": 689342,
+        "range_requests": 15
+      },
+      "process_peak_MiB": 346.21484375,
+      "result": {
+        "rows": 34,
+        "sha256": "ed6d50446ad4d042ac19b09142adcdd3f2dce181a757c6fb7385bb37d578ce93"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 30,
+        "bytes": 1378684,
+        "range_requests": 30
+      }
+    },
+    {
+      "engine": "polars_vortex",
+      "task": "all_pressure",
+      "repetition": 1,
+      "open_s": 6.971065886318684e-06,
+      "first_s": 0.3234465210698545,
+      "repeat_s": 0.3150788370985538,
+      "first_http": {
+        "requests": 38,
+        "bytes": 90165943,
+        "range_requests": 37
+      },
+      "process_peak_MiB": 434.19140625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 76,
+        "bytes": 180331886,
+        "range_requests": 74
+      }
+    },
+    {
+      "engine": "pandas_parquet",
+      "task": "all_pressure",
+      "repetition": 1,
+      "open_s": 7.302034646272659e-06,
+      "first_s": 1.174954278045334,
+      "repeat_s": 1.1575120820198208,
+      "first_http": {
+        "requests": 1,
+        "bytes": 124162610,
+        "range_requests": 0
+      },
+      "process_peak_MiB": 2441.20703125,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 2,
+        "bytes": 248325220,
+        "range_requests": 0
+      }
+    },
+    {
+      "engine": "pandas_parquet",
+      "task": "mesh",
+      "repetition": 1,
+      "open_s": 6.426009349524975e-06,
+      "first_s": 0.31370315607637167,
+      "repeat_s": 0.3544490470085293,
+      "first_http": {
+        "requests": 1,
+        "bytes": 217951896,
+        "range_requests": 0
+      },
+      "process_peak_MiB": 483.11328125,
+      "result": {
+        "rows": 1,
+        "stl_bytes": 1153984,
+        "sha256": "d1da72eed934ad32f2e249dd60715649733371da8e17fcd032bae81a4332b759"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 2,
+        "bytes": 435903792,
+        "range_requests": 0
+      }
+    },
+    {
+      "engine": "sql_vortex",
+      "task": "all_pressure",
+      "repetition": 1,
+      "open_s": 0.1216423170408234,
+      "first_s": 0.3372284760698676,
+      "repeat_s": 0.20611816609743983,
+      "first_http": {
+        "requests": 38,
+        "bytes": 90165943,
+        "range_requests": 37
+      },
+      "process_peak_MiB": 330.625,
+      "result": {
+        "rows": 3312,
+        "sha256": "efe886a7db6003b13b78511321b2a9e48dec3ea357e766e7573c3f95bd06a296"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 74,
+        "bytes": 180266351,
+        "range_requests": 73
+      }
+    },
+    {
+      "engine": "polars_parquet",
+      "task": "trial",
+      "repetition": 2,
+      "open_s": 7.852911949157715e-06,
+      "first_s": 0.0507959759561345,
+      "repeat_s": 0.007333251996897161,
+      "first_http": {
+        "requests": 6,
+        "bytes": 922339,
+        "range_requests": 6
+      },
+      "process_peak_MiB": 330.625,
+      "result": {
+        "rows": 138035,
+        "sha256": "e3534c1a0a02dc2e2892c15f817c38a22dcf9125568bf4fbb17fb8458d9ce1dc"
+      },
+      "matches": true,
+      "two_query_http": {
+        "requests": 12,
+        "bytes": 1844678,
+        "range_requests": 12
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+type: software
+title: "Choosing how to publish a research dataset: evidence from PPDS"
+authors:
+  - name: BMClab
+message: "Cite this study for its decision guide, benchmark evidence and example. Cite the PPDS dataset and toolkit separately when using them."
+license: MIT

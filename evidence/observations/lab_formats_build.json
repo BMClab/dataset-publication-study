@@ -1,0 +1,123 @@
+{
+  "tables": {
+    "footprints": {
+      "rows": 4219239,
+      "parquet_bytes": 40736905,
+      "vortex_bytes": 33950256,
+      "vortex_write_seconds": 0.2918809209950268,
+      "db_write_checkpoint_seconds": 1.2581318180309609
+    },
+    "grf": {
+      "rows": 1503305,
+      "parquet_bytes": 6455696,
+      "vortex_bytes": 10639524,
+      "vortex_write_seconds": 0.12591788300778717,
+      "db_write_checkpoint_seconds": 0.5069594100350514
+    },
+    "grf_cycle": {
+      "rows": 64400,
+      "parquet_bytes": 432045,
+      "vortex_bytes": 444296,
+      "vortex_write_seconds": 0.015135744004510343,
+      "db_write_checkpoint_seconds": 0.03778946690727025
+    },
+    "pressure": {
+      "rows": 112965976,
+      "parquet_bytes": 124162610,
+      "vortex_bytes": 245598524,
+      "vortex_write_seconds": 1.3542956459568813,
+      "db_write_checkpoint_seconds": 11.494119814946316
+    },
+    "scans": {
+      "rows": 190,
+      "parquet_bytes": 217951896,
+      "vortex_bytes": 491916088,
+      "vortex_write_seconds": 6.805984275997616,
+      "db_write_checkpoint_seconds": 5.076327132992446
+    },
+    "spatiotemporal": {
+      "rows": 322,
+      "parquet_bytes": 144957,
+      "vortex_bytes": 183648,
+      "vortex_write_seconds": 0.023784282966516912,
+      "db_write_checkpoint_seconds": 0.04353137197904289
+    },
+    "subjects": {
+      "rows": 95,
+      "parquet_bytes": 22349,
+      "vortex_bytes": 47824,
+      "vortex_write_seconds": 0.016302732983604074,
+      "db_write_checkpoint_seconds": 0.016857229988090694
+    },
+    "trials": {
+      "rows": 3312,
+      "parquet_bytes": 28745,
+      "vortex_bytes": 27284,
+      "vortex_write_seconds": 0.011119392002001405,
+      "db_write_checkpoint_seconds": 0.015540177002549171
+    }
+  },
+  "bytes": {
+    "parquet": 389935203,
+    "vortex": 782807444,
+    "duckdb": 599011328
+  },
+  "reference": {
+    "gait": {
+      "gait_trials": 3217,
+      "native_pressure_recordings": 322,
+      "gait_reports": 322,
+      "stance_trials": 95,
+      "participants": 95,
+      "runners": 37,
+      "gait_frames": 874055,
+      "gait_nonzero_cells": 110616571,
+      "report_force_samples": 1503305,
+      "report_cycle_samples": 64400
+    },
+    "stance_nonzero_cells": 2349405,
+    "tables": {
+      "footprints": {
+        "rows": 4219239,
+        "bytes": 40736905,
+        "sha256": "ab874c69624434205e01fd78d9c19630b95d9cafb8ebb2094c53db41585adf32"
+      },
+      "grf": {
+        "rows": 1503305,
+        "bytes": 6455696,
+        "sha256": "3dd302eff7ca10636d5cdeee676fe080a16543f3e9c405ea51abb77b565efb87"
+      },
+      "grf_cycle": {
+        "rows": 64400,
+        "bytes": 432045,
+        "sha256": "403d00e20a8c9c0b821f4c33addc9cf4d7c1f51e3786e228c3f1db0f7b4e0b18"
+      },
+      "pressure": {
+        "rows": 112965976,
+        "bytes": 124162610,
+        "sha256": "07b7f6a218ede17b88e1e94467cfe71183b50cffe94b59eb399d61f533fbf18c"
+      },
+      "scans": {
+        "rows": 190,
+        "bytes": 217951896,
+        "sha256": "50395b682bf62083aec0cb68771e798d6388bd5a29a3854b3e3d34211f625867"
+      },
+      "spatiotemporal": {
+        "rows": 322,
+        "bytes": 144957,
+        "sha256": "e6cbb8381e69b001ed2f9154f7372728df92465e2c321551aa7675f1b41ef6e0"
+      },
+      "subjects": {
+        "rows": 95,
+        "bytes": 22349,
+        "sha256": "7951e60108f281f389ce6f547eafbd6ff4b7afed0f35248ed0d9f56bca83f907"
+      },
+      "trials": {
+        "rows": 3312,
+        "bytes": 28745,
+        "sha256": "537f329ae5b738967ae917028d68d679d7204bb241cd399e4f9cb620d2dac6fd"
+      }
+    }
+  },
+  "verification": "Full ordered row and column value equality after restoring source column types. Includes nulls and STL bytes; source schema metadata not guaranteed by conversions."
+}

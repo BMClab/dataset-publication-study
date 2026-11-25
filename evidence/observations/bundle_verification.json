@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "subjects": true,
+    "trials": true,
+    "standing": true,
+    "footprints": true,
+    "spatiotemporal": true,
+    "grf": true,
+    "grf_cycle": true,
+    "all_scan_bytes": true,
+    "subset_export_values_and_types": true,
+    "subset_export_metadata": true
+  },
+  "scans": 190,
+  "subset_export_seconds": 0.02319577196612954,
+  "subset_export_bytes": 45367
+}

@@ -1,0 +1,587 @@
+{
+  "versions": {
+    "h5py": "3.16.0",
+    "zarr": "3.4.2",
+    "numpy": "2.5.4",
+    "fsspec": "2026.9.0",
+    "aiohttp": "3.14.5",
+    "numcodecs": "0.17.1"
+  },
+  "purpose": "real-Zenodo selective-reader feasibility, not a performance ranking",
+  "summary": {
+    "all_selective_reads_match_references": true,
+    "all_reads_transfer_less_than_complete_file": true,
+    "reference_download_body_bytes": 18921303,
+    "selective_read_body_bytes": 6076715
+  },
+  "fixtures": [
+    {
+      "format": "HDF5",
+      "file": {
+        "name": "RadioSpin_D62_RF_fingerprinting.h5",
+        "size": 2060096,
+        "checksum": "md5:f3ac7203706cee35c01aa0aa8b9b60d1",
+        "url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content"
+      },
+      "array_path": "X_train",
+      "reader": {
+        "status": "pass",
+        "selection": "X_train[100:104, 100:108]",
+        "cache": "new HTTPFile; cache_type=none; block_size=65536; no persistent cache",
+        "traffic_scope": "includes stream open, container metadata and selected array data",
+        "adapter": "h5py.File(fsspec.HTTPFile, 'r')",
+        "array": {
+          "shape": [
+            702,
+            256
+          ],
+          "dtype": "<f8",
+          "chunks": null,
+          "compression": null,
+          "uncompressed_array_bytes": 1437696
+        },
+        "result": {
+          "shape": [
+            4,
+            8
+          ],
+          "dtype": "<f8",
+          "nbytes": 256,
+          "sha256_c_order_bytes": "9dea632159bde4a9a8dd3b46bf321d3cceebd9cd002ff5503fb8b1aa80d9603e",
+          "values": [
+            [
+              0.0044413257562066835,
+              0.00463392458951782,
+              0.004824814373172235,
+              0.004698031307310461,
+              0.004816094287463934,
+              0.004638317339526166,
+              0.0045779290159158855,
+              0.004688625693666289
+            ],
+            [
+              0.008690199501268802,
+              0.008607229021626611,
+              0.008932063149802097,
+              0.009238479863672816,
+              0.009103175140973318,
+              0.009234032919495962,
+              0.009269559063150865,
+              0.009279002368534524
+            ],
+            [
+              0.008214342134571168,
+              0.008216913268281003,
+              0.008211927597978412,
+              0.008003299541094902,
+              0.007818393568807855,
+              0.007493196298764482,
+              0.007770119688923217,
+              0.007792219816234547
+            ],
+            [
+              0.03640555543524659,
+              0.03623908632693772,
+              0.034279260792503256,
+              0.03705708700546287,
+              0.03623899812978589,
+              0.03541104864833359,
+              0.03514689672354004,
+              0.035243923031967675
+            ]
+          ]
+        },
+        "traffic": {
+          "requests": 12,
+          "body_bytes_received": 2768,
+          "range_206_responses": 12,
+          "events": [
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "request_range": "bytes=0-7",
+              "body_bytes_received": 8,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "8",
+                "content-range": "bytes 0-7/2060096",
+                "accept-ranges": "bytes",
+                "retry-after": "14"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "request_range": "bytes=0-47",
+              "body_bytes_received": 48,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "48",
+                "content-range": "bytes 0-47/2060096",
+                "accept-ranges": "bytes",
+                "retry-after": "14"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "request_range": "bytes=48-95",
+              "body_bytes_received": 48,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "48",
+                "content-range": "bytes 48-95/2060096",
+                "accept-ranges": "bytes",
+                "retry-after": "14"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "request_range": "bytes=96-607",
+              "body_bytes_received": 512,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "512",
+                "content-range": "bytes 96-607/2060096",
+                "accept-ranges": "bytes",
+                "retry-after": "13"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "request_range": "bytes=680-1191",
+              "body_bytes_received": 512,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "512",
+                "content-range": "bytes 680-1191/2060096",
+                "accept-ranges": "bytes",
+                "retry-after": "13"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "request_range": "bytes=136-679",
+              "body_bytes_received": 544,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "544",
+                "content-range": "bytes 136-679/2060096",
+                "accept-ranges": "bytes",
+                "retry-after": "13"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "request_range": "bytes=1072-1399",
+              "body_bytes_received": 328,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "328",
+                "content-range": "bytes 1072-1399/2060096",
+                "accept-ranges": "bytes",
+                "retry-after": "13"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "request_range": "bytes=800-1311",
+              "body_bytes_received": 512,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "512",
+                "content-range": "bytes 800-1311/2060096",
+                "accept-ranges": "bytes",
+                "retry-after": "12"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "request_range": "bytes=207648-207711",
+              "body_bytes_received": 64,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "64",
+                "content-range": "bytes 207648-207711/2060096",
+                "accept-ranges": "bytes",
+                "retry-after": "12"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "request_range": "bytes=209696-209759",
+              "body_bytes_received": 64,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "64",
+                "content-range": "bytes 209696-209759/2060096",
+                "accept-ranges": "bytes",
+                "retry-after": "12"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "request_range": "bytes=211744-211807",
+              "body_bytes_received": 64,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "64",
+                "content-range": "bytes 211744-211807/2060096",
+                "accept-ranges": "bytes",
+                "retry-after": "11"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "request_range": "bytes=213792-213855",
+              "body_bytes_received": 64,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/7646236/files/RadioSpin_D62_RF_fingerprinting.h5/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "64",
+                "content-range": "bytes 213792-213855/2060096",
+                "accept-ranges": "bytes",
+                "retry-after": "11"
+              }
+            }
+          ]
+        },
+        "elapsed_seconds": 3.938884553965181,
+        "fewer_response_body_bytes_than_file": true,
+        "response_body_fraction_of_file": 0.0013436267047749232,
+        "matches_verified_local_reference": true
+      }
+    },
+    {
+      "format": "Zarr ZIP",
+      "file": {
+        "name": "20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip",
+        "size": 16861207,
+        "checksum": "md5:26270ab734046a44589f52ff4474bee8",
+        "url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content"
+      },
+      "array_path": "20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr/B/03/0/0",
+      "reader": {
+        "status": "pass",
+        "selection": "B/03/0/0[0, 0, 100:108, 100:108]",
+        "cache": "new HTTPFile; cache_type=none; block_size=65536; no persistent cache",
+        "traffic_scope": "includes stream open, container metadata and selected array data",
+        "adapter": "zarr.storage.ZipStore(fsspec.HTTPFile, mode='r'); zarr.open_array(..., zarr_format=2)",
+        "array": {
+          "shape": [
+            1,
+            1,
+            2160,
+            5120
+          ],
+          "dtype": "<u2",
+          "chunks": [
+            1,
+            1,
+            2160,
+            2560
+          ],
+          "zarr_format": 2,
+          "metadata": {
+            "shape": [
+              1,
+              1,
+              2160,
+              5120
+            ],
+            "chunks": [
+              1,
+              1,
+              2160,
+              2560
+            ],
+            "dtype": "<u2",
+            "fill_value": 0,
+            "order": "C",
+            "filters": null,
+            "dimension_separator": "/",
+            "compressor": {
+              "id": "blosc",
+              "cname": "lz4",
+              "clevel": 5,
+              "shuffle": 1,
+              "blocksize": 0
+            },
+            "attributes": {},
+            "zarr_format": 2
+          },
+          "uncompressed_array_bytes": 22118400
+        },
+        "result": {
+          "shape": [
+            8,
+            8
+          ],
+          "dtype": "<u2",
+          "nbytes": 128,
+          "sha256_c_order_bytes": "a27927088d0a6d562cb4fb8dea52b90a2dcba424369e1bbdad53e80652067a51",
+          "values": [
+            [
+              107,
+              104,
+              109,
+              108,
+              106,
+              107,
+              106,
+              104
+            ],
+            [
+              108,
+              108,
+              107,
+              106,
+              105,
+              104,
+              113,
+              116
+            ],
+            [
+              113,
+              113,
+              104,
+              106,
+              113,
+              112,
+              111,
+              108
+            ],
+            [
+              114,
+              105,
+              115,
+              105,
+              103,
+              106,
+              109,
+              101
+            ],
+            [
+              115,
+              104,
+              104,
+              111,
+              116,
+              117,
+              111,
+              104
+            ],
+            [
+              110,
+              107,
+              112,
+              105,
+              111,
+              106,
+              116,
+              106
+            ],
+            [
+              107,
+              100,
+              112,
+              115,
+              100,
+              111,
+              106,
+              117
+            ],
+            [
+              104,
+              109,
+              114,
+              117,
+              111,
+              116,
+              107,
+              108
+            ]
+          ]
+        },
+        "traffic": {
+          "requests": 9,
+          "body_bytes_received": 6073947,
+          "range_206_responses": 9,
+          "events": [
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "request_range": "bytes=16861185-16861206",
+              "body_bytes_received": 22,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "22",
+                "content-range": "bytes 16861185-16861206/16861207",
+                "accept-ranges": "bytes",
+                "retry-after": "1"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "request_range": "bytes=16861165-16861184",
+              "body_bytes_received": 20,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "20",
+                "content-range": "bytes 16861165-16861184/16861207",
+                "accept-ranges": "bytes",
+                "retry-after": "1"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "request_range": "bytes=16784602-16861184",
+              "body_bytes_received": 76583,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "76583",
+                "content-range": "bytes 16784602-16861184/16861207",
+                "accept-ranges": "bytes",
+                "retry-after": "0"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "request_range": "bytes=7326-7355",
+              "body_bytes_received": 30,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "30",
+                "content-range": "bytes 7326-7355/16861207",
+                "accept-ranges": "bytes",
+                "retry-after": "1"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "request_range": "bytes=7356-7427",
+              "body_bytes_received": 72,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "72",
+                "content-range": "bytes 7356-7427/16861207",
+                "accept-ranges": "bytes",
+                "retry-after": "11"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "request_range": "bytes=7460-7655",
+              "body_bytes_received": 196,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "196",
+                "content-range": "bytes 7460-7655/16861207",
+                "accept-ranges": "bytes",
+                "retry-after": "11"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "request_range": "bytes=510066-510095",
+              "body_bytes_received": 30,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "30",
+                "content-range": "bytes 510066-510095/16861207",
+                "accept-ranges": "bytes",
+                "retry-after": "10"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "request_range": "bytes=510096-510167",
+              "body_bytes_received": 72,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "72",
+                "content-range": "bytes 510096-510167/16861207",
+                "accept-ranges": "bytes",
+                "retry-after": "10"
+              }
+            },
+            {
+              "method": "GET",
+              "url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "request_range": "bytes=510200-6507121",
+              "body_bytes_received": 5996922,
+              "status": 206,
+              "final_url": "https://zenodo.org/api/records/20559997/files/20200812-CardiomyocyteDifferentiation14-Cycle1_mip.zarr.zip/content",
+              "response_headers": {
+                "content-type": "application/octet-stream",
+                "content-length": "5996922",
+                "content-range": "bytes 510200-6507121/16861207",
+                "accept-ranges": "bytes",
+                "retry-after": "10"
+              }
+            }
+          ]
+        },
+        "elapsed_seconds": 16.162532784976065,
+        "fewer_response_body_bytes_than_file": true,
+        "response_body_fraction_of_file": 0.36023204032783657,
+        "matches_verified_local_reference": true
+      }
+    }
+  ]
+}

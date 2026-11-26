@@ -40,6 +40,8 @@ python3 evidence/methods/lab_format_tables.py evidence/observations
 
 The first table reports first and repeated queries in milliseconds and peak memory in MiB. The second reports decimal MB of response bodies and request counts for first queries over loopback HTTPS. [Published tables and methods](evidence/reports/lab_format_benchmark.md)
 
+To check the archive itself, run `python3 scripts/check_repo.py`. It verifies every provenance hash and local link and confirms that the rendered tables match the published report. GitHub Actions runs it and both examples on every push. A weekly job rereads the public PPDS release and fails if any reader's outcome differs from the [archived observation](evidence/observations/public_release_check.json).
+
 ## Credit
 
 Cite this investigation using the [study citation](CITATION.cff) or its DOI, [10.5281/zenodo.24546052](https://doi.org/10.5281/zenodo.24546052), which resolves to the latest version. Version 0.1.0 has its own DOI, [10.5281/zenodo.24546053](https://doi.org/10.5281/zenodo.24546053). Cite the PPDS dataset for its measurements and the PPDS software for its toolkit or notebooks. The selected case uses dataset v1.0.0 and toolkit v0.1.1. The study's software and documentation carry BMClab's MIT license. [Dataset v1.0.0](https://doi.org/10.5281/zenodo.24432612) · [Software citation](https://doi.org/10.5281/zenodo.24490656) · [License](LICENSE)

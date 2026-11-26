@@ -2,6 +2,7 @@
 
 Both readers run on local files. Hosted access needs its own test against the
 published copy, because readers can differ in how they request byte ranges.
+The notebook examples/reader_checks.py runs such a test.
 """
 
 from pathlib import Path

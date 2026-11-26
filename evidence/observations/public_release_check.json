@@ -5,7 +5,7 @@
     "trials": "https://zenodo.org/api/records/24432612/files/trials.parquet/content",
     "pressure": "https://zenodo.org/api/records/24432612/files/pressure.parquet/content"
   },
-  "started_utc": "2026-11-25T23:54:52.666696+00:00",
+  "started_utc": "2026-11-26T00:02:38.104575+00:00",
   "python": "3.14.9",
   "packages": {
     "duckdb": "2.0.1",
@@ -13,12 +13,29 @@
   },
   "byte_counting": "Declared Content-Length of GET responses from DuckDB's HTTP log; not measured wire bytes",
   "repetitions": "One observation per reader and task over the public internet",
+  "reference": {
+    "cohort": {
+      "rows": [
+        [
+          1174,
+          34
+        ]
+      ],
+      "origin": "Counts DuckDB returned in the first run of this check; 34 participants, as in the benchmark cohort"
+    },
+    "trial": {
+      "trial_id": 1566,
+      "n_cells": 32266,
+      "n_frames": 280,
+      "origin": "n_cells and n_frames columns of trials.parquet"
+    }
+  },
   "rate_limit_headers": {
     "status": 206,
     "x-ratelimit-limit": "133",
-    "x-ratelimit-remaining": "132",
-    "x-ratelimit-reset": "1795650954",
-    "retry-after": "60"
+    "x-ratelimit-remaining": "131",
+    "x-ratelimit-reset": "1795651368",
+    "retry-after": "9"
   },
   "cohort_selection": {
     "sql": "SELECT count(*) AS trials, count(DISTINCT subject) AS participants FROM trials WHERE Age >= 60",
@@ -26,7 +43,9 @@
       {
         "reader": "duckdb",
         "status": "pass",
-        "seconds": 2.369,
+        "timer": "view creation and query; matches the request log",
+        "seconds": 4.315,
+        "setup_seconds": 1.881,
         "rows": [
           [
             1174,
@@ -39,6 +58,8 @@
           "get_requests": 6,
           "head_requests": 6,
           "declared_get_body_bytes": 66408,
+          "gets_without_content_length": 0,
+          "byte_total": "complete",
           "statuses": [
             "OK_200",
             "PartialContent_206"
@@ -122,14 +143,16 @@
       {
         "reader": "polars_scan",
         "status": "fail",
-        "seconds": 1.671,
+        "timer": "scan setup and query",
+        "seconds": 1.948,
         "error_class": "OSError",
         "error": "object-store error: Generic HTTP error: Requested 0..54111, got 18446744073709343583..54111 (location: api/records/24432612/files/trials.parquet/content) (path: https://zenodo.org)"
       },
       {
         "reader": "polars_sql",
         "status": "fail",
-        "seconds": 1.535,
+        "timer": "scan setup and query",
+        "seconds": 1.493,
         "error_class": "OSError",
         "error": "object-store error: Generic HTTP error: Requested 0..54111, got 18446744073709343583..54111 (location: api/records/24432612/files/trials.parquet/content) (path: https://zenodo.org)"
       }
@@ -143,25 +166,31 @@
       "trial": 3,
       "trial_id": 1566
     },
-    "expected_from_trials_table": {
+    "trials_table": {
       "n_cells": 32266,
       "n_frames": 280
     },
+    "query": "Fetch every stored (frame, y, x, value) row for the trial into Python",
     "status": "pass",
-    "timer": "pressure query only; trial lookup ran in a separate connection",
-    "seconds": 5.199,
-    "rows": [
-      [
-        32266,
-        278,
-        485
-      ]
-    ],
+    "checks": {
+      "trial_id_matches_reference": true,
+      "trials_table_matches_reference": true,
+      "row_count_equals_n_cells": true,
+      "cells_unique": true,
+      "frames_within_recording": true,
+      "values_positive": true
+    },
+    "timer": "pressure query and row transfer to Python; the trial lookup ran in a separate connection",
+    "seconds": 5.908,
+    "rows_returned": 32266,
+    "rows_sha256": "f2d46f3dda60d93746d0016e2176a8ac22d421cacd92687de81863e99e689044",
     "http": {
       "requests": 12,
       "get_requests": 8,
       "head_requests": 4,
-      "declared_get_body_bytes": 1371553,
+      "declared_get_body_bytes": 1461413,
+      "gets_without_content_length": 0,
+      "byte_total": "complete",
       "statuses": [
         "OK_200",
         "PartialContent_206"
@@ -218,27 +247,27 @@
       },
       {
         "method": "GET",
-        "range": "bytes=60860896-60948696",
+        "range": "bytes=60950935-60951403",
         "status": "PartialContent_206",
-        "content_length": 87801
+        "content_length": 469
       },
       {
         "method": "GET",
-        "range": "bytes=60816601-60821532",
+        "range": "bytes=60951404-61104711",
         "status": "PartialContent_206",
-        "content_length": 4932
+        "content_length": 153308
       },
       {
         "method": "GET",
-        "range": "bytes=60950935-60955870",
+        "range": "bytes=60816601-60817069",
         "status": "PartialContent_206",
-        "content_length": 4936
+        "content_length": 469
       },
       {
         "method": "GET",
-        "range": "bytes=61006368-61104711",
+        "range": "bytes=60817070-60948696",
         "status": "PartialContent_206",
-        "content_length": 98344
+        "content_length": 131627
       }
     ]
   },
@@ -247,5 +276,5 @@
     "full pressure read",
     "authenticated access"
   ],
-  "finished_utc": "2026-11-25T23:55:09.196266+00:00"
+  "finished_utc": "2026-11-26T00:02:55.936737+00:00"
 }

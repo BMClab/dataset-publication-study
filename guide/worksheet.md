@@ -6,7 +6,7 @@ Copy this page into the project, fill it in, and link to the observations used f
 |---|---|
 | Which release and audience is this for? | Dataset, version, decision date, author, users and their analysis environments |
 | What must survive a round trip? | Units, keys, axes, clocks, types, missing values, zeros, binary objects and expected checks |
-| Where will files be read? | Versioned host and its rate limit, approximate total, largest and smallest file sizes, local download path, network and client constraints |
+| Where will files be read? | Required versioned host and its rate limit, whether the same query must run on the host and after download, approximate total, largest and smallest file sizes, local download path, network and client constraints |
 | Which criteria decide the outcome? | Required capabilities first, then preferences in priority order and their rationale |
 
 | User task and frequency | Input selection and independent expected answer | Format, physical layout, reader and environment | First / repeat latency, memory, bytes and requests | Pass, failure or untested |

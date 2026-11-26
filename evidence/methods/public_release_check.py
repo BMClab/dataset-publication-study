@@ -24,6 +24,14 @@ PRESSURE = URL.format("pressure.parquet")
 TRIAL_KEY = {"subject": "s045", "condition": "wc", "trial": 3}
 COHORT_SQL = "SELECT count(*) AS trials, count(DISTINCT subject) AS participants FROM trials WHERE Age >= 60"
 
+# Fixed expectations for v1.0.0. The cohort counts are those DuckDB returned in the
+# first run of this check; the 34 participants agree with the benchmark cohort. The trial
+# expectations are the trial table's recorded cell and frame counts for that trial.
+REFERENCE = {
+    "cohort": {"rows": [[1174, 34]], "origin": "Counts DuckDB returned in the first run of this check; 34 participants, as in the benchmark cohort"},
+    "trial": {"trial_id": 1566, "n_cells": 32266, "n_frames": 280, "origin": "n_cells and n_frames columns of trials.parquet"},
+}
+
 
 def digest(rows):
     return hashlib.sha256(json.dumps(rows, default=str).encode()).hexdigest()
@@ -48,24 +56,35 @@ def rate_limit_headers():
 
 def summarize(log):
     gets = [r for r in log if r["method"] == "GET"]
+    unknown = sum(r["content_length"] is None for r in gets)
     return {
         "requests": len(log),
         "get_requests": len(gets),
         "head_requests": len(log) - len(gets),
-        "declared_get_body_bytes": sum(r["content_length"] or 0 for r in gets),
+        "declared_get_body_bytes": sum(r["content_length"] for r in gets if r["content_length"] is not None),
+        "gets_without_content_length": unknown,
+        "byte_total": "complete" if unknown == 0 else "partial: lower bound, some GET lengths unknown",
         "statuses": sorted({str(r["status"]) for r in log}),
     }
+
+
+def cohort_verdict(rows):
+    return "pass" if [list(r) for r in rows] == REFERENCE["cohort"]["rows"] else "mismatch"
 
 
 def cohort_duckdb():
     con = duckdb.connect()
     con.sql("CALL enable_logging('HTTP')")
-    con.read_parquet(TRIALS).create_view("trials")
+    # Timer and request log both start here and cover view creation plus the query.
     start = time.perf_counter()
+    con.read_parquet(TRIALS).create_view("trials")
+    setup = time.perf_counter() - start
     rows = con.sql(COHORT_SQL).fetchall()
     elapsed = time.perf_counter() - start
     log = http_log(con, TRIALS)
-    return {"reader": "duckdb", "status": "pass", "seconds": round(elapsed, 3),
+    return {"reader": "duckdb", "status": cohort_verdict(rows),
+            "timer": "view creation and query; matches the request log",
+            "seconds": round(elapsed, 3), "setup_seconds": round(setup, 3),
             "rows": rows, "sha256": digest(rows), "http": summarize(log), "http_log": log}
 
 
@@ -79,10 +98,11 @@ def cohort_polars(style):
                 pl.len().alias("trials"), pl.col("subject").n_unique().alias("participants"))
         rows = frame.collect().rows()
     except Exception as exc:  # the observation is the failure itself
-        return {"reader": f"polars_{style}", "status": "fail", "seconds": round(time.perf_counter() - start, 3),
+        return {"reader": f"polars_{style}", "status": "fail", "timer": "scan setup and query",
+                "seconds": round(time.perf_counter() - start, 3),
                 "error_class": type(exc).__name__, "error": str(exc)}
-    return {"reader": f"polars_{style}", "status": "pass", "seconds": round(time.perf_counter() - start, 3),
-            "rows": rows, "sha256": digest(rows)}
+    return {"reader": f"polars_{style}", "status": cohort_verdict(rows), "timer": "scan setup and query",
+            "seconds": round(time.perf_counter() - start, 3), "rows": rows, "sha256": digest(rows)}
 
 
 def one_trial_duckdb():
@@ -95,19 +115,30 @@ def one_trial_duckdb():
     con.sql("CALL enable_logging('HTTP')")
     start = time.perf_counter()
     rows = con.sql(
-        f"SELECT count(*), max(frame), max(value) FROM read_parquet('{PRESSURE}') WHERE trial_id = ?",
+        f"SELECT frame, y, x, value FROM read_parquet('{PRESSURE}') WHERE trial_id = ? ORDER BY frame, y, x",
         params=[trial_id]).fetchall()
     elapsed = time.perf_counter() - start
-    count, max_frame, _ = rows[0]
     log = http_log(con, PRESSURE)
+    reference = REFERENCE["trial"]
+    checks = {
+        "trial_id_matches_reference": trial_id == reference["trial_id"],
+        "trials_table_matches_reference": (n_cells, n_frames) == (reference["n_cells"], reference["n_frames"]),
+        "row_count_equals_n_cells": len(rows) == n_cells,
+        "cells_unique": len({r[:3] for r in rows}) == len(rows),
+        "frames_within_recording": all(0 <= r[0] < n_frames for r in rows),
+        "values_positive": all(r[3] > 0 for r in rows),
+    }
     return {
         "reader": "duckdb",
         "selection": {**TRIAL_KEY, "trial_id": trial_id},
-        "expected_from_trials_table": {"n_cells": n_cells, "n_frames": n_frames},
-        "status": "pass" if count == n_cells and max_frame < n_frames else "fail",
-        "timer": "pressure query only; trial lookup ran in a separate connection",
+        "trials_table": {"n_cells": n_cells, "n_frames": n_frames},
+        "query": "Fetch every stored (frame, y, x, value) row for the trial into Python",
+        "status": "pass" if all(checks.values()) else "mismatch",
+        "checks": checks,
+        "timer": "pressure query and row transfer to Python; the trial lookup ran in a separate connection",
         "seconds": round(elapsed, 3),
-        "rows": rows,
+        "rows_returned": len(rows),
+        "rows_sha256": digest(rows),
         "http": summarize(log),
         "http_log": log,
     }
@@ -123,6 +154,7 @@ def main(output):
         "packages": {"duckdb": duckdb.__version__, "polars": pl.__version__},
         "byte_counting": "Declared Content-Length of GET responses from DuckDB's HTTP log; not measured wire bytes",
         "repetitions": "One observation per reader and task over the public internet",
+        "reference": REFERENCE,
         "rate_limit_headers": rate_limit_headers(),
         "cohort_selection": {"sql": COHORT_SQL,
                              "results": [cohort_duckdb(), cohort_polars("scan"), cohort_polars("sql")]},

@@ -125,15 +125,15 @@
       "file": "case-studies/ppds/selection-record.md",
       "source": "framework/docs/data_format_and_reader_selection.md",
       "source_sha256": "9e0638d17c6e3487df390bb482c69b6f61b9ce5542882aed8bf79ce93836059d",
-      "sha256": "e41de9efea6216d212000f1c4131d1b482d5530677797ab75089cd1616119813",
-      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable; added notes on a check of the public dataset v1.0.0 without credentials on 25 November 2026; linked the public release check observation"
+      "sha256": "1387ab0637ca31b0f9772e7d9403cfcdda430fce83cdd82cb05d848dd503d6e6",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable; added notes on a check of the public dataset v1.0.0 without credentials on 26 November 2026; linked the public release check observation"
     },
     {
       "file": "case-studies/ppds/polars-vs-duckdb.md",
       "source": "framework/docs/polars_vs_duckdb.md",
       "source_sha256": "03793d8b80e4145bc965230be9efdc2c23fb72c6b9de575541a9500983ddd146",
-      "sha256": "5a1a12cae3ae9a2a1a7075f86df9fb24197673a4bfc998052676633649b29343",
-      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable; corrected the Polars direct-read statements with a check of the public dataset v1.0.0 on 25 November 2026; linked the public release check observation"
+      "sha256": "7b2af400a14b52f70eb20e48331ac726a2482d406ee83f9f7ac96d6b338af574",
+      "adaptation": "Archived text with relinked references, historical-source labels, and local/draft reproduction instructions removed where applicable; corrected the Polars direct-read statements with a check of the public dataset v1.0.0 on 26 November 2026; linked the public release check observation"
     },
     {
       "file": "evidence/observations/lab_formats_pandas_dtypes.json",

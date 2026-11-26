@@ -1,6 +1,6 @@
 # Choosing how to publish a research dataset
 
-This repository helps a lab decide how to publish a research dataset: which file format to release, which reader to recommend, and whether to maintain a toolkit for users. It provides a step-by-step guide, a test for deciding on a toolkit, and a worksheet for recording the evidence behind each choice.
+This repository helps a lab decide how to publish a research dataset: which file format to release, which reader to recommend, and whether to maintain a toolkit for users. It focuses on releases that must work both directly from a public repository and from a local download. It provides a step-by-step guide, a test for deciding on a toolkit, and a worksheet for recording the evidence behind each choice.
 
 - **Choose for your project.** Use the [format and reader guide](guide/choosing-formats-and-readers.md), decide [whether to provide a toolkit](guide/toolkit-decision.md), and record your evidence in the [decision worksheet](guide/worksheet.md).
 - **See a worked case.** BMClab used its plantar pressure dataset (PPDS) to investigate how researchers could retrieve one trial, join a cohort to its measurements, or work offline from the same release. The lab selected Parquet for tabular storage, DuckDB for querying, and a Python toolkit. Follow the [case study](case-studies/ppds/decision.md) from its initial requirements through the measured alternatives. The [evidence index](evidence/README.md) identifies the inputs, environments and limits of each experiment.

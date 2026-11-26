@@ -6,6 +6,14 @@ authors:
   - name: BMClab
 version: 0.1.0
 date-released: 2026-11-25
+doi: 10.5281/zenodo.24546052
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24546052
+    description: "Concept DOI for all versions; resolves to the latest version"
+  - type: doi
+    value: 10.5281/zenodo.24546053
+    description: "DOI of version 0.1.0"
 repository-code: "https://github.com/BMClab/dataset-publication-study"
 keywords:
   - research data publication

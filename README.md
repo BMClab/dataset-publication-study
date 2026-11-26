@@ -1,5 +1,7 @@
 # Choosing how to publish a research dataset
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24546052.svg)](https://doi.org/10.5281/zenodo.24546052)
+
 This repository helps a lab decide how to publish a research dataset: which file format to release, which reader to recommend, and whether to maintain a toolkit for users. It focuses on releases that must work both directly from a public repository and from a local download. It provides a step-by-step guide, a test for deciding on a toolkit, and a worksheet for recording the evidence behind each choice.
 
 - **Choose for your project.** Use the [format and reader guide](guide/choosing-formats-and-readers.md), decide [whether to provide a toolkit](guide/toolkit-decision.md), and record your evidence in the [decision worksheet](guide/worksheet.md).
@@ -40,4 +42,4 @@ The first table reports first and repeated queries in milliseconds and peak memo
 
 ## Credit
 
-Cite this investigation using the [study citation](CITATION.cff). Cite the PPDS dataset for its measurements and the PPDS software for its toolkit or notebooks. The selected case uses dataset v1.0.0 and toolkit v0.1.1. The study's software and documentation carry BMClab's MIT license. [Dataset v1.0.0](https://doi.org/10.5281/zenodo.24432612) · [Software citation](https://doi.org/10.5281/zenodo.24490656) · [License](LICENSE)
+Cite this investigation using the [study citation](CITATION.cff) or its DOI, [10.5281/zenodo.24546052](https://doi.org/10.5281/zenodo.24546052), which resolves to the latest version. Version 0.1.0 has its own DOI, [10.5281/zenodo.24546053](https://doi.org/10.5281/zenodo.24546053). Cite the PPDS dataset for its measurements and the PPDS software for its toolkit or notebooks. The selected case uses dataset v1.0.0 and toolkit v0.1.1. The study's software and documentation carry BMClab's MIT license. [Dataset v1.0.0](https://doi.org/10.5281/zenodo.24432612) · [Software citation](https://doi.org/10.5281/zenodo.24490656) · [License](LICENSE)

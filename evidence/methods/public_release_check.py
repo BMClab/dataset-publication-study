@@ -26,10 +26,16 @@ COHORT_SQL = "SELECT count(*) AS trials, count(DISTINCT subject) AS participants
 
 # Fixed expectations for v1.0.0. The cohort counts are those DuckDB returned in the
 # first run of this check; the 34 participants agree with the benchmark cohort. The trial
-# expectations are the trial table's recorded cell and frame counts for that trial.
+# expectations are the trial table's recorded cell and frame counts for that trial, and
+# the digest of its ordered (frame, y, x, value) rows, which detects changed values.
 REFERENCE = {
     "cohort": {"rows": [[1174, 34]], "origin": "Counts DuckDB returned in the first run of this check; 34 participants, as in the benchmark cohort"},
-    "trial": {"trial_id": 1566, "n_cells": 32266, "n_frames": 280, "origin": "n_cells and n_frames columns of trials.parquet"},
+    "trial": {
+        "trial_id": 1566, "n_cells": 32266, "n_frames": 280,
+        "rows_sha256": "f2d46f3dda60d93746d0016e2176a8ac22d421cacd92687de81863e99e689044",
+        "origin": ("n_cells and n_frames columns of trials.parquet; rows_sha256 from the archived DuckDB run, "
+                   "reproduced independently with Polars from a checksum-verified local download"),
+    },
 }
 
 
@@ -123,6 +129,7 @@ def one_trial_duckdb():
     checks = {
         "trial_id_matches_reference": trial_id == reference["trial_id"],
         "trials_table_matches_reference": (n_cells, n_frames) == (reference["n_cells"], reference["n_frames"]),
+        "rows_match_reference_digest": digest(rows) == reference["rows_sha256"],
         "row_count_equals_n_cells": len(rows) == n_cells,
         "cells_unique": len({r[:3] for r in rows}) == len(rows),
         "frames_within_recording": all(0 <= r[0] < n_frames for r in rows),

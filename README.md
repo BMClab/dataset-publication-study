@@ -19,7 +19,7 @@ The example creates three tiny Parquet tables in a temporary directory. DuckDB a
 
 [`examples/reader_checks.py`](examples/reader_checks.py) is a [marimo](https://marimo.io) notebook for anyone who wants to try simple tests without setting up the study. Part 1 repeats the comparison above and adds a marimo SQL cell, and all three readers must match the reference. Part 2 opens a Parquet file directly from its host, or from a local path, with DuckDB and Polars. It reports whether each reader succeeded, and for URLs the requests and declared bytes DuckDB used. Paste the URL of a file on your own host to test it. A reader failure in part 2 is recorded as an observation.
 
-[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/BMClab/dataset-publication-study/blob/main/examples/reader_checks.py) opens the notebook in marimo's hosted service, with nothing to install.
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/notebooks/nb_jrdWVXnqpnoecRnKvQff3W/app) runs the notebook as an app in marimo's hosted service, with nothing to install. To read the code, or to copy the notebook and change it, open the [notebook page on molab](https://molab.marimo.io/notebooks/nb_jrdWVXnqpnoecRnKvQff3W).
 
 To run it locally from the repository root:
 
